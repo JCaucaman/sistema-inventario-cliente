@@ -1,0 +1,15 @@
+.header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    margin-bottom: auto;
+  }
+  
+  .header-content {
+    background-color: bisque;
+    height: 50px;
+    flex-grow: 1;
+  }
+  

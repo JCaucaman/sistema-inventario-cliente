@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  @media screen and (max-width: 767px) {
+    body {
+      height: auto;
+      overflow: auto;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .body-content {
+      min-height: calc(100vh - 100px);
+    }
+  }
