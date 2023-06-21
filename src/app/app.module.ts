@@ -3,11 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { HeaderComponent } from './header/header.component';
-import { InicioComponent } from './inicio/inicio.component';
-import { MenuComponent } from './menu/menu.component';
-import { PaguinaNoEncontradaComponent } from './paguina-no-encontrada/paguina-no-encontrada.component';
+import { LoginComponent } from './components/login/login.component';
+import { HeaderComponent } from './components/header/header.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { PaguinaNoEncontradaComponent } from './components/paguina-no-encontrada/paguina-no-encontrada.component';
 
 @NgModule({
   declarations: [
