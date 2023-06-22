@@ -1,0 +1,32 @@
+<p>menu works!</p>
+<body class="body-menu">
+    <app-header></app-header>
+    <div class="body-menu-content">
+        <img src="../../../assets/img/fondo-unicornio.png" class="fondo-unicornio">
+        <div class="table-container">
+            <table>
+                <tr>
+                    <td><button class="NAVEGACION" routerLink="/inventario">INVENTARIO</button></td>
+                    <td><button class="NAVEGACION" routerLink="/clientes">CLIENTES</button></td>
+                </tr>
+                <tr>
+                    <td><button class="NAVEGACION" routerLink="/lista_de_compras">LISTA COMPRA</button></td>
+                    <td><button class="NAVEGACION" routerLink="/cajas">CAJAS</button></td>
+            </table>
+        </div>
+    </div>
+    <footer class="footer-menu">
+        <div class="footer-menu-content">
+            <p class="footer-texto">Autores: Ariel Mancilla, Nicolás Calisto & Jorge Cárcamo</p>
+        </div>
+    </footer>
+    <script>
+        function redirigir(url) {
+            window.location.href = url;
+        }
+        function toggleMenu() {
+  var menu = document.getElementById("menu-dropdown");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+    </script>
+</body>

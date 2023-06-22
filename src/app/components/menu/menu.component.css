@@ -1,0 +1,148 @@
+.body-menu-content {
+    position: fixed;
+    top: 10%;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .table-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .table-container table {
+    border-collapse: collapse;
+  }
+  
+  .table-container td,
+  .table-container th {
+    border: none;
+    padding: 8px;
+  }
+  
+  .NAVEGACION {
+    width: 250px;
+    height: 150px;
+    background-color: #f3c6ef;
+    border-radius: 15px;
+    margin: 30px;
+    font-size: 22px;
+  }
+  
+  .NAVEGACION:hover {
+    background-color: #ffaff8;
+  }
+  
+  .fondo-unicornio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+  }
+  
+  .footer-menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 7%;
+    display: flex;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+  
+  .footer-menu-content {
+    background-color: #f3c6ef;
+    height: 100%;
+    flex-grow: 1;
+  }
+  
+  .footer-texto {
+    text-align: center;
+  }
+  .button-menu {
+    background-color: #f3c6ef;
+    width: 110px;
+    border-radius: 15px;
+    }
+    .button-menu:hover {
+        background-color: #ffaff8;
+    }
+  @media screen and (max-width: 600px) {
+    .header-menu {
+      flex-wrap: wrap;
+    }
+  
+    .header-menu-text {
+      font-size: 200%;
+      text-align: center;
+      padding: 0 10px;
+    }
+  
+    .logout-button {
+      margin: 0 5px;
+    }
+  
+    .NAVEGACION {
+      width: 150px;
+      height: 80px;
+      margin: 10px;
+    }
+  
+    .table-container {
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  
+    .table-container td,
+    .table-container th {
+      padding: 4px;
+    }
+  }
+  
+  @media only screen and (min-width: 667px) and (max-width: 915px),
+    (min-height: 375px) and (max-height: 412px) {
+    .table-container {
+      height: 120%;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .table-container table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+  
+    .table-container td,
+    .table-container th {
+      width: 100%;
+      border: none;
+      padding: 8px;
+    }
+  
+    .NAVEGACION {
+      flex: 1;
+      background-color: #f3c6ef;
+      border-radius: 15px;
+      margin-right: 2%;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 130px;
+    }
+  }
+  

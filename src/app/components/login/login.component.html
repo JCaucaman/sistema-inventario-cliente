@@ -1,0 +1,10 @@
+<form class="login-form" (submit)="login()">
+    <div class="image-container">
+        <img src="../../../assets/img/favicon.png" class="logo">
+    </div>
+    <input type="text" [(ngModel)]="usuario.name" id="username" name="username" placeholder="Nombre de usuario" required>
+    <br>
+    <input type="password" [(ngModel)]="usuario.password" id="password" name="password" placeholder="Contraseña" required>
+    <br>
+    <button type="submit">Iniciar sesión</button>
+</form>
