@@ -4,10 +4,28 @@ import { MenuComponent } from './components/menu/menu.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { PaguinaNoEncontradaComponent } from './components/paguina-no-encontrada/paguina-no-encontrada.component';
 
+import { AutenticacionGuard } from "./guard/autentificacion.guard";
+import { InventarioComponent } from './components/inventario/inventario.component';
+
 const routes: Routes = [
-  {path : '', component : InicioComponent},
-  {path : 'menu', component : MenuComponent},
-  {path : '**', component : PaguinaNoEncontradaComponent} // error 404
+  {
+    path : '',
+    component : InicioComponent
+  },
+  {
+    path : 'menu',
+    component : MenuComponent,
+    canActivate : [AutenticacionGuard]
+  },
+  {
+    path : 'inventario',
+    component : InventarioComponent,
+    canActivate : [AutenticacionGuard]
+  },
+  {
+    path : '**', // error 404
+    component : PaguinaNoEncontradaComponent
+  }
 ];
 
 @NgModule({

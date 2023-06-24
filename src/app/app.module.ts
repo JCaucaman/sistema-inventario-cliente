@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +11,10 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { PaguinaNoEncontradaComponent } from './components/paguina-no-encontrada/paguina-no-encontrada.component';
 
+import { AutenticacionGuard } from "./guard/autentificacion.guard";
+import { InventarioComponent } from './components/inventario/inventario.component';
+import { InterceptorTokenService } from "./services/interceptor-token.service";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +22,8 @@ import { PaguinaNoEncontradaComponent } from './components/paguina-no-encontrada
     HeaderComponent,
     InicioComponent,
     MenuComponent,
-    PaguinaNoEncontradaComponent
+    PaguinaNoEncontradaComponent,
+    InventarioComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,14 @@ import { PaguinaNoEncontradaComponent } from './components/paguina-no-encontrada
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ 
+    AutenticacionGuard,
+    {
+      provide :  HTTP_INTERCEPTORS,
+      useClass : InterceptorTokenService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
