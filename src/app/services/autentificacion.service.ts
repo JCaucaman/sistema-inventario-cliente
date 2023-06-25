@@ -16,6 +16,10 @@ export class AutentificacionService {
     return this.http.post<any>(this.URL + '/', usuario); 
   }
 
+  autoLogin(){
+    return this.http.post<any>(this.URL + '/token', {})
+  }
+
   loggedIn() : Boolean{
     if(localStorage.getItem('token')){ // cambiar
       return true

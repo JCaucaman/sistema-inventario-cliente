@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MaterialService } from "../../services/material.service";
 
 @Component({
   selector: 'app-inventario',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./inventario.component.css']
 })
 export class InventarioComponent {
+
+  constructor(
+    private MaterialService : MaterialService
+  ){}
 
 }
