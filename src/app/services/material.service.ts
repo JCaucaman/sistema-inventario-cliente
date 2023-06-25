@@ -25,7 +25,7 @@ export class MaterialService {
     }
 
     materialMostrar(){
-      return this.http.get<any>(this.URL + '/material/mostrar');
+      return this.http.get<any>(this.URL + '/api/materiales/');
     }
 
   }

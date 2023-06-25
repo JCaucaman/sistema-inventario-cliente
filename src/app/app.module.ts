@@ -14,6 +14,9 @@ import { PaguinaNoEncontradaComponent } from './components/paguina-no-encontrada
 import { AutenticacionGuard } from "./guard/autentificacion.guard";
 import { InventarioComponent } from './components/inventario/inventario.component';
 import { InterceptorTokenService } from "./services/interceptor-token.service";
+import { ClientesComponent } from './components/clientes/clientes.component';
+import { CajasComponent } from './components/cajas/cajas.component';
+import { ListaDeComprasComponent } from './components/lista-de-compras/lista-de-compras.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { InterceptorTokenService } from "./services/interceptor-token.service";
     InicioComponent,
     MenuComponent,
     PaguinaNoEncontradaComponent,
-    InventarioComponent
+    InventarioComponent,
+    ClientesComponent,
+    CajasComponent,
+    ListaDeComprasComponent
   ],
   imports: [
     BrowserModule,

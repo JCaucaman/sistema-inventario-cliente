@@ -6,6 +6,9 @@ import { PaguinaNoEncontradaComponent } from './components/paguina-no-encontrada
 
 import { AutenticacionGuard } from "./guard/autentificacion.guard";
 import { InventarioComponent } from './components/inventario/inventario.component';
+import { CajasComponent } from './components/cajas/cajas.component';
+import { ListaDeComprasComponent } from './components/lista-de-compras/lista-de-compras.component';
+import { ClientesComponent } from './components/clientes/clientes.component';
 
 const routes: Routes = [
   {
@@ -20,6 +23,21 @@ const routes: Routes = [
   {
     path : 'inventario',
     component : InventarioComponent,
+    canActivate : [AutenticacionGuard]
+  },
+  {
+    path : 'cajas',
+    component : CajasComponent,
+    canActivate : [AutenticacionGuard]
+  },
+  {
+    path : 'lista_de_compras',
+    component : ListaDeComprasComponent,
+    canActivate : [AutenticacionGuard]
+  },
+  {
+    path : 'clientes',
+    component : ClientesComponent,
     canActivate : [AutenticacionGuard]
   },
   {

@@ -8,8 +8,27 @@ import { MaterialService } from "../../services/material.service";
 })
 export class InventarioComponent {
 
+  material = {
+    nombre: '',
+    cantidad: 0,
+    descripcion: '',
+    origen: '',
+    etiquetas: [],
+    'estado reserva': false
+  }
+
   constructor(
     private MaterialService : MaterialService
   ){}
+
+  materialMostrar(){
+    this.MaterialService.materialMostrar()
+    .subscribe(
+      res => {
+        console.log(res)
+      },
+      err => console.log(err)
+    )
+  }
 
 }
