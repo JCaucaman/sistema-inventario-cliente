@@ -1,11 +1,12 @@
 
-<div class="contentenedor-materiales"  *ngFor="let material of materiales">
-    <div id="{{material._id}}" class="material">
-       <span>{{material.nombre}}</span>
-       <span>{{material.cantidad}}</span>
-       <span>{{material.precio}}</span>
-       <span>{{material.origen}}</span>
-       <span>{{material.etiquetas}}</span>
+<div class="contentenedor-materiales">
+    <div id="{{material._id}}" class="material" *ngFor="let material of materiales">
+       <span class="material_nombre">Nombre: {{material.nombre}}</span>
+       <span class="material_cantidad">Cantidad: {{material.cantidad}}</span>
+       <span class="material_precio">Precio: {{material.precio}}</span>
+       <span class="material_origen"> Origen: {{material.origen}}</span>
+       <span class="material_etiquetas">Etiquetas: <br>{{material.etiquetas}}</span>
     </div>     
 </div>
 
+#AD0434
