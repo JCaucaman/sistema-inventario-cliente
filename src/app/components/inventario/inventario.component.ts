@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MaterialService } from "../../services/material.service";
 
 @Component({
@@ -6,26 +6,25 @@ import { MaterialService } from "../../services/material.service";
   templateUrl: './inventario.component.html',
   styleUrls: ['./inventario.component.css']
 })
-export class InventarioComponent {
+export class InventarioComponent implements OnInit {
 
-  material = {
-    nombre: '',
-    cantidad: 0,
-    descripcion: '',
-    origen: '',
-    etiquetas: [],
-    'estado reserva': false
-  }
+  materiales : any = [] // guarda los materiales despues de que son obtenidos
 
   constructor(
     private MaterialService : MaterialService
   ){}
 
-  materialMostrar(){
+  ngOnInit(){ // se ejecuta al cargar el componente asociado
+    this.mostrarMateriales()
+  }
+
+  mostrarMateriales(){
     this.MaterialService.materialMostrar()
     .subscribe(
       res => {
-        console.log(res)
+
+        this.materiales = res;
+
       },
       err => console.log(err)
     )

@@ -1,2 +1,11 @@
 
-<input type="submit" value="ver materiales" (click)="materialMostrar()">
+<div class="contentenedor-materiales"  *ngFor="let material of materiales">
+    <div id="{{material._id}}" class="material">
+       <span>{{material.nombre}}</span>
+       <span>{{material.cantidad}}</span>
+       <span>{{material.precio}}</span>
+       <span>{{material.origen}}</span>
+       <span>{{material.etiquetas}}</span>
+    </div>     
+</div>
+
