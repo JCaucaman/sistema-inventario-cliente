@@ -17,6 +17,12 @@ import { InterceptorTokenService } from "./services/interceptor-token.service";
 import { ClientesComponent } from './components/clientes/clientes.component';
 import { CajasComponent } from './components/cajas/cajas.component';
 import { ListaDeComprasComponent } from './components/lista-de-compras/lista-de-compras.component';
+import { MaterialesComponent } from './components/materiales/materiales.component';
+import { InventarioMenuComponent } from './components/inventario-menu/inventario-menu.component';
+import { InventarioMaterialModalComponent } from './components/inventario-material-modal/inventario-material-modal.component';
+import { InventarioEtiquetaModalComponent } from './components/inventario-etiqueta-modal/inventario-etiqueta-modal.component';
+import { ClientesMenuComponent } from './components/clientes-menu/clientes-menu.component';
+import { ClientesPedidosComponent } from './components/clientes-pedidos/clientes-pedidos.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +35,13 @@ import { ListaDeComprasComponent } from './components/lista-de-compras/lista-de-
     InventarioComponent,
     ClientesComponent,
     CajasComponent,
-    ListaDeComprasComponent
+    ListaDeComprasComponent,
+    MaterialesComponent,
+    InventarioMenuComponent,
+    InventarioMaterialModalComponent,
+    InventarioEtiquetaModalComponent,
+    ClientesMenuComponent,
+    ClientesPedidosComponent
   ],
   imports: [
     BrowserModule,

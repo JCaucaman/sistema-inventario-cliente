@@ -1,0 +1,31 @@
+
+.contentenedor-materiales {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+
+    width: 90%;
+    height: 100%;
+
+    background-color: #ff000024;
+}
+
+.material {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+
+    margin: 10px;
+    padding: 15px;
+    
+    width: 20%;
+    height: auto;
+
+    min-width: 180px;
+    max-width: 220px;
+
+    background-color: #AD0434;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 7px;
+}
