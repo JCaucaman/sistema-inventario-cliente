@@ -1,31 +1,42 @@
 #inventario-menu {
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
+    flex-wrap: wrap;
 
-    background-color: #00000024;
+    position: fixed;
+    bottom: 0;
 
-    width: 10em;
+    width: 20%;
+    height: 90%;
 
+    min-width: 101px;
+
+    background-color: rgba(255, 192, 203, 0.099);
 }
 
-#opciones-inventario {
+#opciones-inventario{
     display: flex;
     flex-flow: column;
     align-items: center;
 
-
+    width: 100%;
+    height: 25%;
 }
 
-#boton-crear {
-    font-size: large;
-    margin-top: 50px;
-    padding: 20px;
-    border-radius: 20px ;
+#boton-crear{
+    padding: 10px;
+    margin-top: 20px;
 
-    border: 0;
-    background-color: #f3c6ef;
+    width: 80%;
+
+    cursor: pointer;
+
+    border-radius: 20px;
+    background-color: rgb(255, 189, 200);
+    border: 1px solid pink
 }
 
 #boton-crear:hover {
-    background-color: #ffaff8;
+    background-color: rgb(255, 216, 223);
+    border: 1px solid rgb(224, 161, 171)
 }

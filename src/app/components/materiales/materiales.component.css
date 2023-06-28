@@ -1,31 +1,101 @@
 
-.contentenedor-materiales {
+.contenedor-materiales {
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    justify-content:flex-start;
+    justify-content: center;
+    
+    position: fixed;
+    right: 0;
+    top: 10%;
 
-    width: 90%;
-    height: 100%;
+    padding-top: 1%;
+
+    width: 80%;
+    height: 89%;
+
+    overflow-y: scroll;
 
     background-color: #ff000024;
 }
 
 .material {
     display: flex;
-    flex-flow: column;
-    flex-wrap: wrap;
+    flex-direction: column;
 
     margin: 10px;
     padding: 15px;
     
-    width: 20%;
+    width: 100%;
     height: auto;
 
-    min-width: 180px;
-    max-width: 220px;
+    min-width: 200px;
+    max-width: 250px;
 
-    background-color: #AD0434;
-    border: 1px solid rgb(175, 175, 175);
+    max-height: 42%;
+
+    cursor: default;
+
+    background-color: #ffc4d5;
+    border: 1px solid rgb(247, 168, 168);
     border-radius: 7px;
+}
+
+.etiquetas {
+    display: flex;
+    flex-direction: column;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: start;
+
+    width: 100%;
+    height: auto;
+
+    margin-top: 8px;
+    padding-top: 15px;
+
+    border-top: 1px solid #AD0434;
+}
+
+.material_etiquetas {
+    cursor: pointer;
+
+    padding: 5px;
+    margin: 3px;
+
+    border-radius: 15px;
+    background-color: white;
+
+}
+
+.material_nombre{
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    text-shadow: #ffffff24;
+
+    color: #AD0434;
+}
+
+.material_descripcion {
+    display: flex;
+
+    width: 100%;
+    margin: 10px;
+
+}
+
+.contenedor_numero {
+    display: flex;
+    padding-top: 5px;
+    margin: 5px;;
+}
+
+
+.material_cantidad, .material_precio {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    width: 50%;
+    justify-content: end;
 }

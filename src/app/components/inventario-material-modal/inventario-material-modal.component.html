@@ -1,1 +1,25 @@
-<p>inventario-material-modal works!</p>
+<div id="modal-material" [style]="CompartirService.styleModalMaterial">
+    <form id="from-crear-material" (submit)="crearMaterial()">
+        <span>
+            <h3>
+                Ingresar Nuevo Material
+            </h3>
+        </span>
+        <span class="input-data">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" [(ngModel)]="material.nombre" maxlength="15">
+
+            <label for="nombre">Cantidad</label>
+            <input type="number" name="cantidad" id="cantidad" [(ngModel)]="material.cantidad" min="0" max="9999999999">
+
+            <label for="nombre">Precio</label>
+            <input type="number" name="precio" id="precio" [(ngModel)]="material.precio" min="0" max="9999999999">
+
+            <label for="nombre">Descripcion</label>
+            <textarea name="Descripcion"  id="descripcion" [(ngModel)]="material.descripcion" maxlength="256"></textarea>
+        </span>
+        <span class="input-button">
+            <button type="submit">Crear Material</button>
+        </span>
+    </form>
+</div>

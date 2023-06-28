@@ -13,15 +13,15 @@ export class MaterialService {
     ) { }
 
     materialCrear(material: object) {
-      return this.http.post<any>(this.URL + '/material/crear', material);
+      return this.http.post<any>(this.URL + '/api/materiales', material);
     }
 
     materialEliminar(id : string){
-      return this.http.delete<any>(this.URL + '/material/' + id);
+      return this.http.delete<any>(this.URL + '/api/materiales/' + id);
     }
 
-    materialModificar(material: object){
-      return this.http.put<any>(this.URL + '/material/modificar', material);
+    materialModificar(id: string, material: object){
+      return this.http.put<any>(this.URL + '/api/materiales/' + id, material);
     }
 
     materialMostrar(){

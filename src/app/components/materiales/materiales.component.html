@@ -1,12 +1,17 @@
 
-<div class="contentenedor-materiales">
-    <div id="{{material._id}}" class="material" *ngFor="let material of materiales">
-       <span class="material_nombre">Nombre: {{material.nombre}}</span>
-       <span class="material_cantidad">Cantidad: {{material.cantidad}}</span>
-       <span class="material_precio">Precio: {{material.precio}}</span>
-       <span class="material_origen"> Origen: {{material.origen}}</span>
-       <span class="material_etiquetas">Etiquetas: <br>{{material.etiquetas}}</span>
-    </div>     
+<div class="contenedor-materiales">
+    <div id="{{material._id}}" class="material" *ngFor="let material of CompartirService.materiales">
+        <span class="material_nombre" title="Nombre">{{material.nombre}}</span>
+        <span class="material_descripcion" title="Descripcion">{{material.descripcion}}</span>
+        <span class="material_origen" title="Origen">Origen: {{material.origen}}</span>
+        <div class="contenedor_numero">
+            <span class="material_precio" title="Precio"> $ {{material.precio}}</span>    
+            <span class="material_cantidad" title="Cantidad">{{material.cantidad}} c/u</span>
+        </div>
+        <div class="etiquetas">
+            <div title="etiqueta" class="material_etiquetas" *ngFor="let etiqueta of material.etiquetas">
+                {{etiqueta}}
+            </div>
+        </div>
+    </div>
 </div>
-
-#AD0434

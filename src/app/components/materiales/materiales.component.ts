@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MaterialService } from "../../services/material.service";
+import { CompartirService } from "../../services/compartir.service";
 
 @Component({
   selector: 'app-materiales',
@@ -8,11 +9,10 @@ import { MaterialService } from "../../services/material.service";
 })
 export class MaterialesComponent implements OnInit {
 
-  materiales : any = [] // guarda los materiales despues de que son obtenidos
-
   constructor(
-    private MaterialService : MaterialService
-  ){}
+    private MaterialService : MaterialService,
+    public CompartirService : CompartirService,
+  ) { }
 
   ngOnInit(){ // se ejecuta al cargar el componente asociado
     this.mostrarMateriales()
@@ -22,9 +22,7 @@ export class MaterialesComponent implements OnInit {
     this.MaterialService.materialMostrar()
     .subscribe(
       res => {
-
-        this.materiales = res;
-
+        this.CompartirService.materiales = res
       },
       err => console.log(err)
     )
