@@ -1,18 +1,23 @@
 
-<div class="contenedor-materiales">
-    <div id="{{material._id}}" (contextmenu)="contextmenu($event)" class="material" *ngFor="let material of CompartirService.materiales">
-        <span class="material_nombre" title="Nombre">{{material.nombre}}</span>
-        <span class="material_descripcion" title="Descripcion">{{material.descripcion}}</span>
-        <span class="material_origen" title="Origen">Origen: {{material.origen}}</span>
-        <div class="contenedor_numero">
-            <span class="material_precio" title="Precio"> $ {{material.precio}}</span>    
-            <span class="material_cantidad" title="Cantidad">{{material.cantidad}} und.</span>
-        </div>
-        <div class="etiquetas">
-            <div title="etiqueta" class="material_etiquetas" *ngFor="let etiqueta of material.etiquetas">
-                {{etiqueta}}
+<div class="contenedor-materiales" (click)="click($event)">
+        <div id="{{material._id}}-id" (contextmenu)="contextmenu($event)" class="material" *ngFor="let material of CompartirService.materiales">
+            <span id="{{material._id}}-nombre" class="material_nombre" title="Nombre">{{material.nombre}}</span>
+            <span id="{{material._id}}-descripcion" class="material_descripcion" title="Descripcion">{{material.descripcion}}</span>
+            <span id="{{material._id}}-origen" class="material_origen" title="Origen">Origen: {{material.origen}}</span>
+            <div id="{{material._id}}-numeros" class="contenedor_numero">
+                <span id="{{material._id}}-precio" class="material_precio" title="Precio"> $ {{material.precio}}</span>    
+                <span id="{{material._id}}-cantidad" class="material_cantidad" title="Cantidad">{{material.cantidad}} und.</span>
+            </div>
+            <div class="etiquetas">
+                <div title="etiqueta" class="material_etiquetas" *ngFor="let etiqueta of material.etiquetas">
+                    {{etiqueta}}
+                </div>
             </div>
         </div>
-
-    </div>
+        <div class="contexMenu" (click)="disappearContext()" #menu>
+            <ul>
+                <li>Modificar</li>
+                <li (click)="eliminarMaterial()">Eliminar</li>
+            </ul>
+        </div>
 </div>

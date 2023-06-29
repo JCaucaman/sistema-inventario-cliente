@@ -1,9 +1,9 @@
 
 .contenedor-materiales {
     display: flex;
-    flex-flow: row;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     
     position: fixed;
     right: 0;
@@ -32,8 +32,8 @@
     min-width: 200px;
     max-width: 250px;
 
-    max-height: 90%;
-    min-height: 10%;
+    max-height: 40%;
+    min-height: 30%;
 
     cursor: default;
 
@@ -100,4 +100,39 @@
     flex-wrap: wrap;
     width: 50%;
     justify-content: end;
+}
+
+/*  contex menu  */
+
+.contexMenu {
+    position: fixed;
+    
+    width: 150px;
+
+    z-index: 10000;
+
+    display: none;
+
+    background-color: #AD0434;
+}
+
+.contexMenu ul {
+    padding: 0;
+    margin: 0;
+}
+
+.contexMenu ul li {
+    list-style-type: none;
+    padding: 10px 14px;
+    border: 1px solid whitesmoke;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.2s all;
+
+    background-color: #AD0434;
+    color: #fff;
+}
+
+.contexMenu ul li:hover{
+    background-color: #b43d5f;
 }
