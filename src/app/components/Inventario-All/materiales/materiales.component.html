@@ -6,12 +6,13 @@
         <span class="material_origen" title="Origen">Origen: {{material.origen}}</span>
         <div class="contenedor_numero">
             <span class="material_precio" title="Precio"> $ {{material.precio}}</span>    
-            <span class="material_cantidad" title="Cantidad">{{material.cantidad}} c/u</span>
+            <span class="material_cantidad" title="Cantidad">{{material.cantidad}} und.</span>
         </div>
         <div class="etiquetas">
             <div title="etiqueta" class="material_etiquetas" *ngFor="let etiqueta of material.etiquetas">
                 {{etiqueta}}
             </div>
         </div>
+        <app-menu-material></app-menu-material>
     </div>
 </div>

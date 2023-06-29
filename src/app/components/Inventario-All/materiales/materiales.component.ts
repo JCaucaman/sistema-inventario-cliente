@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MaterialService } from "../../services/material.service";
-import { CompartirService } from "../../services/compartir.service";
+import { MaterialService } from "../../../services/material.service";
+import { CompartirService } from "../../../services/compartir.service";
 
 @Component({
   selector: 'app-materiales',

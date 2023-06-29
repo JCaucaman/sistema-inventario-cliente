@@ -13,6 +13,6 @@ export class CompartirService {
   constructor() { }
 
   agregarMaterial(material: any) {
-    this.materiales.push(material); 
+    this.materiales.unshift(material); 
   }
 }

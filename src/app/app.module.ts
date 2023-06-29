@@ -12,17 +12,18 @@ import { MenuComponent } from './components/menu/menu.component';
 import { PaguinaNoEncontradaComponent } from './components/paguina-no-encontrada/paguina-no-encontrada.component';
 
 import { AutenticacionGuard } from "./guard/autentificacion.guard";
-import { InventarioComponent } from './components/inventario/inventario.component';
+import { InventarioComponent } from './components/Inventario-All/inventario/inventario.component';
 import { InterceptorTokenService } from "./services/interceptor-token.service";
 import { ClientesComponent } from './components/clientes/clientes.component';
 import { CajasComponent } from './components/cajas/cajas.component';
 import { ListaDeComprasComponent } from './components/lista-de-compras/lista-de-compras.component';
-import { MaterialesComponent } from './components/materiales/materiales.component';
-import { InventarioMenuComponent } from './components/inventario-menu/inventario-menu.component';
-import { InventarioMaterialModalComponent } from './components/inventario-material-modal/inventario-material-modal.component';
-import { InventarioEtiquetaModalComponent } from './components/inventario-etiqueta-modal/inventario-etiqueta-modal.component';
+import { MaterialesComponent } from './components/Inventario-All/materiales/materiales.component';
+import { InventarioMenuComponent } from './components/Inventario-All/inventario-menu/inventario-menu.component';
+import { InventarioMaterialModalComponent } from './components/Inventario-All/inventario-material-modal/inventario-material-modal.component';
+import { InventarioEtiquetaModalComponent } from './components/Inventario-All/inventario-etiqueta-modal/inventario-etiqueta-modal.component';
 import { ClientesMenuComponent } from './components/clientes-menu/clientes-menu.component';
 import { ClientesPedidosComponent } from './components/clientes-pedidos/clientes-pedidos.component';
+import { MenuMaterialComponent } from './components/Inventario-All/menu-material/menu-material.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ClientesPedidosComponent } from './components/clientes-pedidos/clientes
     InventarioMaterialModalComponent,
     InventarioEtiquetaModalComponent,
     ClientesMenuComponent,
-    ClientesPedidosComponent
+    ClientesPedidosComponent,
+    MenuMaterialComponent
   ],
   imports: [
     BrowserModule,

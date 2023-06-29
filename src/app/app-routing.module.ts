@@ -5,7 +5,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { PaguinaNoEncontradaComponent } from './components/paguina-no-encontrada/paguina-no-encontrada.component';
 
 import { AutenticacionGuard } from "./guard/autentificacion.guard";
-import { InventarioComponent } from './components/inventario/inventario.component';
+import { InventarioComponent } from './components/Inventario-All/inventario/inventario.component';
 import { CajasComponent } from './components/cajas/cajas.component';
 import { ListaDeComprasComponent } from './components/lista-de-compras/lista-de-compras.component';
 import { ClientesComponent } from './components/clientes/clientes.component';

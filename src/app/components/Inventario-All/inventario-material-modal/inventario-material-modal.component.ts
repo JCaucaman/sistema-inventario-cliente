@@ -33,10 +33,16 @@ export class InventarioMaterialModalComponent {
       res => {
         this.CompartirService.agregarMaterial(res)
         this.desaparecer()
+        this.material = {
+          nombre: '',
+          origen: '',
+          descripcion: '',
+          cantidad: 0,
+          precio: 0
+        }
       },
       err => {
         console.log(err)
-        this.desaparecer()
       }
     )
   }
