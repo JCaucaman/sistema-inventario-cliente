@@ -28,4 +28,8 @@ export class MaterialesComponent implements OnInit {
     )
   }
 
+  contextmenu(event: any){
+
+  }
+
 }

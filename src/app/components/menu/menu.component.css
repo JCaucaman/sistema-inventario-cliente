@@ -48,7 +48,7 @@
     object-fit: cover;
     z-index: -1;
     background-size: cover;
-    backdrop-filter: blur(8px);
+ /*    backdrop-filter: blur(8px);   ERROR*/
   }
   
   .footer-menu {
