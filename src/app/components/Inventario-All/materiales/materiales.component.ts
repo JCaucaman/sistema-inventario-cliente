@@ -54,6 +54,7 @@ export class MaterialesComponent implements OnInit {
       (material: any) => material._id == this.id
     )
     this.CompartirInventarioModificarService.materialModificado = modMateriales[0]
+    this.CompartirInventarioModificarService.copy_materialModificado = Object.assign({}, this.CompartirInventarioModificarService.materialModificado)
     this.CompartirInventarioModificarService.id = this.id
 
   }

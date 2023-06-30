@@ -27,6 +27,7 @@ export class InventarioMaterialModalComponent {
 
     desaparecer(){
       this.CompartirService.styleModalMaterial = 'visibility: hidden;'
+      this.CompartirInventarioModificarService.cancalarModificacion()
     }
 
   crearMaterial(){
