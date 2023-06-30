@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CompartirService } from "src/app/services/compartir.service";
+import { CompartirInventarioModificarService } from "src/app/services/compartir-inventario-modificar.service";
 
 @Component({
   selector: 'app-inventario-menu',
@@ -9,11 +10,13 @@ import { CompartirService } from "src/app/services/compartir.service";
 export class InventarioMenuComponent {
 
   constructor(
-    private Visibilidad: CompartirService
+    private Visibilidad: CompartirService,
+    public CompartirInventarioModificarService : CompartirInventarioModificarService
   ){ }
 
 
   aparecer(){
     this.Visibilidad.styleModalMaterial = 'visibility: visible;'
+    this.CompartirInventarioModificarService.modificar = false
   }
 }

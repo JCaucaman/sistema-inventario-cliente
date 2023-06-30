@@ -3,7 +3,7 @@
         <span class="exit-button">
             <input type="button" class="exit" value="x" (click)="desaparecer()">
         </span>
-        <form id="from-crear-material" (submit)="crearMaterial()">
+        <form id="from-crear-material" (submit)="crearMaterial()" *ngIf="!CompartirInventarioModificarService.modificar">
             <span>
                 <h3>
                     Ingresar Nuevo Material
@@ -27,6 +27,35 @@
             </span>
             <span class="input-button">
                 <button type="submit">Crear Material</button>
+            </span>
+        </form>
+        
+
+
+        <form id="from-crear-material" (submit)="modificarMaterial()" *ngIf="CompartirInventarioModificarService.modificar">
+            <span>
+                <h3>
+                    Modificar Material
+                </h3>
+            </span>
+            <span class="input-data">
+                <label for="nombreN">Nombre</label>
+                <input type="text" name="nombreN" id="nombreN" [(ngModel)]="CompartirInventarioModificarService.materialModificado.nombre" maxlength="16">
+
+                <label for="origenN">Origen</label>
+                <input type="text" name="origen" id="origenN" [(ngModel)]="CompartirInventarioModificarService.materialModificado.origen" maxlength="32">
+
+                <label for="cantidadN">Cantidad</label>
+                <input type="number" name="cantidadN" id="cantidadN" [(ngModel)]="CompartirInventarioModificarService.materialModificado.cantidad" min="0">
+
+                <label for="precioN">Precio</label>
+                <input type="number" name="precioN" id="precioN" [(ngModel)]="CompartirInventarioModificarService.materialModificado.precio" min="0">
+
+                <label for="descripcionN">Descripcion</label>
+                <textarea name="descripcionN"  id="descripcionN" maxlength="256" [(ngModel)]="CompartirInventarioModificarService.materialModificado.descripcion"></textarea>
+            </span>
+            <span class="input-button">
+                <button type="submit">Guardar</button>
             </span>
         </form>
     </div>

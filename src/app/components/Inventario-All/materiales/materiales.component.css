@@ -112,27 +112,37 @@
     z-index: 10000;
 
     display: none;
+    padding: 3px;
+    margin: 5px;
 
-    background-color: #AD0434;
+    background-color: #99052f;
+    border-radius: 5px;
 }
 
 .contexMenu ul {
     padding: 0;
     margin: 0;
+
 }
 
 .contexMenu ul li {
     list-style-type: none;
+
     padding: 10px 14px;
-    border: 1px solid whitesmoke;
-    width: 100%;
+    margin: 1px;
+
+    width: auto;
     cursor: pointer;
     transition: 0.2s all;
 
-    background-color: #AD0434;
-    color: #fff;
+
+    background-color: #91052d;
+    border: 1px solid #8d032a;
+    border-radius: 5px;
+    color: #474546;
 }
 
 .contexMenu ul li:hover{
     background-color: #b43d5f;
+    color: #fff;
 }

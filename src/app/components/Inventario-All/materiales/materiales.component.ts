@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { MaterialService } from "../../../services/material.service";
 import { CompartirService } from "../../../services/compartir.service";
+import { CompartirInventarioModificarService } from "src/app/services/compartir-inventario-modificar.service";
 
 @Component({
   selector: 'app-materiales',
@@ -14,7 +15,8 @@ export class MaterialesComponent implements OnInit {
   constructor(
     private MaterialService : MaterialService,
     public CompartirService : CompartirService,
-  ) { }
+    public CompartirInventarioModificarService : CompartirInventarioModificarService
+    ) { }
 
   ngOnInit(){ // se ejecuta al cargar el componente asociado
     this.mostrarMateriales()
@@ -30,33 +32,6 @@ export class MaterialesComponent implements OnInit {
     )
   }
 
-  // Mouse
-
-  @ViewChild('menu') menu! :ElementRef
-
-  contextmenu(event: MouseEvent){
-    event.preventDefault();
-
-    this.menu.nativeElement.style.display = "block";
-    this.menu.nativeElement.style.top = event.pageY + "px"
-    this.menu.nativeElement.style.left = event.pageX + "px"
-
-    const target = event.target as HTMLElement;
-
-    this.id = target.id.split('-')[0]
-
-    console.log(this.id)
-
-  }
-
-  click(event: MouseEvent){
-    this.menu.nativeElement.style.display = "none";
-  }
-
-  disappearContext(){
-    this.menu.nativeElement.style.display = "none";
-  }
-
   eliminarMaterial(){
     this.MaterialService.materialEliminar(this.id)
     .subscribe(
@@ -68,6 +43,49 @@ export class MaterialesComponent implements OnInit {
       },
       err => console.log(err)
     )
+  }
+
+  ApareceModalModificar(){
+    this.CompartirInventarioModificarService.modificar = true
+    this.CompartirService.styleModalMaterial = 'visibility: visible;'
+    console.log(this.id)
+
+    const modMateriales = this.CompartirService.materiales.filter(
+      (material: any) => material._id == this.id
+    )
+    this.CompartirInventarioModificarService.materialModificado = modMateriales[0]
+    this.CompartirInventarioModificarService.id = this.id
+
+  }
+
+  // Mouse
+
+  @ViewChild('menu') menu! :ElementRef
+
+  contextmenu(event: MouseEvent){
+    event.preventDefault();
+
+    const target = event.target as HTMLElement;
+
+    this.id = target.id.split('-')[0]
+
+    if(this.id.length == 24){
+    this.menu.nativeElement.style.display = "block";
+    this.menu.nativeElement.style.top = event.pageY + "px"
+    this.menu.nativeElement.style.left = event.pageX + "px"
+
+    console.log(this.id)
+    } else {
+      this.menu.nativeElement.style.display = "none";
+    }
+  }
+
+  click(event: MouseEvent){
+    this.menu.nativeElement.style.display = "none";
+  }
+
+  disappearContext(){
+    this.menu.nativeElement.style.display = "none";
   }
 
 }

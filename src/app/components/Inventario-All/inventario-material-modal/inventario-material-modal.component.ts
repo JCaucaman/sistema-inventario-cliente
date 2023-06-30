@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MaterialService } from "src/app/services/material.service";
 import { CompartirService } from "src/app/services/compartir.service";
+import { CompartirInventarioModificarService } from "src/app/services/compartir-inventario-modificar.service";
 
 @Component({
   selector: 'app-inventario-material-modal',
@@ -20,7 +21,8 @@ export class InventarioMaterialModalComponent {
 
   constructor(
     private MaterialService : MaterialService,
-    public CompartirService: CompartirService
+    public CompartirService: CompartirService,
+    public CompartirInventarioModificarService : CompartirInventarioModificarService
     ) { }
 
     desaparecer(){
@@ -46,4 +48,21 @@ export class InventarioMaterialModalComponent {
       }
     )
   }
+
+  modificarMaterial(){
+    this.MaterialService.materialModificar(
+      this.CompartirInventarioModificarService.id,
+      this.CompartirInventarioModificarService.materialModificado)
+      .subscribe(
+        res => {
+          console.log(res)
+          this.desaparecer()
+
+        },
+        err => {
+          console.log(err)
+        }
+      )
+  }
+
 }

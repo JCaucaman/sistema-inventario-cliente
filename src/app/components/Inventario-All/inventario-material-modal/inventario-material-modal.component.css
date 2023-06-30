@@ -55,7 +55,7 @@ label {
     margin: 5px;
 }
 
-#descripcion {
+#descripcion, #descripcionN {
     resize: none;
     width: 250px;
     height: 230px;
