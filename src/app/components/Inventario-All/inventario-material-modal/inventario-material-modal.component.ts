@@ -27,7 +27,6 @@ export class InventarioMaterialModalComponent {
 
     desaparecer(){
       this.CompartirService.styleModalMaterial = 'visibility: hidden;'
-      this.CompartirInventarioModificarService.cancalarModificacion()
     }
 
   crearMaterial(){
@@ -53,17 +52,16 @@ export class InventarioMaterialModalComponent {
   modificarMaterial(){
     this.MaterialService.materialModificar(
       this.CompartirInventarioModificarService.id,
-      this.CompartirInventarioModificarService.materialModificado)
-      .subscribe(
-        res => {
-          console.log(res)
-          this.desaparecer()
-
-        },
-        err => {
-          console.log(err)
-        }
-      )
+      this.CompartirInventarioModificarService.materialModificado
+    ).subscribe(
+      res => {
+        console.log(res)
+        this.desaparecer()
+        this.CompartirInventarioModificarService.modificarMaterialLocal()
+      },
+      err => {
+        console.log(err)
+      }
+    )
   }
-
 }

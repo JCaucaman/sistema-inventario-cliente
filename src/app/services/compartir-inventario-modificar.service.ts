@@ -12,7 +12,13 @@ export class CompartirInventarioModificarService {
 
   modificar : boolean = false
 
+
+  copy_materialModificado : any
+
+  id = ''
+
   materialModificado = {
+    _id: this.id,
     nombre: '',
     cantidad: 0,
     precio: 0,
@@ -20,11 +26,15 @@ export class CompartirInventarioModificarService {
     descripcion: ''
   }
 
-  id = ''
+  modificarMaterialLocal(){
 
-  modificarMaterialLocal(material :any){
+    const dato = this.CompartirService.materiales.find(
+      (dato : any) => dato._id == this.id
+    )
 
-    const indice = this.CompartirService.materiales.indexOf(this.id)
-    this.CompartirService.materiales.splice(indice, 1)
+    const indice =  this.CompartirService.materiales.indexOf(dato)
+    console.log(indice)
+    console.log(this.CompartirService.materiales.splice(indice, 1, this.materialModificado))
   }
+
 }
