@@ -11,7 +11,7 @@
 
     padding-top: 1%;
 
-    width: 80%;
+    width: 87%;
     height: 89%;
 
     overflow-y: scroll;
@@ -33,7 +33,7 @@
     max-width: 250px;
 
     max-height: 40%;
-    min-height: 10%;
+    min-height: 5%;
 
     cursor: default;
 
@@ -46,6 +46,7 @@
 .material:hover {
     margin: 5px;
     padding: 20px;
+    background-color: #f8b7ca;
 }
 
 .etiquetas {
