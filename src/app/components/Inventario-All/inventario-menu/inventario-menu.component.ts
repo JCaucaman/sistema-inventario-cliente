@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { CompartirService } from "src/app/services/compartir.service";
-import { CompartirInventarioModificarService } from "src/app/services/compartir-inventario-modificar.service";
+import { CompartirService } from "src/app/services/inventario/compartir.service";
+import { CompartirInventarioModificarService } from "src/app/services/inventario/compartir-inventario-modificar.service";
 
 @Component({
   selector: 'app-inventario-menu',

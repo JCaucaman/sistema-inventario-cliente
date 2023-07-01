@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { MaterialService } from "../../../services/material.service";
-import { CompartirService } from "../../../services/compartir.service";
-import { CompartirInventarioModificarService } from "src/app/services/compartir-inventario-modificar.service";
+import { MaterialService } from "../../../services/inventario/material.service";
+import { CompartirService } from "../../../services/inventario/compartir.service";
+import { CompartirInventarioModificarService } from "src/app/services/inventario/compartir-inventario-modificar.service";
 
 @Component({
   selector: 'app-materiales',

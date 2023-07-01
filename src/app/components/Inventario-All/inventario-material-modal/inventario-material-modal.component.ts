@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { MaterialService } from "src/app/services/material.service";
-import { CompartirService } from "src/app/services/compartir.service";
-import { CompartirInventarioModificarService } from "src/app/services/compartir-inventario-modificar.service";
+import { MaterialService } from "src/app/services/inventario/material.service";
+import { CompartirService } from "src/app/services/inventario/compartir.service";
+import { CompartirInventarioModificarService } from "src/app/services/inventario/compartir-inventario-modificar.service";
 
 @Component({
   selector: 'app-inventario-material-modal',
