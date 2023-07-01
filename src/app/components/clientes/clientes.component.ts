@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeaderMenuService } from "src/app/services/header-menu.service";
 
 @Component({
   selector: 'app-clientes',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./clientes.component.css']
 })
 export class ClientesComponent {
+  constructor(
+    public HeaderMenuService : HeaderMenuService
+    ) { }
 
+
+  ngOnInit(){ 
+    this.HeaderMenuService.menuDrop = true
+    this.HeaderMenuService.inventario = false
+    this.HeaderMenuService.cajas = false
+    this.HeaderMenuService.clientes = true
+    this.HeaderMenuService.listaDeCompras = false
+    this.HeaderMenuService.menu = false
+  }
 }

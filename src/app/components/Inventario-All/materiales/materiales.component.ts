@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { MaterialService } from "../../../services/inventario/material.service";
 import { CompartirService } from "../../../services/inventario/compartir.service";
 import { CompartirInventarioModificarService } from "src/app/services/inventario/compartir-inventario-modificar.service";
@@ -8,7 +8,7 @@ import { CompartirInventarioModificarService } from "src/app/services/inventario
   templateUrl: './materiales.component.html',
   styleUrls: ['./materiales.component.css']
 })
-export class MaterialesComponent implements OnInit {
+export class MaterialesComponent{
 
   id: string = ''
 
@@ -18,7 +18,7 @@ export class MaterialesComponent implements OnInit {
     public CompartirInventarioModificarService : CompartirInventarioModificarService
     ) { }
 
-  ngOnInit(){ // se ejecuta al cargar el componente asociado
+  ngOnInit(){ 
     this.mostrarMateriales()
   }
 
@@ -75,7 +75,6 @@ export class MaterialesComponent implements OnInit {
     this.menu.nativeElement.style.top = event.pageY + "px"
     this.menu.nativeElement.style.left = event.pageX + "px"
 
-    console.log(this.id)
     } else {
       this.menu.nativeElement.style.display = "none";
     }

@@ -1,14 +1,25 @@
-<header class="header-menu">
+<header class="header-menu" >
     <div class="header-menu-content">
         <img src="../../../assets/img/favicon.png" class="logo" alt="logo">
         <span class="header-menu-text">ALCHEMIST UNICORN</span>
-        <button class="menu-button">Menú</button>
-        <div id="menu-dropdown" class="menu-cascada">
+        <button class="menu-button" (click)="menuDrop()" *ngIf="HeaderMenuService.menuDrop">Menú</button>
+        <div id="menu-dropdown" class="menu-cascada" #menudropdown  (click)="click($event)">
             <ul>
-              <li><button class="button-menu">Menu de inicio</button></li>
-              <li><button class="button-menu">cliente</button></li>
-              <li><button class="button-menu">Compras</button></li>
-              <li><button class="button-menu">Cajas</button></li>
+              <li *ngIf="!HeaderMenuService.menu">
+                <button class="button-menu" routerLink="/menu">Menu Principal</button>
+              </li>
+              <li *ngIf="!HeaderMenuService.inventario">
+                <button class="button-menu" routerLink="/inventario">Inventario</button>
+              </li>
+              <li *ngIf="!HeaderMenuService.clientes">
+                <button class="button-menu" routerLink="/clientes">Cliente</button>
+              </li>
+              <li *ngIf="!HeaderMenuService.listaDeCompras">
+                <button class="button-menu" routerLink="/lista_de_compras">Compras</button>
+              </li>
+              <li *ngIf="!HeaderMenuService.cajas">
+                <button class="button-menu" routerLink="/cajas">Cajas</button>
+              </li>
             </ul>
           </div>
         <button class="logout-button" (click)="logout()" >Cerrar sesión</button>

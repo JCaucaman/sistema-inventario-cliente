@@ -35,18 +35,18 @@
     font-size: 25px;
   }
   
-  .menu-button,
-  .logout-button {
+  .menu-button, .logout-button {
     background-color: #f3c6ef;
     color: black;
     border: none;
     cursor: pointer;
     margin-right: 5px;
-    border-radius: 15px;
+    border-radius: 3px;
     padding: 4px 15px;
     height: 40px;
-    border: 1px solid black;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     text-align: center;
+    transition: 0.2s all;
   }
   
   .menu-button {
@@ -58,6 +58,11 @@
     width: 62.5px;
   }
   
+
+  .menu-button:hover {
+    background-color: #ffaff8;
+  }
+
   .logout-button:hover {
     background-color: #ffaff8;
   }
@@ -66,36 +71,42 @@
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 5em;
     width: 150px;
-    background-color: #f3c6ef;
+    background-color: #f3afed;
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px;
+    z-index: 10000;
   }
   
   #menu-dropdown ul {
     list-style-type: none;
+    display: flex;
+    flex-flow: column;
+
+    width: 100%;
+
     margin: 0;
     padding: 0;
-  }
-  
-  #menu-dropdown li {
-    margin-bottom: 5px;
-  }
-  
-  #menu-dropdown li a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  .body-menu-content {
-    position: fixed;
-    top: 10%;
-    bottom: 5%;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
+    
     justify-content: center;
     align-items: center;
+  }
+  
+  #menu-dropdown ul li {
+    width: 100%;
+  }
+
+  .button-menu {
+    width: 100%;
+    margin: 2px;
+    padding: 10px;
+    background-color:#f3b6ee ;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    transition: 0.2s all;
+  }
+  
+  .button-menu:hover {
+  background-color:#f5d7f2 ;
   }
