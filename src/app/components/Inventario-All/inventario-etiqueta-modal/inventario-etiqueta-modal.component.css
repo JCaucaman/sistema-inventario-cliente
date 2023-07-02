@@ -3,7 +3,7 @@
     position: absolute;
     justify-content: center;
     align-items: center;
-    z-index: 40;
+    z-index: 45;
 
     width: 100%;
     height: 100%;
@@ -15,22 +15,37 @@
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-#from-crear-etiqueta {
+#form-etiqueta {
+    display: flex;
+    flex-flow: column;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 300px;
+    max-height: 300px;
+
+    padding-top: 10px;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+    border: 2px solid pink;
+    border-radius: 10px;
+
+}
+
+
+#from-crear-etiqueta, #from-modificar-etiqueta {
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
 
+    width: 100%;
+    height: 100%;
 
-    width: 90%;
-    height: 85%;
-
-    max-width: 300px;
-    max-height: 300px;
-
-    background-color: white;
-    border: 2px solid pink;
-    border-radius: 10px;
 }
 
 .input-data {
@@ -64,4 +79,28 @@ button{
 button:hover {
     background-color: rgb(255, 216, 223);
     border: 1px solid rgb(224, 161, 171)
+}
+
+.exit {
+    cursor: pointer;
+
+    margin: 10px;
+    padding: 5px 10px;
+
+    color: black;
+    background-color: rgb(255, 189, 200);
+    border: 1px solid pink;
+    border-radius: 30px;
+
+}
+
+.exit-button {
+    display: flex;
+    align-self: end;
+}
+
+.exit:hover {
+    color: white;
+    background-color: rgb(255, 216, 223);
+    border: 1px solid rgb(224, 161, 171);
 }

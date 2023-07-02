@@ -19,4 +19,9 @@ export class InventarioMenuComponent {
     this.Visibilidad.styleModalMaterial = 'visibility: visible;'
     this.CompartirInventarioModificarService.modificar = false
   }
+
+  aparecerEtiqueta(){
+    this.Visibilidad.styleModalEtiqueta = 'visibility: visible;'
+    this.CompartirInventarioModificarService.modificar = false
+  }
 }

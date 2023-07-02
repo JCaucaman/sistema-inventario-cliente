@@ -37,7 +37,7 @@
 }
 
 
-#from-crear-material {
+#from-crear-material, #from-modificar-material {
     display: flex;
     flex-flow: column;
     align-items: center;

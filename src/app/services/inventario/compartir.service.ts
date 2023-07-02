@@ -7,8 +7,6 @@ export class CompartirService {
 
   materiales : any = []
 
-  desde : any = this.materiales.lenght
-
   styleModalMaterial : String = ''
   styleModalEtiqueta : String = ''
   

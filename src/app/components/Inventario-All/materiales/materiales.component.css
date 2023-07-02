@@ -15,7 +15,7 @@
     padding-top: 0.25%;
     padding-bottom: 0.75%;
 
-    width: 80%;
+    width: 85%;
     height: 89%;
 
     overflow-y: scroll;
@@ -61,7 +61,6 @@
     justify-content: start;
 
     width: 100%;
-    height: auto;
 
     margin-top: 8px;
     padding: 15px 0;
@@ -71,7 +70,6 @@
 
 .material_etiquetas {
     cursor: pointer;
-
     padding: 5px;
     margin: 3px;
 
@@ -147,7 +145,7 @@
     padding: 3px;
     margin: 5px;
 
-    background-color: #99052f;
+    background-color: #ee4777;
     border-radius: 5px;
 }
 
@@ -168,13 +166,12 @@
     transition: 0.2s all;
 
 
-    background-color: #91052d;
-    border: 1px solid #8d032a;
+    background-color: #ee4777;
     border-radius: 5px;
-    color: #474546;
+    color: #d6d4d5;
 }
 
 .contexMenu ul li:hover{
-    background-color: #b43d5f;
+    background-color: #f0668d;
     color: #fff;
 }

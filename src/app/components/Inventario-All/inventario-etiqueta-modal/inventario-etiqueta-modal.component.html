@@ -1,20 +1,43 @@
-<div id="modal-etiqueta">
-    <form id="from-crear-etiqueta" method="post">
-        <span>
-            <h3>
-                Crear Etiqueta
-            </h3>
+<div id="modal-etiqueta"  [style]="CompartirService.styleModalEtiqueta">
+    <div id="form-etiqueta">
+        <span class="exit-button">
+            <input type="button" class="exit" value="x" (click)="desaparecer()">
         </span>
-        <span class="input-data">
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre">
+        <form id="from-crear-etiqueta"  *ngIf="!CompartirInventarioModificarService.modificar">
+            <span>
+                <h3>
+                    Crear Etiqueta
+                </h3>
+            </span>
+            <span class="input-data">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" [(ngModel)]="etiqueta.nombre">
 
-            <label for="color">Color</label>
-            <input type="color" name="color" id="color">
+                <label for="color">Color</label>
+                <input type="color" name="color" id="color" [(ngModel)]="etiqueta.color">
 
-        </span>
-        <span class="input-button">
-            <button type="submit">Crear Etiqueta</button>
-        </span>
-    </form>
+            </span>
+            <span class="input-button" >
+                <button type="submit" (click)="crearEtiqueta()">Crear Etiqueta</button>
+            </span>
+        </form>
+        <form id="from-modificar-etiqueta" *ngIf="CompartirInventarioModificarService.modificar">
+            <span>
+                <h3>
+                    Modificar Etiqueta
+                </h3>
+            </span>
+            <span class="input-data">
+                <label for="nombreE">Nombre</label>
+                <input type="text" name="nombreE" id="nombreE">
+
+                <label for="colorE">Color</label>
+                <input type="color" name="colorE" id="colorE">
+
+            </span>
+            <span class="input-button">
+                <button type="submit" (click)="modificarMaterial()">Guardar</button>
+            </span>
+        </form>
+    </div>
 </div>

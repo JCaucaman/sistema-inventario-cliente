@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef} from '@angular/core';
 import { MaterialService } from "../../../services/inventario/material.service";
 import { CompartirService } from "../../../services/inventario/compartir.service";
 import { CompartirInventarioModificarService } from "src/app/services/inventario/compartir-inventario-modificar.service";
@@ -14,6 +14,8 @@ export class MaterialesComponent{
 
   clicks = 1
 
+  scrollAtBottom: boolean = false;
+
   constructor(
     private MaterialService : MaterialService,
     public CompartirService : CompartirService,
@@ -28,7 +30,7 @@ export class MaterialesComponent{
     this.MaterialService.materialMostrar()
     .subscribe(
       res => {
-        this.CompartirService.materiales = res
+        this.CompartirService.materiales = res.slice(0, 20);
         console.log(res)
       },
       err => console.log(err)
@@ -99,4 +101,5 @@ export class MaterialesComponent{
     this.clicks = 0
   }
   
+
 }

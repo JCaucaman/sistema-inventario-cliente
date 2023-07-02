@@ -6,12 +6,12 @@
     position: fixed;
     bottom: 0;
 
-    width: 20%;
+    width: 15%;
     height: 90%;
 
-    min-width: 101px;
+    min-width: 103px;
 
-    background-color: rgba(255, 192, 203, 0.099);
+    background-color: rgba(255, 192, 203, 0.1);
 }
 
 #opciones-inventario{
@@ -20,10 +20,10 @@
     align-items: center;
 
     width: 100%;
-    height: 25%;
+    height: 20%;
 }
 
-#boton-crear{
+#boton-crear, #boton-crear-etiqueta{
     padding: 10px;
     margin-top: 20px;
 
@@ -37,7 +37,7 @@
     transition: 0.2s all;
 }
 
-#boton-crear:hover {
+#boton-crear:hover, #boton-crear-etiqueta:hover {
     background-color: rgb(255, 216, 223);
-    border: 1px solid rgb(224, 161, 171)
+    border: 1px solid rgb(244, 215, 220)
 }
