@@ -6,11 +6,10 @@
     position: fixed;
     bottom: 0;
 
-    width: 14%;
+    width: 20%;
     height: 90%;
 
     min-width: 101px;
-    max-width: 200px;
 
     background-color: rgba(255, 192, 203, 0.099);
 }

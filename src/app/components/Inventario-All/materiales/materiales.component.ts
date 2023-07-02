@@ -12,6 +12,8 @@ export class MaterialesComponent{
 
   id: string = ''
 
+  clicks = 1
+
   constructor(
     private MaterialService : MaterialService,
     public CompartirService : CompartirService,
@@ -27,6 +29,7 @@ export class MaterialesComponent{
     .subscribe(
       res => {
         this.CompartirService.materiales = res
+        console.log(res)
       },
       err => console.log(err)
     )
@@ -43,6 +46,7 @@ export class MaterialesComponent{
       },
       err => console.log(err)
     )
+    this.clicks = 0
   }
 
   ApareceModalModificar(){
@@ -56,7 +60,7 @@ export class MaterialesComponent{
     this.CompartirInventarioModificarService.materialModificado = { ...modMateriales[0]}
     this.CompartirInventarioModificarService.copy_materialModificado = { ...modMateriales[0]}
     this.CompartirInventarioModificarService.id = this.id
-
+    this.clicks = 0
   }
 
   // Mouse
@@ -67,7 +71,6 @@ export class MaterialesComponent{
     event.preventDefault();
 
     const target = event.target as HTMLElement;
-
     this.id = target.id.split('-')[0]
 
     if(this.id.length == 24){
@@ -75,17 +78,25 @@ export class MaterialesComponent{
     this.menu.nativeElement.style.top = event.pageY + "px"
     this.menu.nativeElement.style.left = event.pageX + "px"
 
+    this.clicks = 0
     } else {
       this.menu.nativeElement.style.display = "none";
     }
   }
 
   click(event: MouseEvent){
-    this.menu.nativeElement.style.display = "none";
+    this.clicks ++
+    if(this.clicks == 3){
+      this.contextmenu(event)
+      this.clicks = 0
+    } else {
+      this.menu.nativeElement.style.display = "none";
+    }
   }
 
   disappearContext(){
     this.menu.nativeElement.style.display = "none";
+    this.clicks = 0
   }
-
+  
 }

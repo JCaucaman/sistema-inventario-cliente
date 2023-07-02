@@ -19,5 +19,7 @@ export class ListaDeComprasComponent {
     this.HeaderMenuService.clientes = false
     this.HeaderMenuService.listaDeCompras = true
     this.HeaderMenuService.menu = false
+    this.HeaderMenuService.headerText = true
+    this.HeaderMenuService.searchInventario = false
   }
 }

@@ -15,5 +15,7 @@ export class MenuComponent {
 
   ngOnInit(){ 
   this.HeaderMenuService.menuDrop = false
+  this.HeaderMenuService.headerText = true
+  this.HeaderMenuService.searchInventario = false
   }
 }

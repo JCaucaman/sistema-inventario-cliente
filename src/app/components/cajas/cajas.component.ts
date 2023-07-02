@@ -19,5 +19,7 @@ export class CajasComponent {
     this.HeaderMenuService.clientes = false
     this.HeaderMenuService.listaDeCompras = false
     this.HeaderMenuService.menu = false
+    this.HeaderMenuService.headerText = true
+    this.HeaderMenuService.searchInventario = false
   }
 }

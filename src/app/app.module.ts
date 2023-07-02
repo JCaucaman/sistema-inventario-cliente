@@ -23,6 +23,7 @@ import { InventarioMaterialModalComponent } from './components/Inventario-All/in
 import { InventarioEtiquetaModalComponent } from './components/Inventario-All/inventario-etiqueta-modal/inventario-etiqueta-modal.component';
 import { ClientesMenuComponent } from './components/clientes-menu/clientes-menu.component';
 import { ClientesPedidosComponent } from './components/clientes-pedidos/clientes-pedidos.component';
+import { EtiquetasComponent } from './components/Inventario-All/etiquetas/etiquetas.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { ClientesPedidosComponent } from './components/clientes-pedidos/clientes
     InventarioMaterialModalComponent,
     InventarioEtiquetaModalComponent,
     ClientesMenuComponent,
-    ClientesPedidosComponent
+    ClientesPedidosComponent,
+    EtiquetasComponent
   ],
   imports: [
     BrowserModule,

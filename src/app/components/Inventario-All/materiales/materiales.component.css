@@ -1,3 +1,6 @@
+* {
+    color: #474546
+}
 
 .contenedor-materiales {
     display: flex;
@@ -12,7 +15,7 @@
     padding-top: 0.25%;
     padding-bottom: 0.75%;
 
-    width: 87%;
+    width: 80%;
     height: 89%;
 
     overflow-y: scroll;
@@ -33,7 +36,7 @@
     min-width: 200px;
     max-width: 250px;
 
-    max-height: 40%;
+    max-height: 50%;
     min-height: 5%;
 
     cursor: default;
@@ -61,7 +64,7 @@
     height: auto;
 
     margin-top: 8px;
-    padding-top: 15px;
+    padding: 15px 0;
 
     border-top: 1px solid #AD0434;
 }
@@ -77,13 +80,30 @@
 
 }
 
-.material_nombre{
+.material_nombre {
     font-size: larger;
     display: flex;
+    flex-flow: column;
+    align-items: center;
     justify-content: center;
-    text-shadow: #ffffff24;
 
     color: #AD0434;
+}
+
+.material-reservado{
+    align-self: flex-end;
+    padding: 4px;
+
+    width: 100%;
+
+    background-color: #ff7da2;
+    border-radius: 5px;
+}
+
+.contenedor-reserva{
+    display: flex;
+    height: 100%;
+
 }
 
 .material_descripcion {
@@ -102,12 +122,16 @@
 }
 
 
-.material_cantidad, .material_precio {
+.material_cantidad, .material_precio,.material_cantidad_Zero {
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
     width: 50%;
     justify-content: end;
+}
+
+.material_cantidad_Zero{
+    color: red;
 }
 
 /*  contex menu  */

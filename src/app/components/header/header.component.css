@@ -55,7 +55,8 @@
   }
   
   .logout-button {
-    width: 62.5px;
+
+    width: 123px;
   }
   
 
@@ -109,4 +110,21 @@
   
   .button-menu:hover {
   background-color:#f5d7f2 ;
+  }
+
+  .searchInventario{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search{
+
+    width: 100%;
+    font-size: large;
+
+    padding: 6px;
+    border: 1px solid #afafaf;
+    border-radius: 20px;
   }

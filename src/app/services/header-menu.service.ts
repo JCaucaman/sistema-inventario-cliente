@@ -5,6 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class HeaderMenuService {
 
+  headerText : boolean = true
+  searchInventario : boolean = false
+
   menuDrop : boolean = false
 
   listaDeCompras :boolean = false

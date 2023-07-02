@@ -1,7 +1,14 @@
 <header class="header-menu" >
     <div class="header-menu-content">
         <img src="../../../assets/img/favicon.png" class="logo" alt="logo">
-        <span class="header-menu-text">ALCHEMIST UNICORN</span>
+        <span class="header-menu-text" *ngIf="HeaderMenuService.headerText">
+          ALCHEMIST UNICORN
+        </span>
+        <span class="searchInventario" *ngIf="HeaderMenuService.searchInventario">
+          <form>
+            <input class="search" type="text" placeholder="Buscar...">
+          </form>
+        </span>
         <button class="menu-button" (click)="menuDrop()" *ngIf="HeaderMenuService.menuDrop">Menú</button>
         <div id="menu-dropdown" class="menu-cascada" #menudropdown  (click)="click($event)">
             <ul>
