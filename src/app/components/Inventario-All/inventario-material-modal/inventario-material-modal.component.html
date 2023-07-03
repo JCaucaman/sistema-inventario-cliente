@@ -1,4 +1,4 @@
-<div id="modal-material" [style]="CompartirService.styleModalMaterial">
+<div id="modal-material" *ngIf="CompartirService.modalMaterial">
     <div id="form-material">
         <span class="exit-button">
             <input type="button" class="exit" value="x" (click)="desaparecer()">

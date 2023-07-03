@@ -1,10 +1,24 @@
 
-#etiqueta{
+#etiquetas{
 
     display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
 
     width: 100%;
     height: 100%;
 
-    background-color: blanchedalmond;
+    margin-top: 10px;
+
+    border-top: 1px solid #ff7da2;
+}
+
+h4 {
+    align-self: center;
+
+    color: #ff7da2;
+}
+
+ul {
+    list-style:none;
 }

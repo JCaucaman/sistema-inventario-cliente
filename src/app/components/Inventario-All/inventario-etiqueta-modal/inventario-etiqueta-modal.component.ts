@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CompartirService } from "src/app/services/inventario/compartir.service";
 import { CompartirInventarioModificarService } from "src/app/services/inventario/compartir-inventario-modificar.service";
-
+import { EtiquetaCompartirService } from "../../../services/inventario/etiqueta-compartir.service";
 
 @Component({
   selector: 'app-inventario-etiqueta-modal',
@@ -12,17 +12,17 @@ export class InventarioEtiquetaModalComponent {
 
   etiqueta = {
     nombre : '',
-    color : ''
+    color : '#000000'
   }
 
   constructor(
-  //  private MaterialService : MaterialService,
     public CompartirService: CompartirService,
-    public CompartirInventarioModificarService : CompartirInventarioModificarService
+    public CompartirInventarioModificarService : CompartirInventarioModificarService,
+    public EtiquetaCompartirService : EtiquetaCompartirService
     ) { }
 
   desaparecer(){
-    this.CompartirService.styleModalEtiqueta = 'visibility: hidden;'
+    this.EtiquetaCompartirService.modalEtiqueta = false
   }
   
   crearEtiqueta(){

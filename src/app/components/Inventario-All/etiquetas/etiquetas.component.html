@@ -1,5 +1,10 @@
 <div id="etiquetas">
-    <div>
-        Etiquetas
-    </div>
+    <h4>Etiquetas</h4>
+    <ul>
+        <li class="etiqueta" id="{{etiqueta._id}}"  *ngFor="let etiqueta of EtiquetaCompartirService.etiquetas">
+            <span>{{etiqueta.nombre}}</span>
+        </li>
+    </ul>
 </div>
+
+<!-- style="color: {{etiqueta.color}}" -->

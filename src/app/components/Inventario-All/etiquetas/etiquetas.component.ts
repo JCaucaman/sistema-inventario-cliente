@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { CompartirService } from "src/app/services/inventario/compartir.service";
+import { EtiquetaService } from "../../../services/inventario/etiqueta.service";
+import { EtiquetaCompartirService } from "../../../services/inventario/etiqueta-compartir.service";
 
 @Component({
   selector: 'app-etiquetas',
@@ -9,7 +10,24 @@ import { CompartirService } from "src/app/services/inventario/compartir.service"
 export class EtiquetasComponent {
 
   constructor(
-    public CompartirService: CompartirService
+    private EtiquetaService : EtiquetaService,
+    public EtiquetaCompartirService : EtiquetaCompartirService
     ) { }
+
+
+    ngOnInit(){
+      this.mostrarEtiquetas()
+    }
+
+    mostrarEtiquetas(){
+      this.EtiquetaService.etiquetaMostrar()
+      .subscribe(
+        res => {
+          this.EtiquetaCompartirService.etiquetas = res;
+          console.log(res)
+        },
+        err => console.log(err)
+      )
+    }
 
 }

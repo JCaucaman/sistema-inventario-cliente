@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CompartirService } from "src/app/services/inventario/compartir.service";
+import { EtiquetaCompartirService } from "src/app/services/inventario/etiqueta-compartir.service";
 import { CompartirInventarioModificarService } from "src/app/services/inventario/compartir-inventario-modificar.service";
 
 @Component({
@@ -10,18 +11,19 @@ import { CompartirInventarioModificarService } from "src/app/services/inventario
 export class InventarioMenuComponent {
 
   constructor(
-    private Visibilidad: CompartirService,
+    private etiquetaVisibilidad: EtiquetaCompartirService,
+    private materialesVisibilidad: CompartirService,
     public CompartirInventarioModificarService : CompartirInventarioModificarService
   ){ }
 
 
   aparecer(){
-    this.Visibilidad.styleModalMaterial = 'visibility: visible;'
+    this.materialesVisibilidad.modalMaterial = true
     this.CompartirInventarioModificarService.modificar = false
   }
 
   aparecerEtiqueta(){
-    this.Visibilidad.styleModalEtiqueta = 'visibility: visible;'
+    this.etiquetaVisibilidad.modalEtiqueta = true
     this.CompartirInventarioModificarService.modificar = false
   }
 }

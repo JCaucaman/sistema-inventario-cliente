@@ -1,4 +1,4 @@
-<div id="modal-etiqueta"  [style]="CompartirService.styleModalEtiqueta">
+<div id="modal-etiqueta"  *ngIf="EtiquetaCompartirService.modalEtiqueta">
     <div id="form-etiqueta">
         <span class="exit-button">
             <input type="button" class="exit" value="x" (click)="desaparecer()">

@@ -30,7 +30,7 @@ export class MaterialesComponent{
     this.MaterialService.materialMostrar()
     .subscribe(
       res => {
-        this.CompartirService.materiales = res.slice(0, 20);
+        this.CompartirService.materiales = res;
         console.log(res)
       },
       err => console.log(err)
@@ -53,7 +53,7 @@ export class MaterialesComponent{
 
   ApareceModalModificar(){
     this.CompartirInventarioModificarService.modificar = true
-    this.CompartirService.styleModalMaterial = 'visibility: visible;'
+    this.CompartirService.modalMaterial = true
     console.log(this.id)
 
     const modMateriales = this.CompartirService.materiales.filter(

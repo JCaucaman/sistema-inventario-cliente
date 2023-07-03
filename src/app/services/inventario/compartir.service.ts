@@ -7,8 +7,7 @@ export class CompartirService {
 
   materiales : any = []
 
-  styleModalMaterial : String = ''
-  styleModalEtiqueta : String = ''
+  modalMaterial : boolean = false
   
   constructor() { }
 

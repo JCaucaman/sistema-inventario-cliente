@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { CompartirService } from "./compartir.service";
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +9,7 @@ export class MaterialService {
   private URL = 'http://localhost:3000'
 
   constructor(
-    private http: HttpClient,
-    public CompartirService: CompartirService
+    private http: HttpClient
     ) { }
 
     materialCrear(material: object) {
