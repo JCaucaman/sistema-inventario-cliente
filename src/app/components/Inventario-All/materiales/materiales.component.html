@@ -1,6 +1,6 @@
 
-<div class="contenedor-materiales" (click)="click($event)">
-    <div id="{{material._id}}-id" (contextmenu)="contextmenu($event)" class="material" *ngFor="let material of CompartirService.materiales">
+<div class="contenedor-materiales" (click)="clickM($event)">
+    <div id="{{material._id}}-id" (contextmenu)="contextmenuM($event)" class="material" *ngFor="let material of CompartirService.materiales">
         <span id="{{material._id}}-nombre" class="material_nombre"title="Nombre">{{material.nombre}}</span>
         <span id="{{material._id}}-descripcion" class="material_descripcion" title="Descripcion">{{material.descripcion}}</span>
         <span id="{{material._id}}-origen" class="material_origen" title="Origen">Origen: {{material.origen}}</span>
@@ -20,9 +20,9 @@
             </div>
         </div>
     </div>
-    <div class="contexMenu" (click)="disappearContext()" #menu>
+    <div class="contexMenu" (click)="disappearContextM()" #menuM>
         <ul>
-            <li (click)="ApareceModalModificar()">Modificar</li>
+            <li (click)="ApareceModalModificarM()">Modificar</li>
             <li (click)="eliminarMaterial()">Eliminar</li>
         </ul>
     </div>

@@ -10,9 +10,9 @@ import { CompartirInventarioModificarService } from "src/app/services/inventario
 })
 export class MaterialesComponent{
 
-  id: string = ''
+  idM: string = ''
 
-  clicks = 1
+  clicksM = 1
 
   scrollAtBottom: boolean = false;
 
@@ -38,67 +38,67 @@ export class MaterialesComponent{
   }
 
   eliminarMaterial(){
-    this.MaterialService.materialEliminar(this.id)
+    this.MaterialService.materialEliminar(this.idM)
     .subscribe(
       res => {
         const newMateriales = this.CompartirService.materiales.filter(
-          (material: any) => material._id !== this.id
+          (material: any) => material._id !== this.idM
         )
         this.CompartirService.materiales = newMateriales
       },
       err => console.log(err)
     )
-    this.clicks = 0
+    this.clicksM = 0
   }
 
-  ApareceModalModificar(){
+  ApareceModalModificarM(){
     this.CompartirInventarioModificarService.modificar = true
     this.CompartirService.modalMaterial = true
-    console.log(this.id)
+    console.log(this.idM)
 
     const modMateriales = this.CompartirService.materiales.filter(
-      (material: any) => material._id == this.id
+      (material: any) => material._id == this.idM
     )
     this.CompartirInventarioModificarService.materialModificado = { ...modMateriales[0]}
     this.CompartirInventarioModificarService.copy_materialModificado = { ...modMateriales[0]}
-    this.CompartirInventarioModificarService.id = this.id
-    this.clicks = 0
+    this.CompartirInventarioModificarService.id = this.idM
+    this.clicksM = 0
   }
 
   // Mouse
 
-  @ViewChild('menu') menu! :ElementRef
+  @ViewChild('menuM') menuM! :ElementRef
 
-  contextmenu(event: MouseEvent){
+  contextmenuM(event: MouseEvent){
     event.preventDefault();
 
     const target = event.target as HTMLElement;
-    this.id = target.id.split('-')[0]
+    this.idM = target.id.split('-')[0]
 
-    if(this.id.length == 24){
-    this.menu.nativeElement.style.display = "block";
-    this.menu.nativeElement.style.top = event.pageY + "px"
-    this.menu.nativeElement.style.left = event.pageX + "px"
+    if(this.idM.length == 24){
+    this.menuM.nativeElement.style.display = "block";
+    this.menuM.nativeElement.style.top = event.pageY + "px"
+    this.menuM.nativeElement.style.left = event.pageX + "px"
 
-    this.clicks = 0
+    this.clicksM = 0
     } else {
-      this.menu.nativeElement.style.display = "none";
+      this.menuM.nativeElement.style.display = "none";
     }
   }
 
-  click(event: MouseEvent){
-    this.clicks ++
-    if(this.clicks == 3){
-      this.contextmenu(event)
-      this.clicks = 0
+  clickM(event: MouseEvent){
+    this.clicksM ++
+    if(this.clicksM == 3){
+      this.contextmenuM(event)
+      this.clicksM = 0
     } else {
-      this.menu.nativeElement.style.display = "none";
+      this.menuM.nativeElement.style.display = "none";
     }
   }
 
-  disappearContext(){
-    this.menu.nativeElement.style.display = "none";
-    this.clicks = 0
+  disappearContextM(){
+    this.menuM.nativeElement.style.display = "none";
+    this.clicksM = 0
   }
   
 

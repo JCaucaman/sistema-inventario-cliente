@@ -1,14 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
-/*
+
 html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
 
     font-family: sans-serif;
   }
-
+/*
   @media screen and (max-width: 767px) {
     body {
       height: auto;
@@ -21,4 +19,4 @@ html, body {
       min-height: calc(100vh - 100px);
     }
   }
-  */
+*/
