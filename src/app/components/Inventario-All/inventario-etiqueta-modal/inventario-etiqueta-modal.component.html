@@ -3,7 +3,7 @@
         <span class="exit-button">
             <input type="button" class="exit" value="x" (click)="desaparecer()">
         </span>
-        <form id="from-crear-etiqueta"  *ngIf="!CompartirInventarioModificarService.modificar">
+        <form id="from-crear-etiqueta"  *ngIf="!EtiquetaModificarService.modificar">
             <span>
                 <h3>
                     Crear Etiqueta
@@ -21,7 +21,7 @@
                 <button type="submit" (click)="crearEtiqueta()">Crear Etiqueta</button>
             </span>
         </form>
-        <form id="from-modificar-etiqueta" *ngIf="CompartirInventarioModificarService.modificar">
+        <form id="from-modificar-etiqueta" *ngIf="EtiquetaModificarService.modificar">
             <span>
                 <h3>
                     Modificar Etiqueta
@@ -29,10 +29,10 @@
             </span>
             <span class="input-data">
                 <label for="nombreE">Nombre</label>
-                <input type="text" name="nombreE" id="nombreE">
+                <input type="text" name="nombreE" id="nombreE" [(ngModel)]="EtiquetaModificarService.etiquetaModificado.nombre">
 
                 <label for="colorE">Color</label>
-                <input type="color" name="colorE" id="colorE">
+                <input type="color" name="colorE" id="colorE" [(ngModel)]="EtiquetaModificarService.etiquetaModificado.color">
 
             </span>
             <span class="input-button">

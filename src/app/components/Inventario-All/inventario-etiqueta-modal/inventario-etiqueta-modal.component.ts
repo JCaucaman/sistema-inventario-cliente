@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { EtiquetaService } from "../../../services/inventario/etiqueta.service";
-import { CompartirInventarioModificarService } from "src/app/services/inventario/compartir-inventario-modificar.service";
 import { EtiquetaCompartirService } from "../../../services/inventario/etiqueta-compartir.service";
-
+import { EtiquetaModificarService } from "../../../services/inventario/etiqueta-modificar.service";
 @Component({
   selector: 'app-inventario-etiqueta-modal',
   templateUrl: './inventario-etiqueta-modal.component.html',
@@ -17,8 +16,8 @@ export class InventarioEtiquetaModalComponent {
 
   constructor(
     private EtiquetaService : EtiquetaService,
-    public CompartirInventarioModificarService : CompartirInventarioModificarService,
-    public EtiquetaCompartirService : EtiquetaCompartirService
+    public EtiquetaCompartirService : EtiquetaCompartirService,
+    public EtiquetaModificarService : EtiquetaModificarService
     ) { }
 
   desaparecer(){
@@ -47,6 +46,19 @@ export class InventarioEtiquetaModalComponent {
 
   modificarEtiqueta(){
     console.log(this.etiqueta)
+    this.EtiquetaService.etiquetaModificar(
+      this.EtiquetaModificarService.id,
+      this.EtiquetaModificarService.etiquetaModificado
+    ).subscribe(
+      res => {
+        console.log(res)
+        this.desaparecer()
+        this.EtiquetaModificarService.modificarEtiquetaLocal()
+      },
+      err => {
+        console.log(err)
+      }
+    )
   }
 
 }

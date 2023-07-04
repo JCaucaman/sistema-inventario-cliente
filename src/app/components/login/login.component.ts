@@ -5,7 +5,7 @@ import { Router } from "@angular/router";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css','../../../../node_modules/ngx-toastr/toastr.css']
 })
 export class LoginComponent {
 
@@ -26,7 +26,9 @@ export class LoginComponent {
         localStorage.setItem('token', res.token)
         this.router.navigate(['/menu'])
       },
-      err => console.log(err)
+      err => {
+        console.log(err)
+      }
     )
   }
 }

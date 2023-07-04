@@ -55,22 +55,21 @@ li {
 
 .contexMenu {
     position: fixed;
-    
-    width: 150px;
 
-    z-index: 10000;
+    z-index: 10000000000000;
 
     display: none;
     padding: 3px;
     margin: 5px;
 
-    background-color: #ee4777;
+    background-color: #ff90af;
     border-radius: 5px;
 }
 
 .contexMenu ul {
     padding: 0;
     margin: 0;
+    overflow-y:hidden;
 
 }
 
@@ -85,7 +84,7 @@ li {
     transition: 0.2s all;
 
 
-    background-color: #ee4777;
+    background-color: #ff90af;
     border-radius: 5px;
     color: #d6d4d5;
 }
