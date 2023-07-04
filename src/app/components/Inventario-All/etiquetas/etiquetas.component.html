@@ -1,10 +1,16 @@
 <div id="etiquetas">
     <h4>Etiquetas</h4>
     <ul>
-        <li class="etiqueta" id="{{etiqueta._id}}"  *ngFor="let etiqueta of EtiquetaCompartirService.etiquetas">
+        <li class="etiqueta" id="{{etiqueta._id}}" style="color: {{etiqueta.color}}" *ngFor="let etiqueta of EtiquetaCompartirService.etiquetas">
             <span>{{etiqueta.nombre}}</span>
         </li>
     </ul>
+    <div class="contexMenu" (click)="disappearContext()" #menu>
+        <ul>
+            <li (click)="ApareceModalModificarE()">Modificar</li>
+            <li (click)="eliminarEtiqueta()">Eliminar</li>
+        </ul>
+    </div>
 </div>
 
 <!-- style="color: {{etiqueta.color}}" -->

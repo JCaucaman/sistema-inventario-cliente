@@ -1,7 +1,6 @@
 #inventario-menu {
     display: flex;
     flex-flow: column;
-    flex-wrap: wrap;
 
     position: fixed;
     bottom: 0;

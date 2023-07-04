@@ -20,5 +20,77 @@ h4 {
 }
 
 ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+
+    width: 100%;
+    height: 50%;
+
     list-style:none;
+    padding: 0;
+    margin: 0;
+
+    overflow-y: scroll;
+
+}
+
+li {
+    padding: 5px;
+    margin: 3px;
+
+
+    width: 100%;
+
+    cursor: pointer;
+
+    border: 1px solid #ff7da2;
+    background-color: rgb(245, 245, 245);
+    border-radius: 40px;
+
+}
+
+/*  contex menu  */
+
+.contexMenu {
+    position: fixed;
+    
+    width: 150px;
+
+    z-index: 10000;
+
+    display: none;
+    padding: 3px;
+    margin: 5px;
+
+    background-color: #ee4777;
+    border-radius: 5px;
+}
+
+.contexMenu ul {
+    padding: 0;
+    margin: 0;
+
+}
+
+.contexMenu ul li {
+    list-style-type: none;
+
+    padding: 10px 14px;
+    margin: 1px;
+
+    width: auto;
+    cursor: pointer;
+    transition: 0.2s all;
+
+
+    background-color: #ee4777;
+    border-radius: 5px;
+    color: #d6d4d5;
+}
+
+.contexMenu ul li:hover{
+    background-color: #f0668d;
+    color: #fff;
 }

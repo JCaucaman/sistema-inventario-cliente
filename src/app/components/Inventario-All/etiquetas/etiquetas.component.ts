@@ -30,4 +30,16 @@ export class EtiquetasComponent {
       )
     }
 
+    disappearContext(){
+
+    }
+    
+    ApareceModalModificarE(){
+
+    }
+    
+    eliminarEtiqueta(){
+
+    }
+
 }

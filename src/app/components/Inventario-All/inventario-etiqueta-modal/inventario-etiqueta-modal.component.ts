@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CompartirService } from "src/app/services/inventario/compartir.service";
+import { EtiquetaService } from "../../../services/inventario/etiqueta.service";
 import { CompartirInventarioModificarService } from "src/app/services/inventario/compartir-inventario-modificar.service";
 import { EtiquetaCompartirService } from "../../../services/inventario/etiqueta-compartir.service";
 
@@ -16,7 +16,7 @@ export class InventarioEtiquetaModalComponent {
   }
 
   constructor(
-    public CompartirService: CompartirService,
+    private EtiquetaService : EtiquetaService,
     public CompartirInventarioModificarService : CompartirInventarioModificarService,
     public EtiquetaCompartirService : EtiquetaCompartirService
     ) { }
@@ -27,10 +27,25 @@ export class InventarioEtiquetaModalComponent {
   
   crearEtiqueta(){
     console.log(this.etiqueta)
+    this.EtiquetaService.etiquetaCrear(this.etiqueta)
+    .subscribe(
+      res => {
+        this.EtiquetaCompartirService.agregarEtiquetas(res)
+        this.desaparecer()
+        this.etiqueta = {
+          nombre : '',
+          color : '#000000'
+        }
+      },
+      err => {
+        console.log(err)
+      }
+
+    )
   }
 
 
-  modificarMaterial(){
+  modificarEtiqueta(){
     console.log(this.etiqueta)
   }
 
