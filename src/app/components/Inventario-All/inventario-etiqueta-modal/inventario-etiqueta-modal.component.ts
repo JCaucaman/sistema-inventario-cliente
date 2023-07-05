@@ -10,8 +10,8 @@ import { EtiquetaModificarService } from "../../../services/inventario/etiqueta-
 export class InventarioEtiquetaModalComponent {
 
   etiqueta = {
-    nombre : '',
-    color : '#000000'
+    name : '',
+    color_etiqueta : '#000000'
   }
 
   constructor(
@@ -32,8 +32,8 @@ export class InventarioEtiquetaModalComponent {
         this.EtiquetaCompartirService.agregarEtiquetas(res)
         this.desaparecer()
         this.etiqueta = {
-          nombre : '',
-          color : '#000000'
+          name : '',
+          color_etiqueta : '#000000'
         }
       },
       err => {

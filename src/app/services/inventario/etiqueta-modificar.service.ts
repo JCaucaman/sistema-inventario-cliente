@@ -20,8 +20,8 @@ export class EtiquetaModificarService {
 
   etiquetaModificado = {
     _id: this.id,
-    nombre: '',
-    color : ''
+    name: '',
+    color_etiqueta : ''
   }
 
   modificarEtiquetaLocal(){
