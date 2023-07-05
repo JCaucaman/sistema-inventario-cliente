@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CompartirService } from "src/app/services/inventario/compartir.service";
 import { EtiquetaCompartirService } from "src/app/services/inventario/etiqueta-compartir.service";
 import { CompartirInventarioModificarService } from "src/app/services/inventario/compartir-inventario-modificar.service";
+import { EtiquetaModificarService } from 'src/app/services/inventario/etiqueta-modificar.service'
 
 @Component({
   selector: 'app-inventario-menu',
@@ -13,7 +14,8 @@ export class InventarioMenuComponent {
   constructor(
     private etiquetaVisibilidad: EtiquetaCompartirService,
     private materialesVisibilidad: CompartirService,
-    public CompartirInventarioModificarService : CompartirInventarioModificarService
+    public CompartirInventarioModificarService : CompartirInventarioModificarService,
+    public EtiquetaModificarService : EtiquetaModificarService
   ){ }
 
 
@@ -24,6 +26,6 @@ export class InventarioMenuComponent {
 
   aparecerEtiqueta(){
     this.etiquetaVisibilidad.modalEtiqueta = true
-    this.CompartirInventarioModificarService.modificar = false
+    this.EtiquetaModificarService.modificar = false
   }
 }

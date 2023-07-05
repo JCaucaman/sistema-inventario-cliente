@@ -51,9 +51,12 @@ export class InventarioEtiquetaModalComponent {
       this.EtiquetaModificarService.etiquetaModificado
     ).subscribe(
       res => {
-        console.log(res)
         this.desaparecer()
         this.EtiquetaModificarService.modificarEtiquetaLocal()
+        this.etiqueta = {
+          name : '',
+          color_etiqueta : '#000000'
+        }
       },
       err => {
         console.log(err)

@@ -2,6 +2,7 @@ import { Component, ViewChild, ElementRef} from '@angular/core';
 import { MaterialService } from "../../../services/inventario/material.service";
 import { CompartirService } from "../../../services/inventario/compartir.service";
 import { CompartirInventarioModificarService } from "src/app/services/inventario/compartir-inventario-modificar.service";
+import { ModalAgregarEtiquetaService } from "src/app/services/inventario/modal-agregar-etiqueta.service";
 
 @Component({
   selector: 'app-materiales',
@@ -19,7 +20,9 @@ export class MaterialesComponent{
   constructor(
     private MaterialService : MaterialService,
     public CompartirService : CompartirService,
-    public CompartirInventarioModificarService : CompartirInventarioModificarService
+    public CompartirInventarioModificarService : CompartirInventarioModificarService,
+
+    public ModalAgregarEtiquetaService : ModalAgregarEtiquetaService
     ) { }
 
   ngOnInit(){ 
@@ -64,6 +67,15 @@ export class MaterialesComponent{
     this.CompartirInventarioModificarService.id = this.idM
     this.clicksM = 0
   }
+
+  agregarEtiqueta(){
+//    this.MaterialService.materialAgregarEtiqueta
+  }
+
+  openAgregarEtiqueta(){
+    this.ModalAgregarEtiquetaService.modal = true
+  }
+
 
   // Mouse
 

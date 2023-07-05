@@ -2,6 +2,8 @@ import { Component, ViewChild, ElementRef} from '@angular/core';
 import { EtiquetaService } from "../../../services/inventario/etiqueta.service";
 import { EtiquetaCompartirService } from "../../../services/inventario/etiqueta-compartir.service";
 import { EtiquetaModificarService } from "../../../services/inventario/etiqueta-modificar.service";
+import { ModalAgregarEtiquetaService } from '../../../services/inventario/modal-agregar-etiqueta.service'
+
 @Component({
   selector: 'app-etiquetas',
   templateUrl: './etiquetas.component.html',
@@ -16,7 +18,9 @@ export class EtiquetasComponent {
   constructor(
     private EtiquetaService : EtiquetaService,
     public EtiquetaCompartirService : EtiquetaCompartirService,
-    public EtiquetaModificarService: EtiquetaModificarService
+    public EtiquetaModificarService: EtiquetaModificarService,
+
+    public ModalAgregarEtiquetaService : ModalAgregarEtiquetaService
     ) { }
 
 

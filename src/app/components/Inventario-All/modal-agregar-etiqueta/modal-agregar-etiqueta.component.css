@@ -1,0 +1,131 @@
+.modal-agregar {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;
+    
+    width: 100%;
+    height: 100%;
+    
+    max-width: 100%;
+    
+    visibility: visible;
+    
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.form-agragar {
+    display: flex;
+    flex-flow: column;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 400px;
+    max-height: 450px;
+
+    padding-top: 10px;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+    border: 2px solid pink;
+    border-radius: 10px;
+
+}
+
+#buscar-etiqueta{
+    display: flex;
+    flex-flow: column;
+}
+
+#buscador-etiquetas{
+    border-radius: 15px;
+    padding: 3px;
+    border: 1px solid ;
+}
+
+#agregar-etiqquetas {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    margin: 20px 0;
+
+    max-height: 300px;
+
+}
+
+.etiqueta {
+    display: flex;
+    width: 80%;
+    height: auto;
+
+    align-items: center;
+
+    margin: 5px;
+    padding: 5px;
+
+    border: 1px solid;
+    border-radius: 50px;
+}
+
+.check {
+    font-size: large;
+    margin-left: auto;
+    align-content: center;
+}
+
+input[type="checkbox"] {
+    width: 20PX;
+    height: 20px;
+    appearance: none;
+    border: 2px solid #888;
+    border-radius: 10px;
+    transition: 0.1s all;
+}
+
+input[type="checkbox"]:checked {
+    background-color: rgb(236 72 153);
+}
+
+button{
+    padding: 10px;
+
+    width: auto;
+
+    cursor: pointer;
+
+    border-radius: 20px;
+    background-color: rgb(255, 189, 200);
+    border: 1px solid pink;
+    transition: 0.2s all;
+}
+
+input[type="search"]{
+    font-size: large;
+
+    margin-right: auto;
+}
+
+#contenedor-etiquetas {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+
+    align-items: center;
+    overflow-y: scroll;
+}
+
+#titulo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: larger;
+}

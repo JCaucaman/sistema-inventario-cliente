@@ -1,0 +1,22 @@
+<div class="modal-agregar" *ngIf="ModalAgregarEtiquetaService.modal">
+    <div class="form-agragar">
+        <form id="buscar-etiqueta">
+            <label for="buscador-etiquetas" id="titulo">Agregar etiquetas</label>
+            <span>
+                <input type="search" name="buscador-etiquetas" id="buscador-etiquetas">
+                <button type="submit">Buscar</button>
+            </span>
+        </form>
+        <form id="agregar-etiqquetas">
+            <div id="contenedor-etiquetas">
+                <div class="etiqueta" *ngFor="let etiqueta of EtiquetaCompartirService.etiquetas">
+                    <label for="{{etiqueta._id}}" style="color: {{etiqueta.color_etiqueta}};">{{etiqueta.name}}</label>
+                    <span class="check">
+                        <input type="checkbox" name="{{etiqueta._id}}" id="{{etiqueta._id}}">
+                    </span>
+                </div>
+            </div>
+            <button type="submit" (click)="exit()">Guardar</button>
+        </form>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 <div id="etiquetas" (click)="click($event)">
     <h4>Etiquetas</h4>
     <ul>
-        <li class="etiqueta" id="{{etiqueta._id}}-id" style="color: {{etiqueta.color_etiqueta}}"  (contextmenu)="contextmenu($event)" *ngFor="let etiqueta of EtiquetaCompartirService.etiquetas">
+        <li class="etiqueta" id="{{etiqueta._id}}-id" style="color: {{etiqueta.color_etiqueta}}" (contextmenu)="contextmenu($event)" *ngFor="let etiqueta of EtiquetaCompartirService.etiquetas">
             <span id="{{etiqueta._id}}-nombre" >{{etiqueta.name}}</span>
         </li>
     </ul>
