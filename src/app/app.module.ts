@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { PaguinaNoEncontradaComponent } from './components/paguina-no-encontrada/paguina-no-encontrada.component';
+import { clientesComponent } from './components/clientes/clientes.component';
 
 import { AutenticacionGuard } from "./guard/autentificacion.guard";
 import { InventarioComponent } from './components/inventario/inventario.component';
@@ -23,7 +24,8 @@ import { InterceptorTokenService } from "./services/interceptor-token.service";
     InicioComponent,
     MenuComponent,
     PaguinaNoEncontradaComponent,
-    InventarioComponent
+    InventarioComponent,
+    clientesComponent,
   ],
   imports: [
     BrowserModule,
