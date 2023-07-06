@@ -13,6 +13,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { PaguinaNoEncontradaComponent } from './components/paguina-no-encontrada/paguina-no-encontrada.component';
 
+
 import { AutenticacionGuard } from "./guard/autentificacion.guard";
 import { InventarioComponent } from './components/Inventario-All/inventario/inventario.component';
 import { InterceptorTokenService } from "./services/seguridad/interceptor-token.service";
@@ -38,6 +39,7 @@ import { ModalAgregarEtiquetaComponent } from './components/Inventario-All/modal
     MenuComponent,
     PaguinaNoEncontradaComponent,
     InventarioComponent,
+
     ClientesComponent,
     CajasComponent,
     ListaDeComprasComponent,
@@ -49,6 +51,9 @@ import { ModalAgregarEtiquetaComponent } from './components/Inventario-All/modal
     ClientesPedidosComponent,
     EtiquetasComponent,
     ModalAgregarEtiquetaComponent
+
+    
+
   ],
   imports: [
     BrowserModule,
