@@ -10,8 +10,8 @@
             <span id="{{material._id}}-cantidad-Zero" class="material_cantidad_Zero" *ngIf="material.cantidad == 0;" title="Cantidad">{{material.cantidad}} und.</span>
         </div>
         <div class="etiquetas">
-            <div title="etiqueta" class="material_etiquetas" *ngFor="let etiqueta of material.etiquetaM">
-                {{etiqueta}}
+            <div title="etiqueta" id="{{etiqueta._id}}" style="color: {{etiqueta.color_etiqueta}};" class="material_etiquetas" *ngFor="let etiqueta of material.Etiquetas">
+                {{etiqueta.name}}
             </div>
             </div>
         <div class="contenedor-reserva">

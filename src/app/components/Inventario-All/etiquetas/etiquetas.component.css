@@ -2,7 +2,7 @@
 #etiquetas{
 
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     flex-wrap: wrap;
 
     width: 100%;

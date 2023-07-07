@@ -93,7 +93,7 @@ input[type="checkbox"]:checked {
 }
 
 button{
-    padding: 10px;
+    padding: 7px;
 
     width: auto;
 
@@ -103,6 +103,11 @@ button{
     background-color: rgb(255, 189, 200);
     border: 1px solid pink;
     transition: 0.2s all;
+}
+
+button:hover {
+    background-color: rgb(255, 216, 223);
+    border: 1px solid rgb(244, 215, 220)
 }
 
 input[type="search"]{
@@ -128,4 +133,13 @@ input[type="search"]{
     justify-content: center;
     margin-bottom: 20px;
     font-size: larger;
+}
+
+
+#boton-guardar {
+    margin-top: 20px;
+}
+
+#boton-buscar {
+    margin-left: 25px;
 }
