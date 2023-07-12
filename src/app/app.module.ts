@@ -28,6 +28,7 @@ import { ClientesMenuComponent } from './components/clientes-menu/clientes-menu.
 import { ClientesPedidosComponent } from './components/clientes-pedidos/clientes-pedidos.component';
 import { EtiquetasComponent } from './components/Inventario-All/etiquetas/etiquetas.component';
 import { ModalAgregarEtiquetaComponent } from './components/Inventario-All/modal-agregar-etiqueta/modal-agregar-etiqueta.component';
+import { CondicionesDeUsosComponent } from './components/condiciones-de-usos/condiciones-de-usos.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { ModalAgregarEtiquetaComponent } from './components/Inventario-All/modal
     ClientesMenuComponent,
     ClientesPedidosComponent,
     EtiquetasComponent,
-    ModalAgregarEtiquetaComponent
+    ModalAgregarEtiquetaComponent,
+    CondicionesDeUsosComponent
 
     
 
