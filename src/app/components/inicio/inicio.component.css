@@ -96,13 +96,11 @@ html, body {
     height: 50px;
     display: flex;
     margin-top: auto;
-    visibility: hidden;
-    opacity: 0;
   }
   
   .footer-content {
-    background-color: bisque;
     flex-grow: 1;
+    margin-left: 20PX;
   }
   .button-menu {
     background-color: #f3c6ef;

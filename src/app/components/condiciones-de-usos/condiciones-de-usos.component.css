@@ -1,0 +1,29 @@
+*{
+    background-color: #474546;
+}
+
+#contenedor-terminos {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5%;
+
+    position: absolute;
+
+    overflow-y: scroll;
+
+}
+
+#contenido-terminos {
+    width: 80%;
+    bottom: 0;
+    padding: 20px;
+
+    & p , h3, h2 {
+        width: 100%;
+        color: #fff;
+    }
+}

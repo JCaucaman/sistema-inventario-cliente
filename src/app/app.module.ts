@@ -53,9 +53,6 @@ import { CondicionesDeUsosComponent } from './components/condiciones-de-usos/con
     EtiquetasComponent,
     ModalAgregarEtiquetaComponent,
     CondicionesDeUsosComponent
-
-    
-
   ],
   imports: [
     BrowserModule,

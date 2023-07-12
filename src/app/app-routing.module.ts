@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { MenuComponent } from './components/menu/menu.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { PaguinaNoEncontradaComponent } from './components/paguina-no-encontrada/paguina-no-encontrada.component';
-
-
 import { AutenticacionGuard } from "./guard/autentificacion.guard";
 import { InventarioComponent } from './components/Inventario-All/inventario/inventario.component';
 import { CajasComponent } from './components/cajas/cajas.component';
 import { ListaDeComprasComponent } from './components/lista-de-compras/lista-de-compras.component';
 import { ClientesComponent } from './components/clientes/clientes.component';
+import { CondicionesDeUsosComponent } from './components/condiciones-de-usos/condiciones-de-usos.component'
 
 const routes: Routes = [
   {
@@ -42,10 +42,13 @@ const routes: Routes = [
     canActivate : [AutenticacionGuard]
   },
   {
+    path : 'condiciones-de-uso', 
+    component : CondicionesDeUsosComponent
+  },
+  {
     path : '**', // error 404
     component : PaguinaNoEncontradaComponent
-  },
-  
+  }
 ];
 
 @NgModule({
