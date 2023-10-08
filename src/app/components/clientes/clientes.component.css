@@ -1,25 +1,24 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
+#body-clientes {
+
+}
   
-  .body-clientes {
-    height: 100%;
+#body-clientes-content {
+    background-color:#FFDBDB;
     display: flex;
-    flex-direction: column;
-  }
-  
-  .body-clientes-content {
-    flex-grow: 1;
-    
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .app-header,
-  .footer-clientes {
-    background-color: transparent;
-  }
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 73px;
+    padding: 0px 40px;
+    overflow-y: scroll;
+}
+
+.cliente {
+    background-color:brown;
+    height: 250px;
+    width: 270px;
+    margin: 20px;
+}
+
   

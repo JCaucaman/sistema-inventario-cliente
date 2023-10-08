@@ -50,44 +50,6 @@ html, body {
     position: relative;
   }
   
-  .logo {
-    width: 100px;
-    height: auto;
-    margin: 0 auto 20px;
-    display: block;
-  }
-  
-  .login-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  .login-form input[type="text"],
-  .login-form input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-  }
-  
-  .login-form button {
-    background-color: bisque;
-    color: black;
-    padding: 10px 16px;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    width: 28%;
-    margin-bottom: 10px;
-    margin-left: 145px;
-    margin-right: 145px;
-  }
-  .login-form button:hover {
-    background-color: rgba(255, 228, 196, 0.777);
-  }
   
   .footer {
     position: fixed;
@@ -107,22 +69,20 @@ html, body {
     width: 110px;
     border-radius: 15px;
   }
-  
+
+  .body-content {
+    min-height: calc(100vh - 100px);
+  }
+
+/*
+
   @media screen and (min-width: 768px) {
-    .body-content {
-      min-height: calc(100vh - 100px);
-    }
   
     .login-form {
       width: 50%;
       max-width: 400px;
     }
-    
-    .login-form button {
-      width: 28%;
-      margin-left: 145px;
-      margin-right: 145px;
-    }
+
   }
   
   @media screen and (max-width: 767px) {
@@ -142,11 +102,6 @@ html, body {
       transform: translate(-50%, -50%);
     }
   
-    .login-form button {
-      width: 100%;
-      margin-left: 0;
-      margin-right: 0;
-    }
   }
   @media screen and (min-width: 375px) and (max-width: 412px) {
     .login-form {
@@ -154,10 +109,6 @@ html, body {
       max-width: 300px;
     }
   
-    .login-form button {
-      margin-left: auto;
-      margin-right: auto;
-    }
   }
   @media screen and (min-width: 820px) and (max-width: 912px) {
     .login-form {
@@ -165,10 +116,6 @@ html, body {
       max-width: 450px; 
       padding: 30px; 
     }
-  
-    .login-form button {
-      margin-left: auto;
-      margin-right: auto;
-    }
   }
   
+*/
