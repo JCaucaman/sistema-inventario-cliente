@@ -15,14 +15,17 @@ export class InicioComponent implements OnInit {
     ) { }
 
   ngOnInit(){
-    this.autentificacionServise.autoLogin()
-    .subscribe(
-      res => {
-        if(res){
-          this.router.navigate(['/menu'])
-        } else {}
-      }
-    )
+
+      this.autentificacionServise.autoLogin().subscribe(
+        res => {
+          if(res){
+            console.log(res)
+            this.router.navigate(['/menu'])
+          } else {
+            //pass
+          }
+        }
+      )
   }
 
 }

@@ -25,18 +25,10 @@ export class MaterialesComponent{
     public ModalAgregarEtiquetaService : ModalAgregarEtiquetaService
     ) { }
 
-/**
- * The ngOnInit function is used to call the mostrarMateriales function when the component is
- * initialized.
- */
   ngOnInit(){ 
     this.mostrarMateriales()
   }
 
-/**
- * The function "mostrarMateriales" retrieves materials from a service and stores them in a shared
- * service, then logs the response.
- */
   mostrarMateriales(){
     this.MaterialService.materialMostrar()
     .subscribe(
@@ -48,10 +40,6 @@ export class MaterialesComponent{
     )
   }
 
-/**
- * The function "eliminarMaterial" is used to delete a material from a list and update the list
- * accordingly.
- */
   eliminarMaterial(){
     this.MaterialService.materialEliminar(this.idM)
     .subscribe(
@@ -66,10 +54,6 @@ export class MaterialesComponent{
     this.clicksM = 0
   }
 
-/**
- * The function "ApareceModalModificarM" sets certain variables and filters an array based on a given
- * id.
- */
   ApareceModalModificarM(){
     this.CompartirInventarioModificarService.modificar = true
     this.CompartirService.modalMaterial = true
@@ -91,9 +75,6 @@ export class MaterialesComponent{
   openAgregarEtiqueta(){
     this.ModalAgregarEtiquetaService.modal = true
   }
-
-
-  // Mouse
 
   @ViewChild('menuM') menuM! :ElementRef
 

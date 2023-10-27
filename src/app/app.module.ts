@@ -7,28 +7,28 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
-import { HeaderComponent } from './components/header/header.component';
-import { InicioComponent } from './components/inicio/inicio.component';
-import { MenuComponent } from './components/menu/menu.component';
-import { PaguinaNoEncontradaComponent } from './components/paguina-no-encontrada/paguina-no-encontrada.component';
+import { LoginComponent } from './components/Otros/login/login.component';
+import { HeaderComponent } from './components/Otros/header/header.component';
+import { InicioComponent } from './components/Otros/inicio/inicio.component';
+import { MenuComponent } from './components/Otros/menu/menu.component';
+import { PaguinaNoEncontradaComponent } from './components/Otros/paguina-no-encontrada/paguina-no-encontrada.component';
 
 
 import { AutenticacionGuard } from "./guard/autentificacion.guard";
 import { InventarioComponent } from './components/Inventario-All/inventario/inventario.component';
 import { InterceptorTokenService } from "./services/seguridad/interceptor-token.service";
-import { ClientesComponent } from './components/clientes/clientes.component';
-import { CajasComponent } from './components/cajas/cajas.component';
-import { ListaDeComprasComponent } from './components/lista-de-compras/lista-de-compras.component';
+import { ClientesComponent } from './components/Cliente/clientes/clientes.component';
+import { CajasComponent } from './components/Caja/cajas/cajas.component';
+import { ListaDeComprasComponent } from './components/Compras/lista-de-compras/lista-de-compras.component';
 import { MaterialesComponent } from './components/Inventario-All/materiales/materiales.component';
 import { InventarioMenuComponent } from './components/Inventario-All/inventario-menu/inventario-menu.component';
 import { InventarioMaterialModalComponent } from './components/Inventario-All/inventario-material-modal/inventario-material-modal.component';
 import { InventarioEtiquetaModalComponent } from './components/Inventario-All/inventario-etiqueta-modal/inventario-etiqueta-modal.component';
-import { ClientesMenuComponent } from './components/clientes-menu/clientes-menu.component';
-import { ClientesPedidosComponent } from './components/clientes-pedidos/clientes-pedidos.component';
+import { ClientesMenuComponent } from './components/Cliente/clientes-menu/clientes-menu.component';
+import { ClientesPedidosComponent } from './components/Cliente/clientes-pedidos/clientes-pedidos.component';
 import { EtiquetasComponent } from './components/Inventario-All/etiquetas/etiquetas.component';
 import { ModalAgregarEtiquetaComponent } from './components/Inventario-All/modal-agregar-etiqueta/modal-agregar-etiqueta.component';
-import { CondicionesDeUsosComponent } from './components/condiciones-de-usos/condiciones-de-usos.component';
+import { CondicionesDeUsosComponent } from './components/Otros/condiciones-de-usos/condiciones-de-usos.component';
 
 
 @NgModule({
