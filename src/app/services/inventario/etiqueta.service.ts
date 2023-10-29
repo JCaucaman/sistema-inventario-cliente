@@ -13,7 +13,7 @@ export class EtiquetaService {
     private http: HttpClient
     ) { }
 
-    etiquetaCrear(etiqueta: any) {
+    etiquetaCrear(etiqueta: object) {
       return this.http.post<any>(this.URL + '/api/etiqueta', etiqueta);
     }
 
@@ -21,7 +21,7 @@ export class EtiquetaService {
       return this.http.delete<any>(this.URL + '/api/etiqueta/' + id);
     }
 
-    etiquetaModificar(id: string, etiqueta: any){
+    etiquetaModificar(id: string, etiqueta: object){
       return this.http.put<any>(this.URL + '/api/etiqueta/' + id, etiqueta);
     }
 

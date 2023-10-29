@@ -12,7 +12,7 @@
                 <div class="etiqueta" *ngFor="let etiqueta of EtiquetaCompartirService.etiquetas">
                     <label for="{{etiqueta._id}}" style="color: {{etiqueta.color_etiqueta}};">{{etiqueta.name}}</label>
                     <span class="check">
-                        <input type="checkbox" name="{{etiqueta._id}}" id="{{etiqueta._id}}">
+                        <input type="checkbox" name="{{etiqueta._id}}" [(ngModel)]="etiqueta.checked">
                     </span>
                 </div>
             </div>

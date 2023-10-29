@@ -59,7 +59,7 @@ label {
 .input-button {
     display: flex;
     flex-wrap: wrap;
-    justify-content: end;
+    justify-content: flex-end;
     
     width: 70%;
 

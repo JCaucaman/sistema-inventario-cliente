@@ -28,8 +28,8 @@ export class MaterialService {
       return this.http.get<any>(this.URL + '/api/materiales/');
     }
 
-    materialAgregarEtiqueta(id : string, etiqueta: object){
-      return this.http.post<any>(this.URL + '/Etiqueta/' + id, etiqueta)
+    materialAgregarEtiqueta(id : string, etiquetas : any){
+      return this.http.put<any>(this.URL + '/api/materiales/Etiqueta/' + id, etiquetas)
     }
 
   }

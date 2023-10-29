@@ -68,12 +68,26 @@ export class MaterialesComponent{
     this.clicksM = 0
   }
 
-  agregarEtiqueta(){
-//    this.MaterialService.materialAgregarEtiqueta
-  }
-
   openAgregarEtiqueta(){
+
+    // hacer visible el modal agragar etiquetas
     this.ModalAgregarEtiquetaService.modal = true
+
+    // filtrar las material para encontrar el material con el id nesesario
+    const modMaterial = this.CompartirService.materiales.filter(
+      (material: any) => material._id == this.idM
+    )
+
+    // guardar id material
+    this.ModalAgregarEtiquetaService.id_select_material = this.idM;
+
+    // copias del material(objeto) para modificar y para guardar respectivamente
+    this.ModalAgregarEtiquetaService.etiquetas_select_material = [ ...modMaterial[0].Etiquetas]
+
+    // checked las etiquetas del material
+    this.ModalAgregarEtiquetaService.ckeckEtiquetasPreExistentes()
+
+    this.ModalAgregarEtiquetaService.etiquetas_select_material_copy = [ ...modMaterial[0].Etiquetas]
   }
 
   @ViewChild('menuM') menuM! :ElementRef
@@ -85,9 +99,9 @@ export class MaterialesComponent{
     this.idM = target.id.split('-')[0]
 
     if(this.idM.length == 24){
-    this.menuM.nativeElement.style.display = "block";
-    this.menuM.nativeElement.style.top = event.pageY + "px"
-    this.menuM.nativeElement.style.left = event.pageX + "px"
+      this.menuM.nativeElement.style.display = "block";
+      this.menuM.nativeElement.style.top = event.pageY + "px"
+      this.menuM.nativeElement.style.left = event.pageX + "px"
 
     this.clicksM = 0
     } else {
