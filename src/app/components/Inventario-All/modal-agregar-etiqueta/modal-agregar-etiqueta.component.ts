@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef} from '@angular/core';
 import { EtiquetaCompartirService } from "../../../services/inventario/etiqueta-compartir.service";
 import { ModalAgregarEtiquetaService } from '../../../services/inventario/modal-agregar-etiqueta.service'
 import { MaterialService } from "../../../services/inventario/material.service";
@@ -11,6 +11,8 @@ import { CompartirService } from "../../../services/inventario/compartir.service
 })
 export class ModalAgregarEtiquetaComponent {
 
+  idEtiqueta: string = ''
+
   constructor(
     public EtiquetaCompartirService : EtiquetaCompartirService,
     public ModalAgregarEtiquetaService : ModalAgregarEtiquetaService,
@@ -19,11 +21,6 @@ export class ModalAgregarEtiquetaComponent {
   ){}
 
   agregarEtiqueta(){
-
-    // TODO: determinar cuales etiquetas estan checked ✅
-    // TODO: compararlas con las que tenemos guadadas
-    // TODO: determinar cuales no estan en la interseccion
-    // TODO: post de las etiquetas junto a el id del material (sin campo Checked)
 
     let listaEtiquetas_checkednew : any[] = []
     let listaEtiquetas_onlynames = []
@@ -44,8 +41,6 @@ export class ModalAgregarEtiquetaComponent {
       listaEtiquetas_onlynames.push(listaEtiquetas_checkednew[index].name)
     }
 
-    console.log(listaEtiquetas_onlynames)
-
     this.MaterialService.materialAgregarEtiqueta(
       this.ModalAgregarEtiquetaService.id_select_material, 
       listaEtiquetas_onlynames
@@ -63,12 +58,8 @@ export class ModalAgregarEtiquetaComponent {
 
         newmateriales.unshift(newEtiquetas[0])
 
-        console.log(newmateriales)
-
         this.CompartirService.materiales = newmateriales
 
-        console.log(newEtiquetas)
-        console.log(newmateriales)
       },
       err => console.log(err)
     )
@@ -78,5 +69,23 @@ export class ModalAgregarEtiquetaComponent {
     this.agregarEtiqueta()
     this.ModalAgregarEtiquetaService.modal = false
   }
-  
+
+  clickChecked(event: MouseEvent){
+
+    //TO DO: Ckecked en toda la etiqueta no solo en check
+
+   // event.preventDefault();
+
+    //const target = event.target as HTMLElement;
+
+    //console.log(target.id)
+
+
+    //this.EtiquetaCompartirService.etiquetas[target.id].checked == true
+    
+     
+    
+  }
+
+
 }

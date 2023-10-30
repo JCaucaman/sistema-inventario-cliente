@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from "@angular/router";
 import { AutentificacionService } from 'src/app/services/seguridad/autentificacion.service';
-import { HeaderMenuService } from "src/app/services/header-menu.service";
+import { HeaderMenuService } from "src/app/services/otros/header-menu.service";
 
 @Component({
   selector: 'app-header',

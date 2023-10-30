@@ -9,9 +9,9 @@
         </form>
         <form id="agregar-etiqquetas">
             <div id="contenedor-etiquetas">
-                <div class="etiqueta" *ngFor="let etiqueta of EtiquetaCompartirService.etiquetas">
-                    <label for="{{etiqueta._id}}" style="color: {{etiqueta.color_etiqueta}};">{{etiqueta.name}}</label>
-                    <span class="check">
+                <div class="etiqueta" id="{{etiqueta._id}}" (click)="clickChecked($event)" *ngFor="let etiqueta of EtiquetaCompartirService.etiquetas">
+                    <label for="{{etiqueta._id}}" id="{{etiqueta._id}}-label" style="color: {{etiqueta.color_etiqueta}};">{{etiqueta.name}}</label>
+                    <span class="check" id="{{etiqueta._id}}-span">
                         <input type="checkbox" name="{{etiqueta._id}}" [(ngModel)]="etiqueta.checked">
                     </span>
                 </div>

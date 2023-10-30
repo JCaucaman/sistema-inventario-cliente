@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import { HeaderMenuService } from "src/app/services/header-menu.service";
+import { HeaderMenuService } from "src/app/services/otros/header-menu.service";
 
 @Component({
   selector: 'app-lista-de-compras',
