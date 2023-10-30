@@ -10,7 +10,7 @@ import { CajasComponent } from './components/Caja/cajas/cajas.component';
 import { ListaDeComprasComponent } from './components/Compras/lista-de-compras/lista-de-compras.component';
 import { ClientesComponent } from './components/Cliente/clientes/clientes.component';
 import { CondicionesDeUsosComponent } from './components/Otros/condiciones-de-usos/condiciones-de-usos.component'
-import { VentasAdminComponent } from "./components/Ventas/ventas-admin/ventas-admin.component";
+import { VentasAdminComponent } from "./components/Ventas/administrador/ventas-admin/ventas-admin.component";
 
 const routes: Routes = [
   {
