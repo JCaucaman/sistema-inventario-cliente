@@ -15,6 +15,7 @@ export class HeaderMenuService {
   clientes :boolean = false
   cajas :boolean = false
   menu :boolean = false
+  productos : boolean = false
 
   constructor() { }
 }

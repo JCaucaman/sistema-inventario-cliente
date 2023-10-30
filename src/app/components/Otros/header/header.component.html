@@ -27,6 +27,9 @@
               <li *ngIf="!HeaderMenuService.cajas">
                 <button class="button-menu" routerLink="/cajas">Cajas</button>
               </li>
+              <li *ngIf="!HeaderMenuService.productos">
+                <button class="button-menu" routerLink="/productos">Productos</button>
+              </li>
             </ul>
           </div>
         <button class="logout-button" (click)="logout()" >Cerrar sesión</button>

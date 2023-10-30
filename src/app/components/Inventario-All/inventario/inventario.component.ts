@@ -22,5 +22,6 @@ export class InventarioComponent{
     this.HeaderMenuService.menu = false
     this.HeaderMenuService.headerText = false
     this.HeaderMenuService.searchInventario = true
+    this.HeaderMenuService.productos = false
   }
 }

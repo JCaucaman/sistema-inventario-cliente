@@ -10,6 +10,7 @@ import { CajasComponent } from './components/Caja/cajas/cajas.component';
 import { ListaDeComprasComponent } from './components/Compras/lista-de-compras/lista-de-compras.component';
 import { ClientesComponent } from './components/Cliente/clientes/clientes.component';
 import { CondicionesDeUsosComponent } from './components/Otros/condiciones-de-usos/condiciones-de-usos.component'
+import { VentasAdminComponent } from "./components/Ventas/ventas-admin/ventas-admin.component";
 
 const routes: Routes = [
   {
@@ -42,13 +43,19 @@ const routes: Routes = [
     canActivate : [AutenticacionGuard]
   },
   {
+    path : 'productos',
+    component : VentasAdminComponent,
+    canActivate : [AutenticacionGuard]
+  },
+  {
     path : 'condiciones-de-uso', 
     component : CondicionesDeUsosComponent
   },
   {
     path : '**', // error 404
     component : PaguinaNoEncontradaComponent
-  }
+  },
+
 ];
 
 @NgModule({

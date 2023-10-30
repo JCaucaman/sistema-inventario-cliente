@@ -29,6 +29,7 @@ import { ClientesPedidosComponent } from './components/Cliente/clientes-pedidos/
 import { EtiquetasComponent } from './components/Inventario-All/etiquetas/etiquetas.component';
 import { ModalAgregarEtiquetaComponent } from './components/Inventario-All/modal-agregar-etiqueta/modal-agregar-etiqueta.component';
 import { CondicionesDeUsosComponent } from './components/Otros/condiciones-de-usos/condiciones-de-usos.component';
+import { VentasAdminComponent } from './components/Ventas/ventas-admin/ventas-admin.component';
 
 
 @NgModule({
@@ -40,7 +41,6 @@ import { CondicionesDeUsosComponent } from './components/Otros/condiciones-de-us
     MenuComponent,
     PaguinaNoEncontradaComponent,
     InventarioComponent,
-
     ClientesComponent,
     CajasComponent,
     ListaDeComprasComponent,
@@ -52,7 +52,8 @@ import { CondicionesDeUsosComponent } from './components/Otros/condiciones-de-us
     ClientesPedidosComponent,
     EtiquetasComponent,
     ModalAgregarEtiquetaComponent,
-    CondicionesDeUsosComponent
+    CondicionesDeUsosComponent,
+    VentasAdminComponent
   ],
   imports: [
     BrowserModule,

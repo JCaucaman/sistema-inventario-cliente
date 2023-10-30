@@ -24,5 +24,6 @@ export class ClientesComponent {
     this.HeaderMenuService.menu = false
     this.HeaderMenuService.headerText = true
     this.HeaderMenuService.searchInventario = false
+    this.HeaderMenuService.productos = false
   }
 }
