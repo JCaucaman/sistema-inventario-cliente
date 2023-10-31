@@ -33,4 +33,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 - Fondo 1 : #FFDBDB
 - Fondo 2 : #FFF9FA
--
+- ragdsg

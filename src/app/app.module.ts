@@ -33,6 +33,8 @@ import { VentasAdminComponent } from './components/Ventas/administrador/ventas-a
 import { VentasMenuComponent } from './components/Ventas/administrador/ventas-menu/ventas-menu.component';
 import { ProductosComponent } from './components/Ventas/administrador/productos/productos.component';
 import { VentasProductosModalComponent } from './components/Ventas/administrador/ventas-productos-modal/ventas-productos-modal.component';
+import { ClientesModalComponent } from './components/Cliente/clientes-modal/clientes-modal.component';
+import { PedidosModalComponent } from './components/Cliente/pedidos-modal/pedidos-modal.component';
 
 
 @NgModule({
@@ -59,7 +61,9 @@ import { VentasProductosModalComponent } from './components/Ventas/administrador
     VentasAdminComponent,
     VentasMenuComponent,
     ProductosComponent,
-    VentasProductosModalComponent
+    VentasProductosModalComponent,
+    ClientesModalComponent,
+    PedidosModalComponent
   ],
   imports: [
     BrowserModule,

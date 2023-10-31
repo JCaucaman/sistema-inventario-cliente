@@ -13,7 +13,7 @@ export class AutentificacionService {
     ) { }
 
   login(usuario: object) {
-    return this.http.post<any>(this.URL + '/', usuario); 
+    return this.http.post<any>(this.URL + '/usuario', usuario); 
   }
 
   autoLogin(){
