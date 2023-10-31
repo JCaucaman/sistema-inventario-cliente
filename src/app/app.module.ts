@@ -35,6 +35,7 @@ import { ProductosComponent } from './components/Ventas/administrador/productos/
 import { VentasProductosModalComponent } from './components/Ventas/administrador/ventas-productos-modal/ventas-productos-modal.component';
 import { ClientesModalComponent } from './components/Cliente/clientes-modal/clientes-modal.component';
 import { PedidosModalComponent } from './components/Cliente/pedidos-modal/pedidos-modal.component';
+import { ClientesContentComponent } from './components/Cliente/clientes-content/clientes-content.component';
 
 
 @NgModule({
@@ -63,7 +64,8 @@ import { PedidosModalComponent } from './components/Cliente/pedidos-modal/pedido
     ProductosComponent,
     VentasProductosModalComponent,
     ClientesModalComponent,
-    PedidosModalComponent
+    PedidosModalComponent,
+    ClientesContentComponent
   ],
   imports: [
     BrowserModule,

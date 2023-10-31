@@ -1,24 +1,2 @@
-#body-clientes {
-
-}
-  
-#body-clientes-content {
-    background-color:#FFDBDB;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin-top: 73px;
-    padding: 0px 40px;
-    overflow-y: scroll;
-}
-
-.cliente {
-    background-color:brown;
-    height: 250px;
-    width: 270px;
-    margin: 20px;
-}
 
   
