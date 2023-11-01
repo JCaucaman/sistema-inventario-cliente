@@ -37,7 +37,6 @@ import { ClientesModalComponent } from './components/Cliente/clientes-modal/clie
 import { PedidosModalComponent } from './components/Cliente/pedidos-modal/pedidos-modal.component';
 import { ClientesContentComponent } from './components/Cliente/clientes-content/clientes-content.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,7 +64,7 @@ import { ClientesContentComponent } from './components/Cliente/clientes-content/
     VentasProductosModalComponent,
     ClientesModalComponent,
     PedidosModalComponent,
-    ClientesContentComponent
+    ClientesContentComponent,
   ],
   imports: [
     BrowserModule,

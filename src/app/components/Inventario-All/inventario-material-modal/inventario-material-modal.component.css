@@ -34,8 +34,15 @@
     border: 2px solid pink;
     border-radius: 10px;
 
+    overflow-y: scroll;
+
 }
 
+#form-material::-webkit-scrollbar {
+    width: 8px;     
+    height: 8px;    
+    display: none;  
+}
 
 #from-crear-material, #from-modificar-material {
     display: flex;

@@ -1,2 +1,128 @@
+* {
+    color: #474546
+}
 
-  
+.contenedor-clientes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    position: fixed;
+    right: 0;
+    top: 10%;
+
+    padding-top: 0.25%;
+    padding-bottom: 0.75%;
+
+    z-index: -10;
+
+    width: 93%;
+    height: 89%;
+
+    overflow-y: scroll;
+
+    background-color:#FFDBDB
+}
+
+.contenedor-clientes::-webkit-scrollbar {
+    width: 8px;     
+    height: 8px;    
+    display: none;  
+}
+
+.clientes {
+    display: flex;
+    flex-direction: row;
+
+    margin: 10px;
+    padding: 15px;
+    
+    width: 100%;
+    height: 50%;
+
+    min-width: 200px;
+    max-width: 600px;
+
+    max-height: 100%;
+    min-height: 5%;
+
+    cursor: default;
+
+    background-color: #ffc4d5;
+    border: 1px solid rgb(247, 168, 168);
+    border-radius: 7px;
+    transition: 0.3s all;
+}
+
+.contexMenu {
+    position: fixed;
+    
+    width: 150px;
+
+    z-index: 100;
+
+    display: none;
+    padding: 3px;
+    margin: 5px;
+
+    background-color: #ee4777;
+    border-radius: 5px;
+}
+
+.contexMenu ul {
+    padding: 0;
+    margin: 0;
+
+}
+
+.contexMenu ul li {
+    list-style-type: none;
+
+    padding: 10px 14px;
+    margin: 1px;
+
+    width: auto;
+    cursor: pointer;
+    transition: 0.2s all;
+
+
+    background-color: #ee4777;
+    border-radius: 5px;
+    color: #d6d4d5;
+}
+
+.contexMenu ul li:hover{
+    background-color: #f0668d;
+    color: #fff;
+}
+
+.cliente-divisor{
+    width: 50%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.cliente-divisor::-webkit-scrollbar {
+    width: 8px;     
+    height: 8px;    
+    display: none;  
+}
+
+table{
+    background-color: #ffffff64;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.cliente-etiqueta{
+    padding: 5px;
+    margin: 3px;
+
+    height:fit-content;
+
+    border-radius: 15px;
+    background-color: white;
+}

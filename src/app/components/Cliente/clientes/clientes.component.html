@@ -1,2 +1,167 @@
+<div class="contenedor-clientes">
+    <div id="{{cliente._id}}-id" class="clientes" *ngFor="let cliente of ClientesCompartirService.clientes">
+        <div class="cliente-divisor">
+            <div>
+                <span>{{cliente.nombre_cliente}}</span>
+                <span class="cliente-etiqueta">
+                    {{cliente.etiqueta_cliente}}
+                </span>    
+            </div>
+                <span>{{cliente.telefono}}</span>
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            <span>
+                                C. Cuello
+                            </span>
+                            {{cliente.medidas.c_cuello}}
+                        </td>
+                        <td>
+                            <span>
+                                C. Busto
+                            </span>
+                            <div>
+                                {{cliente.medidas.c_busto}}
+                            </div>
+                        </td>
+                        <td>
+                            <span>
+                                C. Cintura
+                            </span>
+                            {{cliente.medidas.c_cintura}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>
+                                C. Cadera
+                            </span>
+                            {{cliente.medidas.c_cadera}}
+                        </td>
+                        <td>
+                            <span>
+                                T. Delantero
+                            </span>
+                            {{cliente.medidas.t_delantero}}
+                        </td>
+                        <td>
+                            <span>
+                                T. Espalda
+                            </span>
+                            {{cliente.medidas.t_espalda}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>
+                                A. Espalda
+                            </span>
+                            {{cliente.medidas.a_espalda}}
+                        </td>
+                        <td>
+                            <span>
+                                A. Busto
+                            </span>
+                            {{cliente.medidas.a_busto}}
+                        </td>
+                        <td>
+                            <span>
+                                Sep. Busto
+                            </span>
+                            {{cliente.medidas.sep_busto}}
+                    </td>
+                    <tr>
+                        <td>
+                            <span>
+                                A. Cadera
+                            </span>
+                            {{cliente.medidas.a_cadera}}
+                        </td>
+                        <td>
+                            <span>
+                                Alto de tiro
+                            </span>
+                            {{cliente.medidas.alto_de_tiro}}
+                        </td>
+                        <td>
+                            <span>
+                                Alto de sisa
+                            </span>
+                            {{cliente.medidas.alto_de_sisa}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>
+                                largo manga
+                            </span>
+                            {{cliente.medidas.largo_manga}}
+                        </td>
+                        <td>
+                            <span>
+                                largo pierna
+                            </span>
+                            {{cliente.medidas.largo_pierna}}
+                        </td>
+                        <td>
+                            <span>
+                               Puño
+                            </span>
+                            {{cliente.medidas.puno}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>
+                                Muñeca
+                            </span>
+                            {{cliente.medidas.muneca}}
+                        </td>
+                        <td>
+                            <span>
+                                Rodilla
+                            </span>
+                            {{cliente.medidas.rodilla}}
+                        </td>
+                        <td>
+                            <span>
+                               Tobillo
+                            </span>
+                            {{cliente.medidas.tobillo}}
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <span>
+                        Ancho de brazo
+                    </span>
+                    {{cliente.medidas.ancho_brazo}}
+                </table>
+                <span>
+                    {{cliente.medidas.toma_medidas}}
+                </span>
+            </div>
+        </div>
+        <div class="cliente-divisor">
 
+            <div class="pedidos"  *ngFor="let pedido of cliente.pedidos">
+                {{pedido.numero}}
+                {{pedido.fecha_pedido}}
+                {{pedido.productos}}
+                {{pedido.total_pedido}}
+            </div>
 
+        </div>
+
+    </div>
+
+    <div class="contexMenu">
+        <ul>
+            <li>Crear Pedido</li>
+            <li>Modificar</li>
+            <li>Editar Etiqueta</li>
+            <li>Eliminar</li>
+        </ul>
+    </div>
+</div>

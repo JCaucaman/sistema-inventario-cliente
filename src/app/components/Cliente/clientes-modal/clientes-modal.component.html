@@ -1,1 +1,182 @@
-<p>clientes-modal works!</p>
+<div id="modal-cliente" *ngIf="true">
+    <div id="form-cliente">
+        <span class="exit-button">
+            <input type="button" class="exit" value="x" >
+        </span>
+        <span>Ficha Cliente</span>
+        <form id="form-crear-cliente" >
+           <div class="div-input">
+                <div class="input-data-name-fono">
+                    <div class="content-data">
+                        <span>Nombre:</span>
+                        <input class="data-input" type="text"/>
+                    </div>
+                </div>
+
+                <div class="input-data-name-fono">
+                    <div class="content-data">
+                        <span>Telefono:</span>
+                        <input class="data-input" type="text" min="8" placeholder="+56 X XXXX XXXX"/>
+                    </div>
+                </div>
+           </div>
+
+            <span>Medidas [cm]</span>
+            <div class="div-inputs">
+                <div class="input-data">
+                    <div class="content-data">
+                        <label>C. Cuello:</label>
+                        <input class="data" type="number" min="0" placeholder="0.0" step="0.1" />
+                    </div>
+                </div>
+    
+                <div class="input-data">
+                    <div class="content-data">
+                        <label>C. Busto:</label>
+                        <input class="data" type="number" min="0" placeholder="0.0" step="0.1" />
+                    </div>
+                </div>
+            </div>
+            <div class="div-inputs">
+                <div class="input-data">
+                    <div class="content-data">
+                        <label>C. Cintura:</label>
+                        <input class="data" type="number" min="0" placeholder="0.0" step="0.1" />
+                    </div>
+                </div>
+    
+                <div class="input-data">
+                    <div class="content-data">
+                        <label>C. Cadera:</label>
+                        <input class="data" type="number" min="0" placeholder="0.0" step="0.1" />
+                    </div>
+                </div>
+            </div>
+            <div class="div-inputs">
+                <div class="input-data">
+                    <div class="content-data">
+                        <label>T. Delantero:</label>
+                        <input class="data" type="number" min="0" placeholder="0.0" step="0.1" />
+                    </div>
+                </div>
+    
+                <div class="input-data">
+                    <div class="content-data">
+                        <label>T. Espalda:</label>
+                        <input class="data" type="number" min="0" placeholder="0.0" step="0.1" />
+                    </div>
+                </div>
+            </div>
+            <div class="div-inputs">
+                <div class="input-data">
+                    <div class="content-data">
+                        <label>A. Espalda:</label>
+                        <input class="data" type="number" min="0" placeholder="0.0" step="0.1" />
+                    </div>
+                </div>
+    
+                <div class="input-data">
+                    <div class="content-data">
+                        <label>A. Busto:</label>
+                        <input class="data" type="number" min="0" placeholder="0.0" step="0.1" />
+                    </div>
+                </div>
+            </div>
+            <div class="div-inputs">
+                <div class="input-data">
+                    <div class="content-data">
+                        <label>Sep. Busto:</label>
+                        <input class="data" type="number" min="0" placeholder="0.0" step="0.1" />
+                    </div>
+                </div>
+    
+                <div class="input-data">
+                    <div class="content-data">
+                        <label>A. Cadera:</label>
+                        <input class="data" type="number" min="0" placeholder="0.0" step="0.1" />
+                    </div>
+                </div>
+            </div>
+            <div class="div-inputs">
+                <div class="input-data">
+                    <div class="content-data">
+                        <label>Alto de tiro:</label>
+                        <input class="data" type="number" min="0" placeholder="0.0" step="0.1" />
+                    </div>
+                </div>
+    
+                <div class="input-data">
+                    <div class="content-data">
+                        <label>Alto de sisa</label>
+                        <input class="data" type="number" min="0" placeholder="0.0" step="0.1" />
+                    </div>
+                </div>
+            </div>
+            <div class="div-inputs">
+                <div class="input-data">
+                    <div class="content-data">
+                        <label>Largo manga:</label>
+                        <input class="data" type="number" min="0" placeholder="0.0" step="0.1" />
+                    </div>
+                </div>
+    
+                <div class="input-data">
+                    <div class="content-data">
+                        <label>Largo pierna</label>
+                        <input class="data" type="number" min="0" placeholder="0.0" step="0.1" />
+                    </div>
+                </div>
+            </div>
+            <div class="div-inputs">
+                <div class="input-data">
+                    <div class="content-data">
+                        <label>Puño:</label>
+                        <input class="data" type="number" min="0" placeholder="0.0" step="0.1" />
+                    </div>
+                </div>
+    
+                <div class="input-data">
+                    <div class="content-data">
+                        <label>Muñeca</label>
+                        <input class="data" type="number" min="0" placeholder="0.0" step="0.1" />
+                    </div>
+                </div>
+            </div>
+            <div class="div-inputs">
+                <div class="input-data">
+                    <div class="content-data">
+                        <label>Rodilla:</label>
+                        <input class="data" type="number" min="0" placeholder="0.0" step="0.1" />
+                    </div>
+                </div>
+    
+                <div class="input-data">
+                    <div class="content-data">
+                        <label>Tobillo:</label>
+                        <input class="data" type="number" min="0" placeholder="0.0" step="0.1" />
+                    </div>
+                </div>
+            </div>
+            <div class="div-inputs">
+                <div class="input-data">
+                    <div class="content-data">
+                        <label>Ancho brazo:</label>
+                        <input class="data" type="number" min="0" placeholder="0.0" step="0.1" />
+                    </div>
+                </div>
+            </div>
+            <span class="input-button">
+                <button type="submit">Crear Cliente</button>
+            </span>
+
+        </form>
+        
+
+        <form id="from-modificar-cliente" *ngIf="false">
+            <span class="input-button">
+                <button type="submit">Modificar Cliente</button>
+            </span>
+        </form>
+    </div>
+</div>
+
