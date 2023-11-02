@@ -11,6 +11,7 @@ import { ListaDeComprasComponent } from './components/Compras/lista-de-compras/l
 import { ClientesContentComponent } from './components/Cliente/clientes-content/clientes-content.component';
 import { CondicionesDeUsosComponent } from './components/Otros/condiciones-de-usos/condiciones-de-usos.component'
 import { VentasAdminComponent } from "./components/Ventas/administrador/ventas-admin/ventas-admin.component";
+import { LoginComponent } from './components/login/login.component'
 
 const routes: Routes = [
   {
@@ -52,10 +53,14 @@ const routes: Routes = [
     component : CondicionesDeUsosComponent
   },
   {
+    path : 'venta-usuario',
+    component : LoginComponent
+  }
+,
+  {
     path : '**', // error 404
     component : PaguinaNoEncontradaComponent
   },
-
 ];
 
 @NgModule({
