@@ -1,0 +1,15 @@
+<p>Login</p>
+<div>
+  <h2>Iniciar Sesión</h2>
+  <form (ngSubmit)="login()">
+    <label for="username">Nombre de usuario:</label>
+    <input [value]="username" (input)="username = event.target.value" name="username" type="text">
+    <label for="password">Contraseña:</label>
+    <input [value]="password" (input)="password = event.target.value" name="password" type="password">
+    <button type="submit">Iniciar Sesión</button>
+  </form>
+
+  <div *ngIf="error" class="error-message">//en esta parte chicos se mostraria el mensaje de error al iniciar sesion si es que existiese ese error
+    {{ error }}
+  </div>
+</div>
