@@ -7,5 +7,7 @@ export class ClientesCompartirService {
 
   clientes : any = []
 
+  modalClientes : boolean = false
+
   constructor() { }
 }
