@@ -9,7 +9,16 @@
     <button type="submit">Iniciar Sesión</button>
   </form>
 
-  <div *ngIf="error" class="error-message">//en esta parte chicos se mostraria el mensaje de error al iniciar sesion si es que existiese ese error
+  <div *ngIf="error" class="error-message"> <!--en esta parte chicos se mostraria el mensaje de error al iniciar sesion si es que existiese ese error-->
     {{ error }}
   </div>
+<div>
+<h2>Registrarse</h2>
+  <form (ngSubmit)="register()">
+    <label for="newUsername">Nuevo Nombre de usuario:</label>
+    <input [value]="newUsername" name="newUsername" type="text">
+    <label for="newPassword">Nueva Contraseña:</label>
+    <input [value]="newPassword" name="newPassword" type="password">
+    <button type="submit">Registrarse</button>
+  </form>
 </div>
