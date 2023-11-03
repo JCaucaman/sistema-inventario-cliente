@@ -12,6 +12,7 @@ export class ClientesModalComponent {
   Cliente = {
     nombre_cliente : '',
     telefono : '',
+    etiqueta_cliente : '',
     medidas: {
       c_cuello: 0.0,
       c_busto: 0.0,
@@ -42,18 +43,21 @@ export class ClientesModalComponent {
 
   desaparecer(){
     this.ClientesCompartirService.modalClientes = false
+    this.ClientesCompartirService.modalClientesModificar = false
   }
 
   crearCliente(){
+    console.log(this.Cliente)
     this.ClientesService.clienteCrear(this.Cliente)
     .subscribe(
       res => {
-        // accion en el frontend
+        this.ClientesCompartirService.agregarCliente(res)
         this.desaparecer()
         
         this.Cliente = {
           nombre_cliente : '',
           telefono : '',
+          etiqueta_cliente : '',
           medidas: {
             c_cuello: 0.0,
             c_busto: 0.0,
@@ -76,6 +80,21 @@ export class ClientesModalComponent {
             ancho_brazo: 0.0 
           }
         }
+      },
+      err => {
+        console.log(err)
+      }
+    )
+  }
+
+  modificarCliente(){
+    this.ClientesService.clienteModificar(
+      this.ClientesCompartirService.id,
+      this.ClientesCompartirService.clienteModifido
+    ).subscribe(
+      res => {
+        this.desaparecer()
+        this.ClientesCompartirService.modificarClientelLocal()
       },
       err => {
         console.log(err)

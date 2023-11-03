@@ -1,146 +1,187 @@
-<div class="contenedor-clientes">
-    <div id="{{cliente._id}}-id" class="clientes" *ngFor="let cliente of ClientesCompartirService.clientes">
+<div class="contenedor-clientes" (click)="clickC($event)">
+    <div id="{{cliente._id}}-id"  (contextmenu)="contextmenuC($event)" class="clientes" *ngFor="let cliente of ClientesCompartirService.clientes">
         <div class="cliente-divisor">
-            <div>
-                <span>{{cliente.nombre_cliente}}</span>
-                <span class="cliente-etiqueta">
+            <div id="{{cliente._id}}-nombretelefono">
+                <span id="{{cliente._id}}-nombre" >
+                    {{cliente.nombre_cliente}}
+                </span>
+                <span id="{{cliente._id}}-etiqueta" class="cliente-etiqueta">
                     {{cliente.etiqueta_cliente}}
                 </span>    
             </div>
-                <span>{{cliente.telefono}}</span>
-            <div>
-                <table>
+                <span id="{{cliente._id}}-telefono">{{cliente.telefono}}</span>
+            <div id="{{cliente._id}}-div_tabla">
+                <table id="{{cliente._id}}-table-top" style="padding-bottom: 0; margin-bottom: 0;">
                     <tr>
-                        <td>
-                            <span>
+                        <td class="top-left-border" id="{{cliente._id}}-c_cuello-td" >
+                            <span id="{{cliente._id}}-c_cuello-span">
                                 C. Cuello
                             </span>
-                            {{cliente.medidas.c_cuello}}
+                            <div id="{{cliente._id}}-c_cuello">
+                                {{cliente.medidas.c_cuello}}
+                            </div>
+
                         </td>
-                        <td>
-                            <span>
+                        <td class="top-mid-border" id="{{cliente._id}}-c_busto-td">
+                            <span  id="{{cliente._id}}-c_busto-span">
                                 C. Busto
                             </span>
-                            <div>
+                            <div id="{{cliente._id}}-c_busto">
                                 {{cliente.medidas.c_busto}}
                             </div>
                         </td>
-                        <td>
-                            <span>
+                        <td class="top-right-border"  id="{{cliente._id}}-c_cintura-td">
+                            <span  id="{{cliente._id}}-c_cintura-span">
                                 C. Cintura
                             </span>
-                            {{cliente.medidas.c_cintura}}
+                            <div id="{{cliente._id}}-c_cintura">
+                                {{cliente.medidas.c_cintura}}
+                            </div>
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <span>
+                        <td class="top-left-border" id="{{cliente._id}}-c_cadera-td">
+                            <span id="{{cliente._id}}-c_cadera-span">
                                 C. Cadera
                             </span>
-                            {{cliente.medidas.c_cadera}}
+                            <div id="{{cliente._id}}-c_cadera">
+                                {{cliente.medidas.c_cadera}}
+                            </div>
                         </td>
-                        <td>
-                            <span>
+                        <td class="top-mid-border" id="{{cliente._id}}-t_delantero-td">
+                            <span id="{{cliente._id}}-t_delantero-span">
                                 T. Delantero
                             </span>
-                            {{cliente.medidas.t_delantero}}
+                            <div id="{{cliente._id}}-t_delantero">
+                                {{cliente.medidas.t_delantero}}
+                            </div>
                         </td>
-                        <td>
-                            <span>
+                        <td class="top-right-border" id="{{cliente._id}}-t_espalda-td">
+                            <span id="{{cliente._id}}-t_espalda-span">
                                 T. Espalda
                             </span>
-                            {{cliente.medidas.t_espalda}}
+                            <div id="{{cliente._id}}-t_espalda">
+                                {{cliente.medidas.t_espalda}}
+                            </div>
+
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <span>
+                        <td class="top-left-border" id="{{cliente._id}}-a_espalda-td">
+                            <span id="{{cliente._id}}-a_espalda-span">
                                 A. Espalda
                             </span>
-                            {{cliente.medidas.a_espalda}}
+                            <div id="{{cliente._id}}-a_espalda">
+                                {{cliente.medidas.a_espalda}}
+                            </div>
                         </td>
-                        <td>
-                            <span>
+                        <td class="top-mid-border" id="{{cliente._id}}-a_busto-td">
+                            <span id="{{cliente._id}}-a_busto-span">
                                 A. Busto
                             </span>
-                            {{cliente.medidas.a_busto}}
+                            <div id="{{cliente._id}}-a_busto">
+                                {{cliente.medidas.a_busto}}
+                            </div>
                         </td>
-                        <td>
-                            <span>
+                        <td class="top-right-border" id="{{cliente._id}}-sep_busto-td">
+                            <span id="{{cliente._id}}-sep_busto-span">
                                 Sep. Busto
                             </span>
-                            {{cliente.medidas.sep_busto}}
+                            <div id="{{cliente._id}}-sep_busto">
+                                {{cliente.medidas.sep_busto}}
+                            </div>
                     </td>
                     <tr>
-                        <td>
-                            <span>
+                        <td class="top-left-border" id="{{cliente._id}}-a_cadera-td">
+                            <span id="{{cliente._id}}-a_cadera-span">
                                 A. Cadera
                             </span>
-                            {{cliente.medidas.a_cadera}}
+                            <div id="{{cliente._id}}-a_cadera">
+                                {{cliente.medidas.a_cadera}}
+                            </div>
                         </td>
-                        <td>
-                            <span>
+                        <td class="top-mid-border" id="{{cliente._id}}-alto_de_tiro-td">
+                            <span id="{{cliente._id}}-alto_de_tiro-span">
                                 Alto de tiro
                             </span>
-                            {{cliente.medidas.alto_de_tiro}}
+                            <div id="{{cliente._id}}-alto_de_tiro">
+                                {{cliente.medidas.alto_de_tiro}}
+                            </div>
                         </td>
-                        <td>
-                            <span>
+                        <td class="top-right-border" id="{{cliente._id}}-alto_de_sisa-td">
+                            <span id="{{cliente._id}}-alto_de_sisa-span">
                                 Alto de sisa
                             </span>
-                            {{cliente.medidas.alto_de_sisa}}
+                            <div id="{{cliente._id}}-alto_de_sisa">
+                                {{cliente.medidas.alto_de_sisa}}
+                            </div>
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <span>
+                        <td class="top-left-border" id="{{cliente._id}}-largo_manga-td">
+                            <span id="{{cliente._id}}-largo_manga-span">
                                 largo manga
                             </span>
-                            {{cliente.medidas.largo_manga}}
+                            <div id="{{cliente._id}}-largo_manga">
+                                {{cliente.medidas.largo_manga}}
+                            </div>
                         </td>
-                        <td>
-                            <span>
+                        <td class="top-mid-border" id="{{cliente._id}}-largo_pierna-td">
+                            <span id="{{cliente._id}}-largo_pierna-span">
                                 largo pierna
                             </span>
-                            {{cliente.medidas.largo_pierna}}
+                            <div id="{{cliente._id}}-largo_pierna">
+                                {{cliente.medidas.largo_pierna}}
+                            </div>
                         </td>
-                        <td>
-                            <span>
+                        <td class="top-right-border" id="{{cliente._id}}-puno-td">
+                            <span id="{{cliente._id}}-puno-span">
                                Puño
                             </span>
-                            {{cliente.medidas.puno}}
+                            <div id="{{cliente._id}}-puno">
+                                {{cliente.medidas.puno}}
+                            </div>
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <span>
+                        <td class="top-left-border" id="{{cliente._id}}-muneca-td">
+                            <span id="{{cliente._id}}-muneca-span">
                                 Muñeca
                             </span>
-                            {{cliente.medidas.muneca}}
+                            <div id="{{cliente._id}}-muneca">
+                                {{cliente.medidas.muneca}}
+                            </div>
                         </td>
-                        <td>
-                            <span>
+                        <td class="top-mid-border" id="{{cliente._id}}-rodilla-td">
+                            <span id="{{cliente._id}}-rodilla-span">
                                 Rodilla
                             </span>
-                            {{cliente.medidas.rodilla}}
+                            <div id="{{cliente._id}}-rodilla">
+                                {{cliente.medidas.rodilla}}
+                            </div>
                         </td>
-                        <td>
-                            <span>
+                        <td class="top-right-border" id="{{cliente._id}}-tobillo-td">
+                            <span id="{{cliente._id}}-tobillo-span">
                                Tobillo
                             </span>
-                            {{cliente.medidas.tobillo}}
+                            <div id="{{cliente._id}}-tobillo">
+                                {{cliente.medidas.tobillo}}
+                            </div>
                         </td>
                     </tr>
                 </table>
-                <table>
-                    <span>
-                        Ancho de brazo
-                    </span>
-                    {{cliente.medidas.ancho_brazo}}
+                <table style="padding-top: 0; margin-top: 0;" id="{{cliente._id}}-table-botton">
+                    <tr>
+                        <td style="width: 100%;" id="{{cliente._id}}-ancho_brazo-td">
+                            <span id="{{cliente._id}}-ancho_brazo-span">
+                                Ancho de brazo
+                            </span>
+                            <div id="{{cliente._id}}-ancho_brazo">
+                                {{cliente.medidas.ancho_brazo}}
+                            </div>
+                        </td>
+                    </tr>
                 </table>
-                <span>
-                    {{cliente.medidas.toma_medidas}}
-                </span>
             </div>
         </div>
         <div class="cliente-divisor">
@@ -156,12 +197,12 @@
 
     </div>
 
-    <div class="contexMenu">
+    <div class="contexMenu" (click)="disappearContextC()" #menuC>
         <ul>
             <li>Crear Pedido</li>
-            <li>Modificar</li>
+            <li (click)="ApareceModalModificarC()">Modificar</li>
             <li>Editar Etiqueta</li>
-            <li>Eliminar</li>
+            <li (click)="eliminarCliente()">Eliminar</li>
         </ul>
     </div>
 </div>

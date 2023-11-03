@@ -4,7 +4,7 @@
             <input type="button" class="exit" value="x" (click)="desaparecer()">
         </span>
         <span>Ficha Cliente</span>
-        <form id="form-crear-cliente" (submit)="crearCliente()">
+        <form id="form-crear-cliente" (submit)="crearCliente()" *ngIf="!ClientesCompartirService.modalClientesModificar">
            <div class="div-input">
                 <div class="input-data-name-fono">
                     <div class="content-data">
@@ -26,14 +26,14 @@
                 <div class="input-data">
                     <div class="content-data">
                         <label>C. Cuello:</label>
-                        <input class="data" type="number" [(ngModel)]="Cliente.medidas.c_cuello" min="0" placeholder="0.0" step="0.1" />
+                        <input class="data" type="number" name="c_cuello" [(ngModel)]="Cliente.medidas.c_cuello" min="0" placeholder="0.0" step="0.1" />
                     </div>
                 </div>
     
                 <div class="input-data">
                     <div class="content-data">
                         <label>C. Busto:</label>
-                        <input class="data" type="number" [(ngModel)]="Cliente.medidas.c_busto" min="0" placeholder="0.0" step="0.1" />
+                        <input class="data" type="number" name="c_busto" [(ngModel)]="Cliente.medidas.c_busto" min="0" placeholder="0.0" step="0.1" />
                     </div>
                 </div>
             </div>
@@ -41,14 +41,14 @@
                 <div class="input-data">
                     <div class="content-data">
                         <label>C. Cintura:</label>
-                        <input class="data" type="number" [(ngModel)]="Cliente.medidas.c_cintura" min="0" placeholder="0.0" step="0.1" />
+                        <input class="data" type="number" name="c_cintura" [(ngModel)]="Cliente.medidas.c_cintura" min="0" placeholder="0.0" step="0.1" />
                     </div>
                 </div>
     
                 <div class="input-data">
                     <div class="content-data">
                         <label>C. Cadera:</label>
-                        <input class="data" type="number" [(ngModel)]="Cliente.medidas.c_cadera" min="0" placeholder="0.0" step="0.1" />
+                        <input class="data" type="number" name="c_cadera" [(ngModel)]="Cliente.medidas.c_cadera" min="0" placeholder="0.0" step="0.1" />
                     </div>
                 </div>
             </div>
@@ -56,14 +56,14 @@
                 <div class="input-data">
                     <div class="content-data">
                         <label>T. Delantero:</label>
-                        <input class="data" type="number" [(ngModel)]="Cliente.medidas.t_delantero" min="0" placeholder="0.0" step="0.1" />
+                        <input class="data" type="number" name="t_delantero" [(ngModel)]="Cliente.medidas.t_delantero" min="0" placeholder="0.0" step="0.1" />
                     </div>
                 </div>
     
                 <div class="input-data">
                     <div class="content-data">
                         <label>T. Espalda:</label>
-                        <input class="data" type="number" [(ngModel)]="Cliente.medidas.t_espalda" min="0" placeholder="0.0" step="0.1" />
+                        <input class="data" type="number" name="t_espalda" [(ngModel)]="Cliente.medidas.t_espalda" min="0" placeholder="0.0" step="0.1" />
                     </div>
                 </div>
             </div>
@@ -71,14 +71,14 @@
                 <div class="input-data">
                     <div class="content-data">
                         <label>A. Espalda:</label>
-                        <input class="data" type="number" [(ngModel)]="Cliente.medidas.a_espalda" min="0" placeholder="0.0" step="0.1" />
+                        <input class="data" type="number" name="a_espalda" [(ngModel)]="Cliente.medidas.a_espalda" min="0" placeholder="0.0" step="0.1" />
                     </div>
                 </div>
     
                 <div class="input-data">
                     <div class="content-data">
                         <label>A. Busto:</label>
-                        <input class="data" type="number" [(ngModel)]="Cliente.medidas.a_busto" min="0" placeholder="0.0" step="0.1" />
+                        <input class="data" type="number" name="a_busto" [(ngModel)]="Cliente.medidas.a_busto" min="0" placeholder="0.0" step="0.1" />
                     </div>
                 </div>
             </div>
@@ -86,14 +86,14 @@
                 <div class="input-data">
                     <div class="content-data">
                         <label>Sep. Busto:</label>
-                        <input class="data" type="number" [(ngModel)]="Cliente.medidas.sep_busto" min="0" placeholder="0.0" step="0.1" />
+                        <input class="data" type="number" name="sep_busto" [(ngModel)]="Cliente.medidas.sep_busto" min="0" placeholder="0.0" step="0.1" />
                     </div>
                 </div>
     
                 <div class="input-data">
                     <div class="content-data">
                         <label>A. Cadera:</label>
-                        <input class="data" type="number" [(ngModel)]="Cliente.medidas.a_cadera" min="0" placeholder="0.0" step="0.1" />
+                        <input class="data" type="number" name="a_cadera" [(ngModel)]="Cliente.medidas.a_cadera" min="0" placeholder="0.0" step="0.1" />
                     </div>
                 </div>
             </div>
@@ -101,14 +101,14 @@
                 <div class="input-data">
                     <div class="content-data">
                         <label>Alto de tiro:</label>
-                        <input class="data" type="number" [(ngModel)]="Cliente.medidas.alto_de_tiro" min="0" placeholder="0.0" step="0.1" />
+                        <input class="data" type="number" name="alto_de_tiro" [(ngModel)]="Cliente.medidas.alto_de_tiro" min="0" placeholder="0.0" step="0.1" />
                     </div>
                 </div>
     
                 <div class="input-data">
                     <div class="content-data">
                         <label>Alto de sisa</label>
-                        <input class="data" type="number" [(ngModel)]="Cliente.medidas.alto_de_sisa" min="0" placeholder="0.0" step="0.1" />
+                        <input class="data" type="number" name="alto_de_sisa" [(ngModel)]="Cliente.medidas.alto_de_sisa" min="0" placeholder="0.0" step="0.1" />
                     </div>
                 </div>
             </div>
@@ -116,14 +116,14 @@
                 <div class="input-data">
                     <div class="content-data">
                         <label>Largo manga:</label>
-                        <input class="data" type="number" [(ngModel)]="Cliente.medidas.largo_manga" min="0" placeholder="0.0" step="0.1" />
+                        <input class="data" type="number" name="largo_manga" [(ngModel)]="Cliente.medidas.largo_manga" min="0" placeholder="0.0" step="0.1" />
                     </div>
                 </div>
     
                 <div class="input-data">
                     <div class="content-data">
                         <label>Largo pierna</label>
-                        <input class="data" type="number" [(ngModel)]="Cliente.medidas.largo_pierna" min="0" placeholder="0.0" step="0.1" />
+                        <input class="data" type="number" name="largo_pierna" [(ngModel)]="Cliente.medidas.largo_pierna" min="0" placeholder="0.0" step="0.1" />
                     </div>
                 </div>
             </div>
@@ -131,14 +131,14 @@
                 <div class="input-data">
                     <div class="content-data">
                         <label>Puño:</label>
-                        <input class="data" type="number" [(ngModel)]="Cliente.medidas.puno" min="0" placeholder="0.0" step="0.1" />
+                        <input class="data" type="number" name="puno" [(ngModel)]="Cliente.medidas.puno" min="0" placeholder="0.0" step="0.1" />
                     </div>
                 </div>
     
                 <div class="input-data">
                     <div class="content-data">
                         <label>Muñeca</label>
-                        <input class="data" type="number" [(ngModel)]="Cliente.medidas.muneca" min="0" placeholder="0.0" step="0.1" />
+                        <input class="data" type="number" name="muneca" [(ngModel)]="Cliente.medidas.muneca" min="0" placeholder="0.0" step="0.1" />
                     </div>
                 </div>
             </div>
@@ -146,14 +146,14 @@
                 <div class="input-data">
                     <div class="content-data">
                         <label>Rodilla:</label>
-                        <input class="data" type="number" [(ngModel)]="Cliente.medidas.rodilla" min="0" placeholder="0.0" step="0.1" />
+                        <input class="data" type="number" name="rodilla" [(ngModel)]="Cliente.medidas.rodilla" min="0" placeholder="0.0" step="0.1" />
                     </div>
                 </div>
     
                 <div class="input-data">
                     <div class="content-data">
                         <label>Tobillo:</label>
-                        <input class="data" type="number" [(ngModel)]="Cliente.medidas.tobillo" min="0" placeholder="0.0" step="0.1" />
+                        <input class="data" type="number" name="tobillo" [(ngModel)]="Cliente.medidas.tobillo" min="0" placeholder="0.0" step="0.1" />
                     </div>
                 </div>
             </div>
@@ -161,7 +161,7 @@
                 <div class="input-data">
                     <div class="content-data">
                         <label>Ancho brazo:</label>
-                        <input class="data" type="number" [(ngModel)]="Cliente.medidas.ancho_brazo" min="0" placeholder="0.0" step="0.1" />
+                        <input class="data" type="number" name="ancho_brazo" [(ngModel)]="Cliente.medidas.ancho_brazo" min="0" placeholder="0.0" step="0.1" />
                     </div>
                 </div>
             </div>
@@ -172,7 +172,168 @@
         </form>
         
 
-        <form id="from-modificar-cliente" *ngIf="false">
+
+        <form id="form-modificar-cliente" (submit)="modificarCliente()" *ngIf="ClientesCompartirService.modalClientesModificar">
+            <div class="div-input">
+                <div class="input-data-name-fono">
+                    <div class="content-data">
+                        <span>Nombre:</span>
+                        <input class="data-input" name="nombre_clienteM" [(ngModel)]="ClientesCompartirService.clienteModifido.nombre_cliente" type="text"/>
+                    </div>
+                </div>
+     
+                     <div class="input-data-name-fono">
+                         <div class="content-data">
+                             <span>Telefono:</span>
+                             <input class="data-input" name="telefonoM" [(ngModel)]="ClientesCompartirService.clienteModifido.telefono" type="text" min="8" placeholder="+56 X XXXX XXXX"/>
+                         </div>
+                     </div>
+                </div>
+     
+                 <span>Medidas [cm]</span>
+                 <div class="div-inputs">
+                     <div class="input-data">
+                         <div class="content-data">
+                             <label>C. Cuello:</label>
+                             <input class="data" type="number" name="c_cuelloM" [(ngModel)]="ClientesCompartirService.clienteModifido.medidas.c_cuello" min="0" placeholder="0.0" step="0.1" />
+                         </div>
+                     </div>
+         
+                     <div class="input-data">
+                         <div class="content-data">
+                             <label>C. Busto:</label>
+                             <input class="data" type="number" name="c_bustoM" [(ngModel)]="ClientesCompartirService.clienteModifido.medidas.c_busto" min="0" placeholder="0.0" step="0.1" />
+                         </div>
+                     </div>
+                 </div>
+                 <div class="div-inputs">
+                     <div class="input-data">
+                         <div class="content-data">
+                             <label>C. Cintura:</label>
+                             <input class="data" type="number" name="c_cinturaM" [(ngModel)]="ClientesCompartirService.clienteModifido.medidas.c_cintura" min="0" placeholder="0.0" step="0.1" />
+                         </div>
+                     </div>
+         
+                     <div class="input-data">
+                         <div class="content-data">
+                             <label>C. Cadera:</label>
+                             <input class="data" type="number" name="c_caderaM" [(ngModel)]="ClientesCompartirService.clienteModifido.medidas.c_cadera" min="0" placeholder="0.0" step="0.1" />
+                         </div>
+                     </div>
+                 </div>
+                 <div class="div-inputs">
+                     <div class="input-data">
+                         <div class="content-data">
+                             <label>T. Delantero:</label>
+                             <input class="data" type="number" name="t_delanteroM" [(ngModel)]="ClientesCompartirService.clienteModifido.medidas.t_delantero" min="0" placeholder="0.0" step="0.1" />
+                         </div>
+                     </div>
+         
+                     <div class="input-data">
+                         <div class="content-data">
+                             <label>T. Espalda:</label>
+                             <input class="data" type="number" name="t_espaldaM" [(ngModel)]="ClientesCompartirService.clienteModifido.medidas.t_espalda" min="0" placeholder="0.0" step="0.1" />
+                         </div>
+                     </div>
+                 </div>
+                 <div class="div-inputs">
+                     <div class="input-data">
+                         <div class="content-data">
+                             <label>A. Espalda:</label>
+                             <input class="data" type="number" name="a_espaldaM" [(ngModel)]="ClientesCompartirService.clienteModifido.medidas.a_espalda" min="0" placeholder="0.0" step="0.1" />
+                         </div>
+                     </div>
+         
+                     <div class="input-data">
+                         <div class="content-data">
+                             <label>A. Busto:</label>
+                             <input class="data" type="number" name="a_bustoM" [(ngModel)]="ClientesCompartirService.clienteModifido.medidas.a_busto" min="0" placeholder="0.0" step="0.1" />
+                         </div>
+                     </div>
+                 </div>
+                 <div class="div-inputs">
+                     <div class="input-data">
+                         <div class="content-data">
+                             <label>Sep. Busto:</label>
+                             <input class="data" type="number" name="sep_bustoM" [(ngModel)]="ClientesCompartirService.clienteModifido.medidas.sep_busto" min="0" placeholder="0.0" step="0.1" />
+                         </div>
+                     </div>
+         
+                     <div class="input-data">
+                         <div class="content-data">
+                             <label>A. Cadera:</label>
+                             <input class="data" type="number" name="a_caderaM" [(ngModel)]="ClientesCompartirService.clienteModifido.medidas.a_cadera" min="0" placeholder="0.0" step="0.1" />
+                         </div>
+                     </div>
+                 </div>
+                 <div class="div-inputs">
+                     <div class="input-data">
+                         <div class="content-data">
+                             <label>Alto de tiro:</label>
+                             <input class="data" type="number" name="alto_de_tiroM" [(ngModel)]="ClientesCompartirService.clienteModifido.medidas.alto_de_tiro" min="0" placeholder="0.0" step="0.1" />
+                         </div>
+                     </div>
+         
+                     <div class="input-data">
+                         <div class="content-data">
+                             <label>Alto de sisa</label>
+                             <input class="data" type="number" name="alto_de_sisaM" [(ngModel)]="ClientesCompartirService.clienteModifido.medidas.alto_de_sisa" min="0" placeholder="0.0" step="0.1" />
+                         </div>
+                     </div>
+                 </div>
+                 <div class="div-inputs">
+                     <div class="input-data">
+                         <div class="content-data">
+                             <label>Largo manga:</label>
+                             <input class="data" type="number" name="largo_mangaM" [(ngModel)]="ClientesCompartirService.clienteModifido.medidas.largo_manga" min="0" placeholder="0.0" step="0.1" />
+                         </div>
+                     </div>
+         
+                     <div class="input-data">
+                         <div class="content-data">
+                             <label>Largo pierna</label>
+                             <input class="data" type="number" name="largo_piernaM" [(ngModel)]="ClientesCompartirService.clienteModifido.medidas.largo_pierna" min="0" placeholder="0.0" step="0.1" />
+                         </div>
+                     </div>
+                 </div>
+                 <div class="div-inputs">
+                     <div class="input-data">
+                         <div class="content-data">
+                             <label>Puño:</label>
+                             <input class="data" type="number" name="punoM" [(ngModel)]="ClientesCompartirService.clienteModifido.medidas.puno" min="0" placeholder="0.0" step="0.1" />
+                         </div>
+                     </div>
+         
+                     <div class="input-data">
+                         <div class="content-data">
+                             <label>Muñeca</label>
+                             <input class="data" type="number" name="munecaM" [(ngModel)]="ClientesCompartirService.clienteModifido.medidas.muneca" min="0" placeholder="0.0" step="0.1" />
+                         </div>
+                     </div>
+                 </div>
+                 <div class="div-inputs">
+                     <div class="input-data">
+                         <div class="content-data">
+                             <label>Rodilla:</label>
+                             <input class="data" type="number" name="rodillaM" [(ngModel)]="ClientesCompartirService.clienteModifido.medidas.rodilla" min="0" placeholder="0.0" step="0.1" />
+                         </div>
+                     </div>
+         
+                     <div class="input-data">
+                         <div class="content-data">
+                             <label>Tobillo:</label>
+                             <input class="data" type="number" name="tobilloM" [(ngModel)]="ClientesCompartirService.clienteModifido.medidas.tobillo" min="0" placeholder="0.0" step="0.1" />
+                         </div>
+                     </div>
+                 </div>
+                 <div class="div-inputs">
+                     <div class="input-data">
+                         <div class="content-data">
+                             <label>Ancho brazo:</label>
+                             <input class="data" type="number" name="ancho_brazoM" [(ngModel)]="ClientesCompartirService.clienteModifido.medidas.ancho_brazo" min="0" placeholder="0.0" step="0.1" />
+                         </div>
+                     </div>
+                 </div>
             <span class="input-button">
                 <button type="submit">Modificar Cliente</button>
             </span>
