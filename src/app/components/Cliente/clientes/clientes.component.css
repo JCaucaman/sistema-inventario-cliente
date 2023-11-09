@@ -75,6 +75,7 @@ table{
     background-color: #ffffff64;
     width: 100%;
     padding: 5px 10px;
+    border-radius: 5px;
 }
 
 tr{
@@ -105,7 +106,7 @@ td{
 
 /* end tabla */
 
-.cliente-etiqueta{
+.cliente-etiqueta, .pedido-etiqueta{
     padding: 5px;
     margin: 3px;
 
@@ -160,3 +161,39 @@ td{
 }
 
 /* end contex menu  */
+
+/* begin pedido */
+
+.pedidos, .pedido-completado{
+    border: 1px solid #f673b4;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: rgb(255, 181, 201);
+    padding: 5px;
+}
+
+.pedido-completado{
+    background-color: rgb(255, 201, 217);
+    text-align: center;
+}
+
+.prueba{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f673b4;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: rgb(255, 213, 224);
+    padding: 5px;
+}
+
+.detalles{
+    display: flex;
+    text-align: center;
+    border: 1px solid #f673b4;
+    background-color: #f4d6e5;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* end pedido */

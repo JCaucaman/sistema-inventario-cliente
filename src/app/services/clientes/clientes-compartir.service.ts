@@ -56,6 +56,17 @@ export class ClientesCompartirService {
     console.log(indice)
     console.log(this.clientes.splice(indice, 1, this.clienteModifido))
   }
+  agregarPedido(pedido : any){
+
+    const dato = this.clientes.find(
+      (dato : any) => dato._id == this.id
+    )
+
+    const indice =  this.clientes.indexOf(dato)
+
+    this.clientes[indice].Pedidos.push(pedido);
+
+  }
 
 
 }

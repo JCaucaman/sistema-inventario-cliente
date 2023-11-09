@@ -186,11 +186,50 @@
         </div>
         <div class="cliente-divisor">
 
-            <div class="pedidos"  *ngFor="let pedido of cliente.pedidos">
-                {{pedido.numero}}
-                {{pedido.fecha_pedido}}
-                {{pedido.productos}}
-                {{pedido.total_pedido}}
+            <div class="pedidos" id="{{pedido._id}}-id" *ngFor="let pedido of cliente.Pedidos" >
+                <div *ngIf="!pedido.completado">
+                    <div style="padding: 5px; margin: 5px;">
+                        <span>
+                            Pedido #{{pedido.codigo_pedido}}
+                        </span>
+                        <span class="pedido-etiqueta">
+                            {{pedido.pedido_etiqueta}}
+                        </span>
+                    </div>
+                    <div class="detalles">
+                        {{pedido.pedido_detalles}}
+                    </div>
+                    <div>
+                        <span>
+                            Costo: {{pedido.pedido_precio}}
+                        </span>
+                        <span>
+                            Abono: {{pedido.abono}}
+                        </span>
+                    </div>
+                    <div class="prueba" *ngFor="let prueba of pedido.pruebas_calce">
+                        <span>
+                            Prueba calce: {{prueba.fecha}}
+                        </span>
+                        <span>
+                            {{prueba.anotacion}}
+                        </span>
+                    </div>
+                    <div>
+                        <div>Materiales:</div>
+                        <ul *ngFor="let material of pedido.materiales" type="">
+                            <li>{{material}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div *ngIf="pedido.completado" class="pedido-completado">
+                    <span>
+                        Pedido #{{pedido.codigo_pedido}}
+                    </span>
+                    <span>
+                        COMPLETADO
+                    </span>
+                </div>
             </div>
 
         </div>
@@ -199,9 +238,8 @@
 
     <div class="contexMenu" (click)="disappearContextC()" #menuC>
         <ul>
-            <li>Crear Pedido</li>
-            <li (click)="ApareceModalModificarC()">Modificar</li>
-            <li>Editar Etiqueta</li>
+            <li (click)="aparecerModelPedidos()" >Crear Pedido</li>
+            <li (click)="apareceModalModificarC()">Modificar</li>
             <li (click)="eliminarCliente()">Eliminar</li>
         </ul>
     </div>

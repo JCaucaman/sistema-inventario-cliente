@@ -1,6 +1,8 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { ClientesService } from "../../../services/clientes/clientes.service";
 import { ClientesCompartirService } from "../../../services/clientes/clientes-compartir.service";
+import { PedidosCompartirService } from 'src/app/services/clientes/pedidos-compartir.service'
+
 
 @Component({
   selector: 'app-clientes',
@@ -19,6 +21,7 @@ export class ClientesComponent {
   constructor(
     private ClientesService: ClientesService,
     public ClientesCompartirService: ClientesCompartirService,
+    public PedidosCompartirService: PedidosCompartirService,
     ) { }
 
     ngOnInit(){
@@ -36,6 +39,12 @@ export class ClientesComponent {
       )
     }
 
+    aparecerModelPedidos(){
+      console.log(this.idC + " crear pedido")
+      this.ClientesCompartirService.id = this.idC
+      this.PedidosCompartirService.modalPedidos = true
+    }
+
     eliminarCliente(){
       this.ClientesService.clienteEliminar(this.idC)
       .subscribe(
@@ -51,7 +60,7 @@ export class ClientesComponent {
       this.clicksC = 0
     }
 
-    ApareceModalModificarC(){
+    apareceModalModificarC(){
       console.log(this.idC + " Modificar")
 
       this.ClientesCompartirService.modalClientes = true

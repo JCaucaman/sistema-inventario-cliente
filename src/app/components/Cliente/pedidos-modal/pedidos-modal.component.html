@@ -1,1 +1,29 @@
-<p>pedidos-modal works!</p>
+<div id="modal-pedido" *ngIf="PedidosCompartirService.modalPedidos">
+    <div id="form-pedido">
+        <span class="exit-button">
+            <input type="button" class="exit" value="x" (click)="cerrar()">
+        </span>
+        <span>
+            <h3>Crear Pedido</h3>            
+        </span>
+        <form  (submit)="crearPedido()" id="form-crear-pedido">
+            <div class="input-data">
+                <div class="content-data">
+                    <span class="data-input">Abono:</span>
+                    <input class="data" type="number" name="abono" [(ngModel)]="Pedido.abono" min="0" placeholder="0" step="10" required>
+                    <span class="data-input">Precio:</span>
+                    <input class="data" type="number" name="precio" [(ngModel)]="Pedido.precio"min="0" placeholder="0" step="10" required>
+                </div>
+            </div>
+            <div class="input-data">
+                <div class="content-data">
+                    <span>Detalles:</span>
+                </div>
+                <textarea name="detalles" id="" cols="47" rows="5" [(ngModel)]="Pedido.detalles" placeholder="..." required></textarea>
+            </div>
+            <span class="input-button">
+                <button type="submit">Crear Pedido</button>
+            </span>
+        </form>
+    </div>
+</div>
