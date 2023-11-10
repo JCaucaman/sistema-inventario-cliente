@@ -1,46 +1,47 @@
-div {
-    text-align: center;
-    background-color: #f2e6f0; 
-    padding: 20px;
-  }
-  
-  h2 {
-    color: #ff85a2; 
-  }
-  
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 
-  label {
-    color: #8f77d5; 
-    font-weight: bold;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #8f77d5; 
-  }
-  
-  
-  button {
-    background-color: #ff85a2; 
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .error-message {
-    color: #ee1515; 
-    font-weight: bold;
-    margin: 10px 0;
-  }
-  
-  
-  div:last-child {
-    background-color: rgb(235, 133, 255); 
-    padding: 20px;
-    color: white;
-  }
-  
+div {
+  text-align: center;
+  background-color: #f2e6f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #ff85a2;
+}
+
+label {
+  color: #8f77d5;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #8f77d5;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #ff85a2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.error-message {
+  color: #99223e;
+  font-weight: bold;
+  margin: 10px 0;
+}

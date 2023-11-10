@@ -1,24 +1,27 @@
-<p>Login</p>
-<div>
-  <h2>Iniciar Sesión</h2>
-  <form (ngSubmit)="login()">
-    <label for="username">Nombre de usuario:</label>
-    <input [value]="username" (input)="username = event.target.value" name="username" type="text">
-    <label for="password">Contraseña:</label>
-    <input [value]="password" (input)="password = event.target.value" name="password" type="password">
-    <button type="submit">Iniciar Sesión</button>
-  </form>
+<div class="login-container">
+  <p>Login</p>
+  <div>
+    <h2>Iniciar Sesión</h2>
+    <form (ngSubmit)="login()">
+      <label for="username">Nombre de usuario:</label>
+      <input [value]="username" (input)="username = event.target.value" name="username" type="text">
+      <label for="password">Contraseña:</label>
+      <input [value]="password" (input)="password = event.target.value" name="password" type="password">
+      <button type="submit">Iniciar Sesión</button>
+    </form>
 
-  <div *ngIf="error" class="error-message"> <!--en esta parte chicos se mostraria el mensaje de error al iniciar sesion si es que existiese ese error-->
-    {{ error }}
+    <div *ngIf="error" class="error-message">
+      {{ error }}
+    </div>
+    <div>
+      <h2>Registrarse</h2>
+      <form (ngSubmit)="register()">
+        <label for="newUsername">Nuevo Nombre de usuario:</label>
+        <input [value]="newUsername" name="newUsername" type="text">
+        <label for="newPassword">Nueva Contraseña:</label>
+        <input [value]="newPassword" name="newPassword" type="password">
+        <button type="submit">Registrarse</button>
+      </form>
+    </div>
   </div>
-<div>
-<h2>Registrarse</h2>
-  <form (ngSubmit)="register()">
-    <label for="newUsername">Nuevo Nombre de usuario:</label>
-    <input [value]="newUsername" name="newUsername" type="text">
-    <label for="newPassword">Nueva Contraseña:</label>
-    <input [value]="newPassword" name="newPassword" type="password">
-    <button type="submit">Registrarse</button>
-  </form>
 </div>
