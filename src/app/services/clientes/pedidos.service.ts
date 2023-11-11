@@ -13,8 +13,11 @@ export class PedidosService {
     private http: HttpClient,
     ) { }
 
-    clienteCrear(pedido: object, id_cliente : string) {
+    pedidoCrear(pedido: object, id_cliente : string) {
       return this.http.post<any>(this.URL + '/api/pedidos/', [pedido, id_cliente]);
     }
 
+    pedidoEliminar(id : string){
+      return this.http.delete<any>(this.URL + '/api/pedidos/' + id);
+    }
 }

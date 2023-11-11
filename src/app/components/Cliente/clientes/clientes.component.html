@@ -186,12 +186,20 @@
         </div>
         <div class="cliente-divisor">
 
-            <div class="pedidos" id="{{pedido._id}}-id" *ngFor="let pedido of cliente.Pedidos" >
+            <div class="pedidos" id="id-{{pedido._id}}" *ngFor="let pedido of cliente.Pedidos" >
                 <div *ngIf="!pedido.completado">
+                    <div id="{{pedido._id}}-pedido-div-button" class="div-button-pedido">
+                        <button id="{{pedido._id}}-pedido-button-delete" class="button-pedido" (click)="eliminarPedido()">
+                            <div id="{{pedido._id}}-pedido-button-delete-div" ></div>
+                        </button>
+                        <button id="{{pedido._id}}-pedido-button-mod" class="button-pedido-mod" (click)="modificarPedido()">
+                            <div id="{{pedido._id}}-pedido-button-mod-div" ></div>
+                        </button>
+                        <button id="{{pedido._id}}-pedido-button-finish" class="button-pedido-finish" (click)="terminarPedido()">
+                            <div id="{{pedido._id}}-pedido-button-finish-div" ></div>
+                        </button>
+                    </div>
                     <div style="padding: 5px; margin: 5px;">
-                        <span>
-                            Pedido #{{pedido.codigo_pedido}}
-                        </span>
                         <span class="pedido-etiqueta">
                             {{pedido.pedido_etiqueta}}
                         </span>
@@ -217,15 +225,12 @@
                     </div>
                     <div>
                         <div>Materiales:</div>
-                        <ul *ngFor="let material of pedido.materiales" type="">
+                        <ul *ngFor="let material of pedido.materiales">
                             <li>{{material}}</li>
                         </ul>
                     </div>
                 </div>
                 <div *ngIf="pedido.completado" class="pedido-completado">
-                    <span>
-                        Pedido #{{pedido.codigo_pedido}}
-                    </span>
                     <span>
                         COMPLETADO
                     </span>
@@ -238,7 +243,7 @@
 
     <div class="contexMenu" (click)="disappearContextC()" #menuC>
         <ul>
-            <li (click)="aparecerModelPedidos()" >Crear Pedido</li>
+            <li (click)="aparecerModalPedidos()" >Crear Pedido</li>
             <li (click)="apareceModalModificarC()">Modificar</li>
             <li (click)="eliminarCliente()">Eliminar</li>
         </ul>

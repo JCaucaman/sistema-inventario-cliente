@@ -3,27 +3,53 @@
         <span class="exit-button">
             <input type="button" class="exit" value="x" (click)="cerrar()">
         </span>
-        <span>
+        <span *ngIf="!this.PedidosCompartirService.modalPedidosModificar">
             <h3>Crear Pedido</h3>            
         </span>
-        <form  (submit)="crearPedido()" id="form-crear-pedido">
+        <form  (submit)="crearPedido()" id="form-crear-pedido" *ngIf="!this.PedidosCompartirService.modalPedidosModificar">
             <div class="input-data">
                 <div class="content-data">
                     <span class="data-input">Abono:</span>
                     <input class="data" type="number" name="abono" [(ngModel)]="Pedido.abono" min="0" placeholder="0" step="10" required>
                     <span class="data-input">Precio:</span>
-                    <input class="data" type="number" name="precio" [(ngModel)]="Pedido.precio"min="0" placeholder="0" step="10" required>
+                    <input class="data" type="number" name="precio" [(ngModel)]="Pedido.pedido_precio"min="0" placeholder="0" step="10" required>
                 </div>
             </div>
             <div class="input-data">
                 <div class="content-data">
                     <span>Detalles:</span>
                 </div>
-                <textarea name="detalles" id="" cols="47" rows="5" [(ngModel)]="Pedido.detalles" placeholder="..." required></textarea>
+                <textarea name="detalles" id="" cols="47" rows="5" [(ngModel)]="Pedido.pedido_detalles" placeholder="..." required></textarea>
             </div>
             <span class="input-button">
                 <button type="submit">Crear Pedido</button>
             </span>
         </form>
+
+        <!--   Formulario para modificar un pedido   -->
+
+        <span *ngIf="this.PedidosCompartirService.modalPedidosModificar">
+            <h3>Modificar Pedido</h3>            
+        </span>
+        <form  (submit)="modificarPedido()" id="form-crear-pedido" *ngIf="this.PedidosCompartirService.modalPedidosModificar">
+            <div class="input-data">
+                <div class="content-data">
+                    <span class="data-input">Abono:</span>
+                    <input class="data" type="number" name="abono" [(ngModel)]="PedidoN.abono" min="0" placeholder="0" step="10" required>
+                    <span class="data-input">Precio:</span>
+                    <input class="data" type="number" name="precio" [(ngModel)]="PedidoN.pedido_precio"min="0" placeholder="0" step="10" required>
+                </div>
+            </div>
+            <div class="input-data">
+                <div class="content-data">
+                    <span>Detalles:</span>
+                </div>
+                <textarea name="detalles" id="" cols="47" rows="5" [(ngModel)]="PedidoN.pedido_detalles" placeholder="..." required></textarea>
+            </div>
+            <span class="input-button">
+                <button type="submit">Modificar Pedido</button>
+            </span>
+        </form>
+
     </div>
 </div>

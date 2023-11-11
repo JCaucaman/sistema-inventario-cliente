@@ -9,6 +9,10 @@ export class PedidosCompartirService {
 
   modalPedidos : Boolean = false
 
+  modalPedidosModificar : Boolean = false
+
+  copyPedido :any
+
   constructor() { }
 
 }

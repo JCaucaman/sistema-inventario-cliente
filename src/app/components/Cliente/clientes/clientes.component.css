@@ -196,4 +196,34 @@ td{
     width: 100%;
 }
 
+.div-button-pedido{
+    display: flex;
+    position: relative;
+    flex-flow: row-reverse;
+}
+
+.button-pedido, .button-pedido-mod, .button-pedido-finish{
+
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+
+    background-color: #ffc1d2;
+    border: #ee4777 solid 1px;
+    border-radius: 20px;
+}
+
+
+.button-pedido:hover{
+    background-color: #ff5985;
+}
+
+.button-pedido-finish:hover{
+    background-color: #75ff59;
+}
+
+.button-pedido-mod:hover{
+    background-color: #fff959;
+}
+
 /* end pedido */

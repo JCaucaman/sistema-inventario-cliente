@@ -12,9 +12,12 @@ export class PedidosModalComponent {
 
   Pedido = {
     abono : Number,
-    precio : Number,
-    detalles : ''
+    pedido_precio : Number,
+    pedido_detalles : '',
+    completado : false
   }
+
+  PedidoN : any
 
   constructor(
     private PedidosService: PedidosService,
@@ -23,10 +26,7 @@ export class PedidosModalComponent {
   ){}
 
   crearPedido(){
-    console.log(this.ClientesCompartirService.id)
-    console.log(this.Pedido)
-
-    this.PedidosService.clienteCrear(this.Pedido, this.ClientesCompartirService.id)
+    this.PedidosService.pedidoCrear(this.Pedido, this.ClientesCompartirService.id)
     .subscribe(
       res => {
         console.log("Pedido Creado")
@@ -34,8 +34,9 @@ export class PedidosModalComponent {
 
         this.Pedido = {
           abono : Number,
-          precio : Number,
-          detalles : ''
+          pedido_precio : Number,
+          pedido_detalles : '',
+          completado : false
         }
 
         this.ClientesCompartirService.agregarPedido(res)
@@ -45,6 +46,10 @@ export class PedidosModalComponent {
       }
 
     )
+  }
+
+  modificarPedido(){
+    console.log("Modificar")
   }
 
   cerrar(){

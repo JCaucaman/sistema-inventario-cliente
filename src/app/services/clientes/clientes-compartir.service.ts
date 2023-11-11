@@ -68,5 +68,15 @@ export class ClientesCompartirService {
 
   }
 
+  quitarPedido(data : any){
+
+    const documento =  this.clientes.find((d : any) => d._id == data.id_cliente)
+    const indice =  this.clientes.indexOf(documento)
+    const documento_pedido = this.clientes[indice].Pedidos.find((d : any) => d._id  == data.id_pedido);
+    const NewPedidos =  this.clientes[indice].Pedidos.filter((pedido : any) => pedido != documento_pedido)
+
+    this.clientes[indice].Pedidos = NewPedidos
+
+  }
 
 }
