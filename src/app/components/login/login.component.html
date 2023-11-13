@@ -1,5 +1,4 @@
 <div class="login-container">
-  <p>Login</p>
   <div>
     <h2>Iniciar Sesión</h2>
     <form (ngSubmit)="login()">
@@ -13,15 +12,22 @@
     <div *ngIf="error" class="error-message">
       {{ error }}
     </div>
-    <div>
+
+    <div *ngIf="showRegisterForm">
+      <div *ngIf="showRegisterSection"></div>
       <h2>Registrarse</h2>
       <form (ngSubmit)="register()">
-        <label for="newUsername">Nuevo Nombre de usuario:</label>
-        <input [value]="newUsername" name="newUsername" type="text">
-        <label for="newPassword">Nueva Contraseña:</label>
-        <input [value]="newPassword" name="newPassword" type="password">
+        <label for="Username">Nombre de usuario:</label>
+        <input [value]="Username" name="Username" type="text">
+        <label for="Password">Contraseña:</label>
+        <input [value]="Password" name="Password" type="password">
         <button type="submit">Registrarse</button>
       </form>
     </div>
+
+    <div>
+      <a (click)="toggleRegisterForm()">¿No tienes cuenta? Regístrate aquí.</a>
+    </div>
+    
   </div>
 </div>
