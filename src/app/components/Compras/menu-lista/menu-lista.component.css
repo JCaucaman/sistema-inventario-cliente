@@ -1,0 +1,63 @@
+#opciones-lista{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    width: 100%;
+    height: 20%;
+}
+
+
+#lista-menu {
+    display: flex;
+    flex-flow: column;
+
+    position: fixed;
+    bottom: 0;
+
+    width: 15%;
+    height: 90%;
+
+    min-width: 103px;
+
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+#boton-descargar:hover {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0)
+}
+
+
+#boton-descargar{
+    padding: 10px;
+    margin-top: 360px;
+
+    width: 97%;
+
+        cursor: pointer;
+
+    border-radius: 20px;
+    background-color: rgb(255, 189, 254);
+    border: 1px solid pink;
+    transition: 0.2s all;
+}
+
+#boton-compra{
+    padding: 10px;
+    margin-top: 50px;
+
+    width: 97%;
+
+        cursor: pointer;
+
+    border-radius: 20px;
+    background-color: rgb(255, 189, 254);
+    border: 1px solid pink;
+    transition: 0.2s all;
+}
+
+#boton-compra:hover {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0)
+}

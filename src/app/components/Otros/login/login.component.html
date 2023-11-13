@@ -1,3 +1,5 @@
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 <form class="login-form" (submit)="login()">
     <div class="image-container">
         <img src="../../../assets/img/logo-slow.webp" class="logo" alt>
@@ -6,5 +8,8 @@
     <br>
     <input type="password" [(ngModel)]="usuario.password" id="password" name="password" placeholder="Contraseña" required>
     <br>
+    <div>
+        <div class="g-recaptcha" data-sitekey="6LeR0-AoAAAAADdikOpg7J5oVNMJnJFTRwmYQ3hQ"></div>
+    </div>
     <button class="login-form button" type="submit">Iniciar sesión</button>
 </form>
