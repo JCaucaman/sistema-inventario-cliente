@@ -189,13 +189,13 @@
             <div class="pedidos" id="id-{{pedido._id}}" *ngFor="let pedido of cliente.Pedidos" >
                 <div *ngIf="!pedido.completado">
                     <div id="{{pedido._id}}-pedido-div-button" class="div-button-pedido">
-                        <button id="{{pedido._id}}-pedido-button-delete" class="button-pedido" (click)="eliminarPedido()">
+                        <button id="{{cliente._id}}-pedido-button-delete" class="button-pedido" (click)="eliminarPedido()">
                             <div id="{{pedido._id}}-pedido-button-delete-div" ></div>
                         </button>
-                        <button id="{{pedido._id}}-pedido-button-mod" class="button-pedido-mod" (click)="modificarPedido()">
+                        <button id="{{cliente._id}}-pedido-button-mod" class="button-pedido-mod" (click)="modificarPedido()">
                             <div id="{{pedido._id}}-pedido-button-mod-div" ></div>
                         </button>
-                        <button id="{{pedido._id}}-pedido-button-finish" class="button-pedido-finish" (click)="terminarPedido()">
+                        <button id="{{cliente._id}}-pedido-button-finish" class="button-pedido-finish" (click)="terminarPedido()">
                             <div id="{{pedido._id}}-pedido-button-finish-div" ></div>
                         </button>
                     </div>

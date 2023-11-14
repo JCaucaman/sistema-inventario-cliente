@@ -29,7 +29,6 @@ export class PedidosModalComponent {
     this.PedidosService.pedidoCrear(this.Pedido, this.ClientesCompartirService.id)
     .subscribe(
       res => {
-        console.log("Pedido Creado")
         this.cerrar()
 
         this.Pedido = {
@@ -49,7 +48,20 @@ export class PedidosModalComponent {
   }
 
   modificarPedido(){
-    console.log("Modificar")
+
+    this.PedidosService.pedidoModificar(this.PedidosCompartirService.id, this.PedidosCompartirService.copyPedido)
+    .subscribe(
+      res =>{
+        this.cerrar()
+
+        this.ClientesCompartirService.modificarPedidoLocal(res)
+
+      },
+      err => {
+        console.log(err)
+      }
+    )
+
   }
 
   cerrar(){

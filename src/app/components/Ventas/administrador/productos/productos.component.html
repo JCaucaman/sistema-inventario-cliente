@@ -1,1 +1,21 @@
-<p>productos works!</p>
+<div id="content-productos">
+    <div id="{{producto._id}}-id" class="producto" *ngFor="let producto of ProductoCompartirService.Productos">
+        <div>
+            {{producto.nombre}}
+        </div>
+        <div>
+            <img [src]="'http://localhost:3000/' + producto.imagen">
+        </div>
+        <div>
+            {{producto.descripcion}}
+        </div>
+        <div>
+            <span>
+                {{producto.precio}}
+            </span>
+            <span>
+                {{producto.cantidad_disponible}}
+            </span>
+        </div>
+    </div>
+</div>

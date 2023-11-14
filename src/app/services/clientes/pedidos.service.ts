@@ -20,4 +20,8 @@ export class PedidosService {
     pedidoEliminar(id : string){
       return this.http.delete<any>(this.URL + '/api/pedidos/' + id);
     }
+
+    pedidoModificar(id: string, pedido: any){
+      return this.http.put<any>(this.URL + '/api/pedidos/' + id, pedido);
+    }
 }

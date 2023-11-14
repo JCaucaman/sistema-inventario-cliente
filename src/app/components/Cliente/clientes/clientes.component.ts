@@ -16,9 +16,7 @@ export class ClientesComponent {
 
   idPedido : any
 
-  elemento : string = ''
-
-  clicksC = 1
+  clicksC = 0
 
   scrollAtBottom: boolean = false;
 
@@ -65,28 +63,71 @@ export class ClientesComponent {
     }
 
     eliminarPedido(){
-      this.PedidosService.pedidoEliminar(this.idPedido)
-      .subscribe(
-        res => {
+      if(this.clicksC == 2){
 
-          this.ClientesCompartirService.quitarPedido(res)
-        },
-        err => console.log(err)
-      )
+        this.PedidosService.pedidoEliminar(this.idPedido)
+        .subscribe(
+          res => {
+
+            this.ClientesCompartirService.quitarPedido(res)
+          },
+          err => console.log(err)
+        )
+        this.clicksC = 0
+      } else {
+
+      }
+
     }
 
     modificarPedido(){
+
+      if(this.clicksC == 2){
+
+        this.ClientesCompartirService.id = this.idC
       
-      //this.aparecerModalPedidos()
-      this.PedidosCompartirService.modalPedidosModificar = true
+        this.aparecerModalPedidos()
+        this.PedidosCompartirService.modalPedidosModificar = true
+
+        const modClientes = this.ClientesCompartirService.clientes.filter(
+          (material: any) => material._id == this.idC
+        )
+        const modPedido = modClientes[0].Pedidos.filter(
+          (pedido: any) => pedido._id == this.idPedido
+        )
+
+        this.PedidosCompartirService.id = this.idPedido
+        this.PedidosCompartirService.copyPedido = { ...modPedido[0]}
+
+        this.clicksC = 0
+      } else {
+
+      }
+
     }
 
     terminarPedido(){
-      console.log("Terminar Pedido")
+      if(this.clicksC == 2){
+
+        this.PedidosService.pedidoModificar(this.idPedido, {"completado" : true})
+        .subscribe(
+          res =>{
+            this.ClientesCompartirService.CompletarPedidoLocal(res)
+          },
+          err => {
+            console.log(err)
+          }
+        )
+
+        this.ClientesCompartirService.CompletarPedidoLocal(null)
+    
+        this.clicksC = 0
+      } else {
+
+      }
     }
 
     apareceModalModificarC(){
-      console.log(this.idC + " Modificar")
 
       this.ClientesCompartirService.modalClientes = true
       this.ClientesCompartirService.modalClientesModificar = true
@@ -109,9 +150,7 @@ export class ClientesComponent {
       const target = event.target as HTMLElement;
       this.idC = target.id.split('-')[0]
 
-      this.elemento = target.id.split('-')[1]
-
-      if(this.idC.length == 24 && this.elemento !== "pedido"){
+      if(this.idC.length == 24){
         this.menuC.nativeElement.style.display = "block";
         this.menuC.nativeElement.style.top = event.pageY + "px"
         this.menuC.nativeElement.style.left = event.pageX + "px"
@@ -125,7 +164,13 @@ export class ClientesComponent {
     clickC(event: MouseEvent){
 
       const target = event.target as HTMLElement;
-      this.idPedido = target.children[0].id.split('-')[0]
+
+      try {
+        this.idC = target.id.split('-')[0]
+        this.idPedido = target.children[0].id.split('-')[0]
+      } catch (error) {
+        
+      }
 
       this.clicksC ++
       if(this.clicksC == 3){

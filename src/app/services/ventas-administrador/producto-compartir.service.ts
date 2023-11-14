@@ -5,5 +5,13 @@ import { Injectable } from '@angular/core';
 })
 export class ProductoCompartirService {
 
+  Productos : any = []
+
+  modalProducto: boolean = false
+
   constructor() { }
+
+  ingresarProducto(producto: any){
+    this.Productos.unshift(producto)
+  }
 }

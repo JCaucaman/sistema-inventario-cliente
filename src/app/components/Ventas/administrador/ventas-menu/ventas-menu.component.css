@@ -1,0 +1,17 @@
+#content-menu-productos{
+    display: flex;
+    margin: 30px;
+    position: relative;
+    width: 5%;
+    height: 100%;
+}
+
+#content-menu-button{
+    display: flex;
+}
+
+button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}

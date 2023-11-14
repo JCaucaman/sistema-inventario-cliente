@@ -35,16 +35,16 @@
             <div class="input-data">
                 <div class="content-data">
                     <span class="data-input">Abono:</span>
-                    <input class="data" type="number" name="abono" [(ngModel)]="PedidoN.abono" min="0" placeholder="0" step="10" required>
+                    <input class="data" type="number" name="abonoN" [(ngModel)]="PedidosCompartirService.copyPedido.abono" min="0" placeholder="0" step="10" required>
                     <span class="data-input">Precio:</span>
-                    <input class="data" type="number" name="precio" [(ngModel)]="PedidoN.pedido_precio"min="0" placeholder="0" step="10" required>
+                    <input class="data" type="number" name="precioN" [(ngModel)]="PedidosCompartirService.copyPedido.pedido_precio" min="0" placeholder="0" step="10" required>
                 </div>
             </div>
             <div class="input-data">
                 <div class="content-data">
                     <span>Detalles:</span>
                 </div>
-                <textarea name="detalles" id="" cols="47" rows="5" [(ngModel)]="PedidoN.pedido_detalles" placeholder="..." required></textarea>
+                <textarea name="detallesN" [(ngModel)]="PedidosCompartirService.copyPedido.pedido_detalles" id="" cols="47" rows="5"  placeholder="..." required></textarea>
             </div>
             <span class="input-button">
                 <button type="submit">Modificar Pedido</button>
