@@ -133,11 +133,11 @@ export class ClientesComponent {
       this.ClientesCompartirService.modalClientesModificar = true
 
       const modClientes = this.ClientesCompartirService.clientes.filter(
-        (material: any) => material._id == this.idC
+        (cliente: any) => cliente._id == this.idC
       )
 
       this.ClientesCompartirService.clienteModifido = { ...modClientes[0]}
-      this.ClientesCompartirService.copyCliente = { ...modClientes[0]}
+
       this.ClientesCompartirService.id = this.idC
       this.clicksC = 0
     }

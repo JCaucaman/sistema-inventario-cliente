@@ -12,6 +12,30 @@
 
 button{
     width: 50px;
-    height: 50px;
+    height: 55px;
     border-radius: 50px;
+
+    text-align: center;
+    text-justify: center;
+}
+
+#boton-crear{
+    padding: 10px 20px;
+    margin-top: 20px;
+
+    width: auto;
+
+    font-size: xx-large;
+
+    cursor: pointer;
+
+    border-radius: 50px;
+    background-color: rgb(255, 189, 200);
+    border: 1px solid pink;
+    transition: 0.2s all;
+}
+
+#boton-crear:hover{
+    background-color: rgb(251, 160, 180);
+    border: 1px solid rgb(244, 215, 220)
 }

@@ -31,20 +31,18 @@
     display: none;  
 }
 
-.clientes {
+.cliente {
     display: flex;
     flex-direction: row;
 
     margin: 10px;
     padding: 15px;
-    
-    width: 100%;
+
     height: 53%;
 
     min-width: 600px;
     max-width: 650px;
 
-    max-height: 100%;
     min-height: 50%;
 
     cursor: default;
@@ -56,7 +54,8 @@
 }
 
 .cliente-divisor{
-    width: 50%;
+    width: 100%;
+    min-width: 50%;
     margin: 5px;
     display: flex;
     flex-direction: column;
@@ -67,6 +66,12 @@
     width: 8px;     
     height: 8px;    
     display: none;  
+}
+
+.cliente-divisor-null{
+    width: 0px;
+    margin: 0px;
+    display: flex;
 }
 
 /* begin tabla */
@@ -190,10 +195,11 @@ td{
 .detalles{
     display: flex;
     text-align: center;
+    padding: 5px;
     border: 1px solid #f673b4;
     background-color: #f4d6e5;
     border-radius: 5px;
-    width: 100%;
+    width: 95%;
 }
 
 .div-button-pedido{

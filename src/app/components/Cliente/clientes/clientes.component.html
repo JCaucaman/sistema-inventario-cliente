@@ -1,5 +1,5 @@
 <div class="contenedor-clientes" (click)="clickC($event)">
-    <div id="{{cliente._id}}-id"  (contextmenu)="contextmenuC($event)" class="clientes" *ngFor="let cliente of ClientesCompartirService.clientes">
+    <div id="{{cliente._id}}-id"  (contextmenu)="contextmenuC($event)" class="cliente" *ngFor="let cliente of ClientesCompartirService.clientes">
         <div class="cliente-divisor">
             <div id="{{cliente._id}}-nombretelefono">
                 <span id="{{cliente._id}}-nombre" >
@@ -184,18 +184,21 @@
                 </table>
             </div>
         </div>
-        <div class="cliente-divisor">
+        <div class="cliente-divisor-null" *ngIf="cliente.Pedidos.length == 0"  id="{{cliente._id}}-list-pedidos-null">
+            
+        </div>
+        <div class="cliente-divisor" *ngIf="cliente.Pedidos.length !== 0" id="{{cliente._id}}-list-pedidos">
 
             <div class="pedidos" id="id-{{pedido._id}}" *ngFor="let pedido of cliente.Pedidos" >
                 <div *ngIf="!pedido.completado">
                     <div id="{{pedido._id}}-pedido-div-button" class="div-button-pedido">
-                        <button id="{{cliente._id}}-pedido-button-delete" class="button-pedido" (click)="eliminarPedido()">
+                        <button id="{{cliente._id}}-pedido-button-delete" class="button-pedido" (click)="eliminarPedido()" title="Eliminar">
                             <div id="{{pedido._id}}-pedido-button-delete-div" ></div>
                         </button>
-                        <button id="{{cliente._id}}-pedido-button-mod" class="button-pedido-mod" (click)="modificarPedido()">
+                        <button id="{{cliente._id}}-pedido-button-mod" class="button-pedido-mod" (click)="modificarPedido()" title="Modificar">
                             <div id="{{pedido._id}}-pedido-button-mod-div" ></div>
                         </button>
-                        <button id="{{cliente._id}}-pedido-button-finish" class="button-pedido-finish" (click)="terminarPedido()">
+                        <button id="{{cliente._id}}-pedido-button-finish" class="button-pedido-finish" (click)="terminarPedido()" title="Terminar pedido">
                             <div id="{{pedido._id}}-pedido-button-finish-div" ></div>
                         </button>
                     </div>
@@ -216,7 +219,7 @@
                         </span>
                     </div>
                     <div class="prueba" *ngFor="let prueba of pedido.pruebas_calce">
-                        <span>
+                        <span class="prueba-fecha">
                             Prueba calce: {{prueba.fecha}}
                         </span>
                         <span>
@@ -230,7 +233,7 @@
                         </ul>
                     </div>
                 </div>
-                <div *ngIf="pedido.completado" class="pedido-completado">
+                <div *ngIf="pedido.completado" class="pedido-completado" title="Pedido Terminado">
                     <span>
                         COMPLETADO
                     </span>

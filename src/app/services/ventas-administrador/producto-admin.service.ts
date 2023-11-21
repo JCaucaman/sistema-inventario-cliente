@@ -20,7 +20,7 @@ export class ProductoAdminService {
     return this.http.delete<any>(this.URL + '/api/productos/' + id);
   }
 
-  productoModificar(id: string, producto: FormData){
+  productoModificar(id: string, producto: FormData | object){
     return this.http.put<any>(this.URL + '/api/productos/'+ id, producto);
   }
 

@@ -9,6 +9,11 @@
         <form  (submit)="crearPedido()" id="form-crear-pedido" *ngIf="!this.PedidosCompartirService.modalPedidosModificar">
             <div class="input-data">
                 <div class="content-data">
+                    <span class="data-input">Etiqueta:</span>
+                    <input class="data" type="text" name="etiqueta" placeholder="nombre etiqueta" [(ngModel)]="Pedido.pedido_etiqueta" required>
+                </div>
+                    
+                <div class="content-data">
                     <span class="data-input">Abono:</span>
                     <input class="data" type="number" name="abono" [(ngModel)]="Pedido.abono" min="0" placeholder="0" step="10" required>
                     <span class="data-input">Precio:</span>

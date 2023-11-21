@@ -15,5 +15,6 @@ export class VentasMenuComponent {
 
   productoAparecerModal(){
     this.ProductoCompartirService.modalProducto = true
+    this.ProductoCompartirService.modalModificarProducto = false
   }
 }

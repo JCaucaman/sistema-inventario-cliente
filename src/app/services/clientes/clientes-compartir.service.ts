@@ -11,8 +11,6 @@ export class ClientesCompartirService {
   modalClientesModificar : boolean = false
   id = ''
 
-  copyCliente: any
-
   clienteModifido = {
     _id: this.id,
     nombre_cliente : '',
@@ -56,6 +54,7 @@ export class ClientesCompartirService {
     console.log(indice)
     console.log(this.clientes.splice(indice, 1, this.clienteModifido))
   }
+  
   agregarPedido(pedido : any){
 
     const dato = this.clientes.find(

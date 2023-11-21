@@ -19,6 +19,12 @@
                         <input class="data-input" name="telefono" [(ngModel)]="Cliente.telefono" type="text" min="8" placeholder="+56 X XXXX XXXX"/>
                     </div>
                 </div>
+                <div class="input-data-name-fono">
+                    <div class="content-data">
+                        <span>Etiqueta:</span>
+                        <input class="data-input" name="etiqueta_cliente" [(ngModel)]="Cliente.etiqueta_cliente" type="text"/>
+                    </div>
+                </div>
            </div>
 
             <span>Medidas [cm]</span>
@@ -182,15 +188,20 @@
                     </div>
                 </div>
      
-                     <div class="input-data-name-fono">
-                         <div class="content-data">
-                             <span>Telefono:</span>
-                             <input class="data-input" name="telefonoM" [(ngModel)]="ClientesCompartirService.clienteModifido.telefono" type="text" min="8" placeholder="+56 X XXXX XXXX"/>
-                         </div>
-                     </div>
+                <div class="input-data-name-fono">
+                    <div class="content-data">
+                        <span>Telefono:</span>
+                        <input class="data-input" name="telefonoM" [(ngModel)]="ClientesCompartirService.clienteModifido.telefono" type="text" min="8" placeholder="+56 X XXXX XXXX"/>
+                    </div>
                 </div>
-     
-                 <span>Medidas [cm]</span>
+                <div class="input-data-name-fono">
+                    <div class="content-data">
+                        <span>Etiqueta:</span>
+                        <input class="data-input" name="etiqueta_clienteM" [(ngModel)]="Cliente.etiqueta_cliente" type="text"/>
+                    </div>
+                </div>
+            </div>
+            <span>Medidas [cm]</span>
                  <div class="div-inputs">
                      <div class="input-data">
                          <div class="content-data">

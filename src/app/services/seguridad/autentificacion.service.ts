@@ -13,11 +13,15 @@ export class AutentificacionService {
     ) { }
 
   login(usuario: object) {
-    return this.http.post<any>(this.URL + '/usuario', usuario); 
+    return this.http.post<any>(this.URL + '/api/usuario/', usuario); 
+  }
+
+  loginAdmin(admin: object) {
+    return this.http.post<any>(this.URL + '/api/usuario/admin', admin); 
   }
 
   autoLogin(){
-    return this.http.post<any>(this.URL + '/token', {})
+    return this.http.post<any>(this.URL + '/api/usuario/token', {})
   }
 
   loggedIn() : Boolean{
