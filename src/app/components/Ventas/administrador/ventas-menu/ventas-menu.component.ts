@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductoCompartirService } from "src/app/services/ventas-administrador/producto-compartir.service";
 
 @Component({
   selector: 'app-ventas-menu',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class VentasMenuComponent {
 
+  constructor(
+    public ProductoCompartirService: ProductoCompartirService
+  ){}
+
+
+  productoAparecerModal(){
+    this.ProductoCompartirService.modalProducto = true
+    this.ProductoCompartirService.modalModificarProducto = false
+  }
 }

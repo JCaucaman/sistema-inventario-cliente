@@ -1,0 +1,159 @@
+#modal-cliente {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#form-cliente {
+    display: flex;
+    flex-flow: column;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 450px;
+    max-height: 650px;
+
+    padding-top: 10px;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+    border: 2px solid pink;
+    border-radius: 10px;
+
+    overflow-y: scroll;
+
+}
+
+#form-cliente::-webkit-scrollbar {
+    width: 8px;     
+    height: 8px;    
+    display: none;  
+}
+
+
+#form-crear-cliente, #from-modificar-cliente {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+label {
+    margin: 5px;
+}
+
+input{
+    font-size:medium;
+}
+
+.input-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    
+    width: 70%;
+
+    margin: 30px;
+}
+button{
+    padding: 10px;
+
+    cursor: pointer;
+
+    border-radius: 20px;
+    background-color: rgb(255, 189, 200);
+    border: 1px solid pink;
+}
+
+button:hover {
+    background-color: rgb(255, 216, 223);
+    border: 1px solid rgb(224, 161, 171)
+}
+
+.exit {
+    cursor: pointer;
+
+    margin: 10px;
+    padding: 5px 10px;
+
+    color: black;
+    background-color: rgb(255, 189, 200);
+    border: 1px solid pink;
+    border-radius: 30px;
+
+}
+
+.exit-button {
+    display: flex;
+    align-self: end;
+}
+
+.exit:hover {
+    color: white;
+    background-color: rgb(255, 216, 223);
+    border: 1px solid rgb(224, 161, 171);
+}
+
+.input-data, .input-data-name-fono{
+    margin: 2px ;
+    display: flex;
+    align-items: center; 
+ 
+    background-color: #f2f2f2; 
+    border-radius: 2px;
+    padding: 2px;
+    width: 190px;
+    border: 2px solid #b2b2b2
+}
+
+.input-data:hover, .input-data-name-fono:hover{
+    border: 2px solid rgb(224, 161, 171);
+}
+
+.input-data-name-fono{
+    width: 100%;
+
+}
+
+.data, .data-input {
+    width: 70px;
+    border: none;
+    outline: none; 
+    background-color: transparent;
+}
+
+.content-data{
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    background-color: #f2f2f2;
+}
+
+.div-inputs{
+    display: flex;
+    flex-flow: row;
+}
+
+.data-input{
+    width: auto;
+}
+
+.div-input{
+    display: flex;
+    flex-flow: column;
+}

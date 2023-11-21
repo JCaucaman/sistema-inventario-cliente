@@ -1,6 +1,6 @@
 <header class="header-menu" >
     <div class="header-menu-content">
-        <img src="../../../assets/img/logo-slow.webp" class="logo" alt="logo">
+        <img src="../../../assets/img/logo-slow.webp" routerLink="/menu" style="cursor: pointer;" class="logo" alt="logo">
         <span class="header-menu-text" *ngIf="HeaderMenuService.headerText">
           ALCHEMIST UNICORN
         </span>
@@ -19,7 +19,7 @@
                 <button class="button-menu" routerLink="/inventario">Inventario</button>
               </li>
               <li *ngIf="!HeaderMenuService.clientes">
-                <button class="button-menu" routerLink="/clientes">Cliente</button>
+                <button class="button-menu" routerLink="/cliente">Cliente</button>
               </li>
               <li *ngIf="!HeaderMenuService.listaDeCompras">
                 <button class="button-menu" routerLink="/lista_de_compras">Compras</button>

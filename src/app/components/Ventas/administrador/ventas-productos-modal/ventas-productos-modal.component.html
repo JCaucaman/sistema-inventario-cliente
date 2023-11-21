@@ -1,1 +1,66 @@
-<p>ventas-productos-modal works!</p>
+<div id="modal-producto" *ngIf="ProductoCompartirService.modalProducto">
+    <div id="form-producto">
+        <h3>Producto</h3>
+        <span class="exit-button">
+            <input type="button" class="exit" value="x" (click)="cerrar()">
+        </span>
+        <form (submit)="crearProducto()" *ngIf="!this.ProductoCompartirService.modalModificarProducto">
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" [(ngModel)]="producto.nombre">
+            </div>
+            <div>
+                <label for="precio">Precio</label>
+                <input type="number" name="precio" [(ngModel)]="producto.precio">
+            </div>
+            <div>
+                <label for="cantidad_disponible">Cantidad</label>
+                <input type="number" name="cantidad_disponible" [(ngModel)]="producto.cantidad_disponible">
+            </div>
+            <div>
+                <label for="descripcion">Descripcion</label>
+                <div>
+                    <textarea name="descripcion" id="" cols="30" rows="10" [(ngModel)]="producto.descripcion"></textarea>
+                </div>
+            </div>
+            <div>
+                <input class="input-file" type="file" (change)="onFotoSeleccionada($event)"  #imagenInput>
+                <img [src]="imagenSelected ||'/assets/img/no_foto.webp'" style="height: 125px;" (click)="imagenInput.click()">
+            </div>
+
+            <span class="input-button">
+                <button type="submit">Crear Producto</button>
+            </span>
+        </form>
+
+
+        <form (submit)="modificarProducto()" *ngIf="this.ProductoCompartirService.modalModificarProducto">
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombreN" [(ngModel)]="ProductoCompartirService.productoModifiacado.nombre">
+            </div>
+            <div>
+                <label for="precio">Precio</label>
+                <input type="number" name="precioN" [(ngModel)]="ProductoCompartirService.productoModifiacado.precio">
+            </div>
+            <div>
+                <label for="cantidad_disponible">Cantidad</label>
+                <input type="number" name="cantidad_disponibleN" [(ngModel)]="ProductoCompartirService.productoModifiacado.cantidad_disponible">
+            </div>
+            <div>
+                <label for="descripcion">Descripcion</label>
+                <div>
+                    <textarea name="descripcionN" id="" cols="30" rows="10" [(ngModel)]="ProductoCompartirService.productoModifiacado.descripcion"></textarea>
+                </div>
+            </div>
+            <div>
+                <input class="input-file" type="file" (change)="onFotoSeleccionada($event)"  #imagenInput>
+                <img [src]="imagenSelected || 'http://localhost:3000/' + ProductoCompartirService.productoModifiacado.imagen_min" style="height: 125px;" (click)="imagenInput.click()">
+            </div>
+
+            <span class="input-button">
+                <button type="submit">Modificar Producto</button>
+            </span>
+        </form>
+    </div>
+</div>

@@ -40,7 +40,7 @@ const routes: Routes = [
     canActivate : [AutenticacionGuard]
   },
   {
-    path : 'clientes',
+    path : 'cliente',
     component : ClientesContentComponent,
     canActivate : [AutenticacionGuard]
   },

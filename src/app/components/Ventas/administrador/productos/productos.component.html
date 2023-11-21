@@ -1,1 +1,38 @@
-<p>productos works!</p>
+<div id="content-productos"  (click)="clickC($event)">
+    <div id="{{producto._id}}-id" (contextmenu)="contextmenuC($event)" class="producto" *ngFor="let producto of ProductoCompartirService.Productos">
+        <div  id="{{producto._id}}-id-nombre" class="producto-nombre">
+            Nombre: {{producto.nombre}}
+        </div>
+        <div id="{{producto._id}}-id-imagen" class="producto-imagen">
+            <img id="{{producto._id}}-id-imagen-250-250" [src]="'http://localhost:3000/' + producto.imagen_min">
+        </div>
+        <div id="{{producto._id}}-id-descripcion" class="producto-descripcion">
+            {{producto.descripcion}}
+        </div>
+        <div id="{{producto._id}}-id-precio-cantidad" class="producto-precio-cantidad">
+            <span id="{{producto._id}}-id-precio" class="producto-precio">
+                Precio: {{producto.precio}}
+            </span>
+            <span id="{{producto._id}}-id-cantidad" class="producto-cantidad" *ngIf="producto.cantidad_disponible !== 0">
+                Cantidad: {{producto.cantidad_disponible}}
+            </span>
+            <span id="{{producto._id}}-id-cantidad-zero" class="producto-cantidad" *ngIf="producto.cantidad_disponible == 0">
+                Cantidad: {{producto.cantidad_disponible}}
+            </span>
+        </div>
+        <div class="disponible" id="{{producto._id}}-id-disponible" *ngIf="producto.disponibilidad">
+            Disponible
+        </div>
+        <div class="no-disponible" id="{{producto._id}}-id-no-disponible" *ngIf="!producto.disponibilidad">
+            No disponible
+        </div>
+    </div>
+
+    <div class="contexMenu" (click)="disappearContextProducto()" #menu>
+        <ul>
+            <li (click)="cambiarDisponbilidad()">Disponibilidad</li>
+            <li (click)="modificarProducto()">Modificar</li>
+            <li (click)="eliminarProducto()">Eliminar</li>
+        </ul>
+    </div>
+</div>

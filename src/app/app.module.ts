@@ -28,7 +28,6 @@ import { InventarioMenuComponent } from './components/Inventario-All/inventario-
 import { InventarioMaterialModalComponent } from './components/Inventario-All/inventario-material-modal/inventario-material-modal.component';
 import { InventarioEtiquetaModalComponent } from './components/Inventario-All/inventario-etiqueta-modal/inventario-etiqueta-modal.component';
 import { ClientesMenuComponent } from './components/Cliente/clientes-menu/clientes-menu.component';
-import { ClientesPedidosComponent } from './components/Cliente/clientes-pedidos/clientes-pedidos.component';
 import { EtiquetasComponent } from './components/Inventario-All/etiquetas/etiquetas.component';
 import { ModalAgregarEtiquetaComponent } from './components/Inventario-All/modal-agregar-etiqueta/modal-agregar-etiqueta.component';
 import { CondicionesDeUsosComponent } from './components/Otros/condiciones-de-usos/condiciones-de-usos.component';
@@ -42,7 +41,6 @@ import { ClientesContentComponent } from './components/Cliente/clientes-content/
 import { PaginaInicioComponent } from './components/paginainicio/paginainicio.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { ProductoService } from './services/productos/producto.service';
-
 
 
 
@@ -63,7 +61,6 @@ import { ProductoService } from './services/productos/producto.service';
     InventarioMaterialModalComponent,
     InventarioEtiquetaModalComponent,
     ClientesMenuComponent,
-    ClientesPedidosComponent,
     EtiquetasComponent,
     ModalAgregarEtiquetaComponent,
     CondicionesDeUsosComponent,

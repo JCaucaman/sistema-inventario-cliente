@@ -1,2 +1,254 @@
+<div class="contenedor-clientes" (click)="clickC($event)">
+    <div id="{{cliente._id}}-id"  (contextmenu)="contextmenuC($event)" class="cliente" *ngFor="let cliente of ClientesCompartirService.clientes">
+        <div class="cliente-divisor">
+            <div id="{{cliente._id}}-nombretelefono">
+                <span id="{{cliente._id}}-nombre" >
+                    {{cliente.nombre_cliente}}
+                </span>
+                <span id="{{cliente._id}}-etiqueta" class="cliente-etiqueta">
+                    {{cliente.etiqueta_cliente}}
+                </span>    
+            </div>
+                <span id="{{cliente._id}}-telefono">{{cliente.telefono}}</span>
+            <div id="{{cliente._id}}-div_tabla">
+                <table id="{{cliente._id}}-table-top" style="padding-bottom: 0; margin-bottom: 0;">
+                    <tr>
+                        <td class="top-left-border" id="{{cliente._id}}-c_cuello-td" >
+                            <span id="{{cliente._id}}-c_cuello-span">
+                                C. Cuello
+                            </span>
+                            <div id="{{cliente._id}}-c_cuello">
+                                {{cliente.medidas.c_cuello}}
+                            </div>
 
+                        </td>
+                        <td class="top-mid-border" id="{{cliente._id}}-c_busto-td">
+                            <span  id="{{cliente._id}}-c_busto-span">
+                                C. Busto
+                            </span>
+                            <div id="{{cliente._id}}-c_busto">
+                                {{cliente.medidas.c_busto}}
+                            </div>
+                        </td>
+                        <td class="top-right-border"  id="{{cliente._id}}-c_cintura-td">
+                            <span  id="{{cliente._id}}-c_cintura-span">
+                                C. Cintura
+                            </span>
+                            <div id="{{cliente._id}}-c_cintura">
+                                {{cliente.medidas.c_cintura}}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="top-left-border" id="{{cliente._id}}-c_cadera-td">
+                            <span id="{{cliente._id}}-c_cadera-span">
+                                C. Cadera
+                            </span>
+                            <div id="{{cliente._id}}-c_cadera">
+                                {{cliente.medidas.c_cadera}}
+                            </div>
+                        </td>
+                        <td class="top-mid-border" id="{{cliente._id}}-t_delantero-td">
+                            <span id="{{cliente._id}}-t_delantero-span">
+                                T. Delantero
+                            </span>
+                            <div id="{{cliente._id}}-t_delantero">
+                                {{cliente.medidas.t_delantero}}
+                            </div>
+                        </td>
+                        <td class="top-right-border" id="{{cliente._id}}-t_espalda-td">
+                            <span id="{{cliente._id}}-t_espalda-span">
+                                T. Espalda
+                            </span>
+                            <div id="{{cliente._id}}-t_espalda">
+                                {{cliente.medidas.t_espalda}}
+                            </div>
 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="top-left-border" id="{{cliente._id}}-a_espalda-td">
+                            <span id="{{cliente._id}}-a_espalda-span">
+                                A. Espalda
+                            </span>
+                            <div id="{{cliente._id}}-a_espalda">
+                                {{cliente.medidas.a_espalda}}
+                            </div>
+                        </td>
+                        <td class="top-mid-border" id="{{cliente._id}}-a_busto-td">
+                            <span id="{{cliente._id}}-a_busto-span">
+                                A. Busto
+                            </span>
+                            <div id="{{cliente._id}}-a_busto">
+                                {{cliente.medidas.a_busto}}
+                            </div>
+                        </td>
+                        <td class="top-right-border" id="{{cliente._id}}-sep_busto-td">
+                            <span id="{{cliente._id}}-sep_busto-span">
+                                Sep. Busto
+                            </span>
+                            <div id="{{cliente._id}}-sep_busto">
+                                {{cliente.medidas.sep_busto}}
+                            </div>
+                    </td>
+                    <tr>
+                        <td class="top-left-border" id="{{cliente._id}}-a_cadera-td">
+                            <span id="{{cliente._id}}-a_cadera-span">
+                                A. Cadera
+                            </span>
+                            <div id="{{cliente._id}}-a_cadera">
+                                {{cliente.medidas.a_cadera}}
+                            </div>
+                        </td>
+                        <td class="top-mid-border" id="{{cliente._id}}-alto_de_tiro-td">
+                            <span id="{{cliente._id}}-alto_de_tiro-span">
+                                Alto de tiro
+                            </span>
+                            <div id="{{cliente._id}}-alto_de_tiro">
+                                {{cliente.medidas.alto_de_tiro}}
+                            </div>
+                        </td>
+                        <td class="top-right-border" id="{{cliente._id}}-alto_de_sisa-td">
+                            <span id="{{cliente._id}}-alto_de_sisa-span">
+                                Alto de sisa
+                            </span>
+                            <div id="{{cliente._id}}-alto_de_sisa">
+                                {{cliente.medidas.alto_de_sisa}}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="top-left-border" id="{{cliente._id}}-largo_manga-td">
+                            <span id="{{cliente._id}}-largo_manga-span">
+                                largo manga
+                            </span>
+                            <div id="{{cliente._id}}-largo_manga">
+                                {{cliente.medidas.largo_manga}}
+                            </div>
+                        </td>
+                        <td class="top-mid-border" id="{{cliente._id}}-largo_pierna-td">
+                            <span id="{{cliente._id}}-largo_pierna-span">
+                                largo pierna
+                            </span>
+                            <div id="{{cliente._id}}-largo_pierna">
+                                {{cliente.medidas.largo_pierna}}
+                            </div>
+                        </td>
+                        <td class="top-right-border" id="{{cliente._id}}-puno-td">
+                            <span id="{{cliente._id}}-puno-span">
+                               Puño
+                            </span>
+                            <div id="{{cliente._id}}-puno">
+                                {{cliente.medidas.puno}}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="top-left-border" id="{{cliente._id}}-muneca-td">
+                            <span id="{{cliente._id}}-muneca-span">
+                                Muñeca
+                            </span>
+                            <div id="{{cliente._id}}-muneca">
+                                {{cliente.medidas.muneca}}
+                            </div>
+                        </td>
+                        <td class="top-mid-border" id="{{cliente._id}}-rodilla-td">
+                            <span id="{{cliente._id}}-rodilla-span">
+                                Rodilla
+                            </span>
+                            <div id="{{cliente._id}}-rodilla">
+                                {{cliente.medidas.rodilla}}
+                            </div>
+                        </td>
+                        <td class="top-right-border" id="{{cliente._id}}-tobillo-td">
+                            <span id="{{cliente._id}}-tobillo-span">
+                               Tobillo
+                            </span>
+                            <div id="{{cliente._id}}-tobillo">
+                                {{cliente.medidas.tobillo}}
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table style="padding-top: 0; margin-top: 0;" id="{{cliente._id}}-table-botton">
+                    <tr>
+                        <td style="width: 100%;" id="{{cliente._id}}-ancho_brazo-td">
+                            <span id="{{cliente._id}}-ancho_brazo-span">
+                                Ancho de brazo
+                            </span>
+                            <div id="{{cliente._id}}-ancho_brazo">
+                                {{cliente.medidas.ancho_brazo}}
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="cliente-divisor-null" *ngIf="cliente.Pedidos.length == 0"  id="{{cliente._id}}-list-pedidos-null">
+            
+        </div>
+        <div class="cliente-divisor" *ngIf="cliente.Pedidos.length !== 0" id="{{cliente._id}}-list-pedidos">
+
+            <div class="pedidos" id="id-{{pedido._id}}" *ngFor="let pedido of cliente.Pedidos" >
+                <div *ngIf="!pedido.completado">
+                    <div id="{{pedido._id}}-pedido-div-button" class="div-button-pedido">
+                        <button id="{{cliente._id}}-pedido-button-delete" class="button-pedido" (click)="eliminarPedido()" title="Eliminar">
+                            <div id="{{pedido._id}}-pedido-button-delete-div" ></div>
+                        </button>
+                        <button id="{{cliente._id}}-pedido-button-mod" class="button-pedido-mod" (click)="modificarPedido()" title="Modificar">
+                            <div id="{{pedido._id}}-pedido-button-mod-div" ></div>
+                        </button>
+                        <button id="{{cliente._id}}-pedido-button-finish" class="button-pedido-finish" (click)="terminarPedido()" title="Terminar pedido">
+                            <div id="{{pedido._id}}-pedido-button-finish-div" ></div>
+                        </button>
+                    </div>
+                    <div style="padding: 5px; margin: 5px;">
+                        <span class="pedido-etiqueta">
+                            {{pedido.pedido_etiqueta}}
+                        </span>
+                    </div>
+                    <div class="detalles">
+                        {{pedido.pedido_detalles}}
+                    </div>
+                    <div>
+                        <span>
+                            Costo: {{pedido.pedido_precio}}
+                        </span>
+                        <span>
+                            Abono: {{pedido.abono}}
+                        </span>
+                    </div>
+                    <div class="prueba" *ngFor="let prueba of pedido.pruebas_calce">
+                        <span class="prueba-fecha">
+                            Prueba calce: {{prueba.fecha}}
+                        </span>
+                        <span>
+                            {{prueba.anotacion}}
+                        </span>
+                    </div>
+                    <div>
+                        <div>Materiales:</div>
+                        <ul *ngFor="let material of pedido.materiales">
+                            <li>{{material}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div *ngIf="pedido.completado" class="pedido-completado" title="Pedido Terminado">
+                    <span>
+                        COMPLETADO
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="contexMenu" (click)="disappearContextC()" #menuC>
+        <ul>
+            <li (click)="aparecerModalPedidos()" >Crear Pedido</li>
+            <li (click)="apareceModalModificarC()">Modificar</li>
+            <li (click)="eliminarCliente()">Eliminar</li>
+        </ul>
+    </div>
+</div>

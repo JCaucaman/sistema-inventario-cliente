@@ -20,7 +20,7 @@ export class LoginComponent {
     ) { }
 
   login(){
-    this.autentificacionServise.login(this.usuario)
+    this.autentificacionServise.loginAdmin(this.usuario)
     .subscribe(
       res => {
         console.log(res)

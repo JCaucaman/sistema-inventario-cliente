@@ -12,7 +12,7 @@ export class ProductoAdminService {
     private http: HttpClient
   ) { }
 
-  productoCrear(producto: object){
+  productoCrear(producto: FormData){
     return this.http.post<any>(this.URL + '/api/productos/', producto);
   }
 
@@ -20,16 +20,12 @@ export class ProductoAdminService {
     return this.http.delete<any>(this.URL + '/api/productos/' + id);
   }
 
-  productoModificar(id: string, producto: object){
+  productoModificar(id: string, producto: FormData | object){
     return this.http.put<any>(this.URL + '/api/productos/'+ id, producto);
   }
 
   productoMostrar(){
     return this.http.get<any>(this.URL + '/api/productos/');
-  }
-
-  productoDisponiblidad(id: string, disponibilidad: boolean){
-    return this.http.put<any>(this.URL + '/api/productos/disponibilidad'+ id, disponibilidad);
   }
 
 } 

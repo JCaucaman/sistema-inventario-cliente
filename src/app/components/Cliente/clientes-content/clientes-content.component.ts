@@ -7,6 +7,7 @@ import { HeaderMenuService } from "src/app/services/otros/header-menu.service";
   styleUrls: ['./clientes-content.component.css']
 })
 export class ClientesContentComponent {
+
   constructor(
     public HeaderMenuService : HeaderMenuService
     ) { }
@@ -23,4 +24,5 @@ export class ClientesContentComponent {
     this.HeaderMenuService.searchInventario = false
     this.HeaderMenuService.productos = false
   }
+  
 }

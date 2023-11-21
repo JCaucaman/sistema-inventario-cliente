@@ -1,0 +1,161 @@
+* {
+    color: #474546;
+}
+
+#content-productos {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    flex-wrap: wrap;
+    justify-items: center;
+
+    padding: 15px;
+
+    overflow-y: scroll;
+
+    width: 95%;
+    height: 85vh
+}
+
+#content-productos::-webkit-scrollbar {
+    width: 8px;     
+    height: 8px;    
+}
+
+#content-productos::-webkit-scrollbar {
+    display: none; 
+}
+
+.producto {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 10px;
+    width: 300px;
+
+    min-height: 370px;
+    max-height: 470px;
+
+    cursor: default;
+
+    background-color: #ffc4d5;
+    border: 1px solid rgb(247, 168, 168);
+    border-radius: 7px;
+    transition: 0.3s all;
+}
+
+/* begin producto  */
+
+img {
+    border-radius: 10px;
+    width: 250px;
+    height: 250px;
+}
+
+.producto-nombre{
+    text-align: center;
+    font-size: larger;
+    margin: 8px 0px;
+    width: 100%;
+
+}
+
+.producto-imagen{
+    border: 1px solid #f0668d;
+    border-radius: 10px;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 15px;
+}
+
+.producto-descripcion{
+    text-align: center;
+    width: 250px;
+    max-height: 100px;
+
+    overflow-y: scroll
+}
+
+.producto-descripcion::-webkit-scrollbar {
+    display: none; 
+}
+
+.producto-precio-cantidad{
+    display: flex;
+    width: 70%;
+    margin-top: 10px;
+    justify-content: space-between
+}
+
+.producto-precio{
+    flex-grow: 1;
+}
+
+.producto-cantidad{
+    flex-shrink: 1;
+}
+
+.disponible, .no-disponible{
+    font-size: larger;
+    margin-top: 5px;
+}
+
+
+.disponible{
+    color:rgb(69, 102, 235);
+}
+.no-disponible{
+    color:rgb(235, 49, 89);
+}
+
+/* end producto  */
+
+/* begin contex menu  */
+
+.contexMenu {
+    position: fixed;
+    
+    width: 150px;
+
+    z-index: 100;
+
+    display: none;
+    padding: 3px;
+    margin: 5px;
+
+    background-color: #ee4777;
+    border-radius: 5px;
+}
+
+.contexMenu ul {
+    padding: 0;
+    margin: 0;
+
+}
+
+.contexMenu ul li {
+    list-style-type: none;
+
+    padding: 10px 14px;
+    margin: 1px;
+
+    width: auto;
+    cursor: pointer;
+    transition: 0.2s all;
+
+
+    background-color: #ee4777;
+    border-radius: 5px;
+    color: #d6d4d5;
+}
+
+.contexMenu ul li:hover{
+    background-color: #f0668d;
+    color: #fff;
+}
+
+/* end contex menu  */
