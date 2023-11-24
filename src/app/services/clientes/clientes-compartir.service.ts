@@ -14,6 +14,7 @@ export class ClientesCompartirService {
   clienteModifido = {
     _id: this.id,
     nombre_cliente : '',
+    etiqueta_cliente: '',
     telefono : '',
     medidas: {
       c_cuello: 0.0,
@@ -68,7 +69,6 @@ export class ClientesCompartirService {
   }
 
   modificarPedidoLocal(pedido : any){
-    //TODO: buscar el cliente
 
     const dato = this.clientes.find(
       (dato : any) => dato._id == this.id
@@ -76,39 +76,28 @@ export class ClientesCompartirService {
 
     const indice =  this.clientes.indexOf(dato)
 
-    //TODO: Buscar el pedido
-
     const datoPedido = this.clientes[indice].Pedidos.find(
       (dato : any) => dato._id == pedido._id
     )
 
     const indicePedido = this.clientes[indice].Pedidos.indexOf(datoPedido)
-
-    //TODO: Cambiar el pedido por el nuevo
 
     this.clientes[indice].Pedidos[indicePedido] = pedido
     
   }
 
   CompletarPedidoLocal(pedido : any){
-    //TODO: buscar el cliente
-
     const dato = this.clientes.find(
       (dato : any) => dato._id == this.id
     )
 
     const indice =  this.clientes.indexOf(dato)
 
-    //TODO: Buscar el pedido
-
     const datoPedido = this.clientes[indice].Pedidos.find(
       (dato : any) => dato._id == pedido._id
     )
 
     const indicePedido = this.clientes[indice].Pedidos.indexOf(datoPedido)
-
-    //TODO: Cambiar "completar por true"
-
     this.clientes[indice].Pedidos[indicePedido].completado = true
     
   }

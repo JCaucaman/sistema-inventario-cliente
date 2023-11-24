@@ -28,13 +28,15 @@ import { ClientesMenuComponent } from './components/Cliente/clientes-menu/client
 import { EtiquetasComponent } from './components/Inventario-All/etiquetas/etiquetas.component';
 import { ModalAgregarEtiquetaComponent } from './components/Inventario-All/modal-agregar-etiqueta/modal-agregar-etiqueta.component';
 import { CondicionesDeUsosComponent } from './components/Otros/condiciones-de-usos/condiciones-de-usos.component';
-import { VentasAdminComponent } from './components/Ventas/administrador/ventas-admin/ventas-admin.component';
-import { VentasMenuComponent } from './components/Ventas/administrador/ventas-menu/ventas-menu.component';
-import { ProductosComponent } from './components/Ventas/administrador/productos/productos.component';
-import { VentasProductosModalComponent } from './components/Ventas/administrador/ventas-productos-modal/ventas-productos-modal.component';
+import { VentasAdminComponent } from './components/Productos/ventas-admin/ventas-admin.component';
+import { VentasMenuComponent } from './components/Productos/ventas-menu/ventas-menu.component';
+import { ProductosComponent } from './components/Productos/productos/productos.component';
+import { VentasProductosModalComponent } from './components/Productos/ventas-productos-modal/ventas-productos-modal.component';
 import { ClientesModalComponent } from './components/Cliente/clientes-modal/clientes-modal.component';
 import { PedidosModalComponent } from './components/Cliente/pedidos-modal/pedidos-modal.component';
 import { ClientesContentComponent } from './components/Cliente/clientes-content/clientes-content.component';
+import { PruebaCalceModalComponent } from './components/Cliente/prueba-calce-modal/prueba-calce-modal.component';
+import { PedidosMaterialesModalComponent } from './components/Cliente/pedidos-materiales-modal/pedidos-materiales-modal.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +65,8 @@ import { ClientesContentComponent } from './components/Cliente/clientes-content/
     ClientesModalComponent,
     PedidosModalComponent,
     ClientesContentComponent,
+    PruebaCalceModalComponent,
+    PedidosMaterialesModalComponent,
   ],
   imports: [
     BrowserModule,

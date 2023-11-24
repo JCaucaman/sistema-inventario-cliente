@@ -1,0 +1,17 @@
+<div id="modal-pedido-calce">
+    <div id="form-calce">
+        <span class="exit-button">
+            <input type="button" class="exit" value="x">
+        </span>
+        <span>Prueba de calce</span>
+        <form id="form-crear-calce" (submit)="crearPruebacalce()">
+            <label for="fecha">Fecha:</label>
+            <input type="datetime-local" name="fecha" [(ngModel)]="PruebaCalce.fecha" required>
+            <label for="anotacion">Anotacion:</label>
+            <textarea name="anotacion" [(ngModel)]="PruebaCalce.anotacion" >
+
+            </textarea>
+            <button type="submit">Agendar prueba de calce</button>
+        </form>
+    </div>
+</div>

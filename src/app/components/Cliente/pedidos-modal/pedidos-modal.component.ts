@@ -13,9 +13,9 @@ export class PedidosModalComponent {
   Pedido = {
     abono : Number,
     pedido_precio : Number,
-    pedido_detalles : String,
+    pedido_detalles : '',
     completado : false,
-    pedido_etiqueta: String,
+    pedido_etiqueta: '',
   }
 
   PedidoN : any
@@ -35,9 +35,9 @@ export class PedidosModalComponent {
         this.Pedido = {
           abono : Number,
           pedido_precio : Number,
-          pedido_detalles : String,
+          pedido_detalles : '',
           completado : false,
-          pedido_etiqueta: String,
+          pedido_etiqueta: '',
         }
 
         this.ClientesCompartirService.agregarPedido(res)
@@ -45,7 +45,6 @@ export class PedidosModalComponent {
       },err =>{
         console.log(err)
       }
-
     )
   }
 

@@ -202,6 +202,22 @@ td{
     width: 95%;
 }
 
+ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 5px;
+  }
+  
+li {
+    display: flex;
+    border: 1px solid #f673b4;
+    padding: 10px;
+    margin: 5px;
+  }
+
 .div-button-pedido{
     display: flex;
     position: relative;

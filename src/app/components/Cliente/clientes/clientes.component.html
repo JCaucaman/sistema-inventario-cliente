@@ -218,18 +218,36 @@
                             Abono: {{pedido.abono}}
                         </span>
                     </div>
+                    <span>
+                        Pruebas calce:
+                        <span>
+                            <input type="button" value="+">
+                        </span>
+                    </span>
                     <div class="prueba" *ngFor="let prueba of pedido.pruebas_calce">
                         <span class="prueba-fecha">
-                            Prueba calce: {{prueba.fecha}}
+                            Fecha: {{prueba.fecha}}
                         </span>
                         <span>
                             {{prueba.anotacion}}
                         </span>
                     </div>
                     <div>
-                        <div>Materiales:</div>
-                        <ul *ngFor="let material of pedido.materiales">
-                            <li>{{material}}</li>
+                        <div>
+                            Materiales:                         
+                            <span>
+                                <input type="button" value="+">
+                            </span>
+                        </div>
+                        <ul>
+                            <li *ngFor="let material of pedido.materiales">
+                                <span>
+                                    Material: {{material.nombre}}
+                                </span>
+                                <span>
+                                    Cantidad: {{material.cantidad}}
+                                </span>
+                            </li> 
                         </ul>
                     </div>
                 </div>

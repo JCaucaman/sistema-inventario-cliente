@@ -1,0 +1,54 @@
+#modal-pedido-calce {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#form-calce {
+    display: flex;
+    flex-flow: column;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 550px;
+    max-height: 250px;
+
+    padding-top: 10px;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+    border: 2px solid pink;
+    border-radius: 10px;
+
+    overflow-y: scroll;
+
+}
+
+#form-calce::-webkit-scrollbar {
+    width: 8px;     
+    height: 8px;    
+    display: none;  
+}
+
+
+#form-crear-calce, #from-modificar-calce {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}

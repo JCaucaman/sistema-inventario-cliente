@@ -1,6 +1,6 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { ProductoAdminService } from "../../../../services/ventas-administrador/producto-admin.service";
-import { ProductoCompartirService } from "../../../../services/ventas-administrador/producto-compartir.service";
+import { ProductoAdminService } from "../../../services/ventas-administrador/producto-admin.service";
+import { ProductoCompartirService } from "../../../services/ventas-administrador/producto-compartir.service";
 
 @Component({
   selector: 'app-productos',
