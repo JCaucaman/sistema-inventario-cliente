@@ -21,32 +21,32 @@ const routes: Routes = [
     component : InicioComponent
   },
   {
-    path : 'admin/menu',
+    path : 'admin-menu',
     component : MenuComponent,
     canActivate : [AutenticacionGuard]
   },
   {
-    path : 'admin/inventario',
+    path : 'admin-inventario',
     component : InventarioComponent,
     canActivate : [AutenticacionGuard]
   },
   {
-    path : 'admin/cajas',
+    path : 'admin-cajas',
     component : CajasComponent,
     canActivate : [AutenticacionGuard]
   },
   {
-    path : 'admin/lista_de_compras',
+    path : 'admin-lista_de_compras',
     component : ListaDeComprasComponent,
     canActivate : [AutenticacionGuard]
   },
   {
-    path : 'admin/cliente',
+    path : 'admin-cliente',
     component : ClientesContentComponent,
     canActivate : [AutenticacionGuard]
   },
   {
-    path : 'admin/productos',
+    path : 'admin-productos',
     component : VentasAdminComponent,
     canActivate : [AutenticacionGuard]
   },

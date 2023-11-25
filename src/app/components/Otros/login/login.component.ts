@@ -25,7 +25,7 @@ export class LoginComponent {
       res => {
         console.log(res)
         localStorage.setItem('token', res.token)
-        this.router.navigate(['/menu'])
+        this.router.navigate(['/admin-menu'])
       },
       err => {
         console.log(err)

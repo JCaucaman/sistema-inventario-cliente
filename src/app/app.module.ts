@@ -41,7 +41,6 @@ import { ClientesContentComponent } from './components/Cliente/clientes-content/
 import { PruebaCalceModalComponent } from './components/Cliente/prueba-calce-modal/prueba-calce-modal.component';
 import { PedidosMaterialesModalComponent } from './components/Cliente/pedidos-materiales-modal/pedidos-materiales-modal.component';
 import { PaginaInicioComponent } from './components/Ventas/usuario/paginainicio/paginainicio.component';
-import { ProductoComponent } from './components/producto/producto.component';
 import { ProductoService } from './services/productos/producto.service';
 
 
@@ -75,7 +74,6 @@ import { ProductoService } from './services/productos/producto.service';
     PruebaCalceModalComponent,
     PedidosMaterialesModalComponent,
     PaginaInicioComponent,
-    ProductoComponent
   ],
   imports: [
     BrowserModule,
