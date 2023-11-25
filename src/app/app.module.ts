@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
+
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -37,6 +40,10 @@ import { PedidosModalComponent } from './components/Cliente/pedidos-modal/pedido
 import { ClientesContentComponent } from './components/Cliente/clientes-content/clientes-content.component';
 import { PruebaCalceModalComponent } from './components/Cliente/prueba-calce-modal/prueba-calce-modal.component';
 import { PedidosMaterialesModalComponent } from './components/Cliente/pedidos-materiales-modal/pedidos-materiales-modal.component';
+import { PaginaInicioComponent } from './components/Ventas/usuario/paginainicio/paginainicio.component';
+import { ProductoComponent } from './components/producto/producto.component';
+import { ProductoService } from './services/productos/producto.service';
+
 
 @NgModule({
   declarations: [
@@ -67,6 +74,8 @@ import { PedidosMaterialesModalComponent } from './components/Cliente/pedidos-ma
     ClientesContentComponent,
     PruebaCalceModalComponent,
     PedidosMaterialesModalComponent,
+    PaginaInicioComponent,
+    ProductoComponent
   ],
   imports: [
     BrowserModule,
@@ -74,9 +83,11 @@ import { PedidosMaterialesModalComponent } from './components/Cliente/pedidos-ma
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    CommonModule,
   ],
   providers: [
     AutenticacionGuard,
+    ProductoService, 
     {
       provide :  HTTP_INTERCEPTORS,
       useClass : InterceptorTokenService,

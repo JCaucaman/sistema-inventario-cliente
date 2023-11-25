@@ -1,0 +1,13 @@
+<div>
+  <h2>Bienvenido a la Página de Inicio</h2>
+  
+  <div class="product-list">
+    <div class="product-item" *ngFor="let producto of productos">
+      <h3>{{ producto.nombre }}</h3>
+      <p>{{ producto.descripcion }}</p>
+      <p>Talla: {{ producto.talla }}</p>
+      <p>Color: {{ producto.color }}</p>
+      <p>Precio: ${{ producto.precio.toFixed(2) }}</p>
+    </div>
+  </div>
+</div>
