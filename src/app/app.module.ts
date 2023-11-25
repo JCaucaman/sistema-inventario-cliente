@@ -38,7 +38,7 @@ import { VentasProductosModalComponent } from './components/Ventas/administrador
 import { ClientesModalComponent } from './components/Cliente/clientes-modal/clientes-modal.component';
 import { PedidosModalComponent } from './components/Cliente/pedidos-modal/pedidos-modal.component';
 import { ClientesContentComponent } from './components/Cliente/clientes-content/clientes-content.component';
-import { PaginaInicioComponent } from './components/paginainicio/paginainicio.component';
+import { PaginaInicioComponent } from './components/Ventas/usuario/paginainicio/paginainicio.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { ProductoService } from './services/productos/producto.service';
 
