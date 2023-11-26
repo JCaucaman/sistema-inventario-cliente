@@ -1,6 +1,6 @@
 <header class="header-menu" >
     <div class="header-menu-content">
-        <img src="../../../assets/img/logo-slow.webp" routerLink="/menu" style="cursor: pointer;" class="logo" alt="logo">
+        <img src="../../../assets/img/logo-slow.webp" routerLink="/admin-menu" style="cursor: pointer;" class="logo" alt="logo">
         <span class="header-menu-text" *ngIf="HeaderMenuService.headerText">
           ALCHEMIST UNICORN
         </span>
@@ -13,22 +13,22 @@
         <div id="menu-dropdown" class="menu-cascada" #menudropdown  (click)="click($event)">
             <ul>
               <li *ngIf="!HeaderMenuService.menu">
-                <button class="button-menu" routerLink="/menu">Menu Principal</button>
+                <button class="button-menu" routerLink="/admin-menu">Menu Principal</button>
               </li>
               <li *ngIf="!HeaderMenuService.inventario">
-                <button class="button-menu" routerLink="/inventario">Inventario</button>
+                <button class="button-menu" routerLink="/admin-inventario">Inventario</button>
               </li>
               <li *ngIf="!HeaderMenuService.clientes">
-                <button class="button-menu" routerLink="/cliente">Cliente</button>
+                <button class="button-menu" routerLink="/admin-cliente">Cliente</button>
               </li>
               <li *ngIf="!HeaderMenuService.listaDeCompras">
-                <button class="button-menu" routerLink="/lista_de_compras">Compras</button>
+                <button class="button-menu" routerLink="/admin-lista_de_compras">Compras</button>
               </li>
               <li *ngIf="!HeaderMenuService.cajas">
-                <button class="button-menu" routerLink="/cajas">Cajas</button>
+                <button class="button-menu" routerLink="/admin-cajas">Cajas</button>
               </li>
               <li *ngIf="!HeaderMenuService.productos">
-                <button class="button-menu" routerLink="/productos">Productos</button>
+                <button class="button-menu" routerLink="/admin-productos">Productos</button>
               </li>
             </ul>
           </div>

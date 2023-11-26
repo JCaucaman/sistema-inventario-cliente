@@ -13,6 +13,11 @@ import { ClientesContentComponent } from './components/Cliente/clientes-content/
 import { CondicionesDeUsosComponent } from './components/Otros/condiciones-de-usos/condiciones-de-usos.component'
 import { VentasAdminComponent } from "./components/Productos/ventas-admin/ventas-admin.component";
 import { LoginComponent } from './components/Ventas/usuario/login/login.component'
+import { VentasCarroComponent } from './components/Ventas/usuario/ventas-carro/ventas-carro.component'
+import { VentasHomeComponent } from './components/Ventas/usuario/ventas-home/ventas-home.component'
+import { VentasInicioComponent } from './components/Ventas/usuario/ventas-inicio/ventas-inicio.component'
+//import {  } from './components/Ventas/usuario/'
+
 
 
 const routes: Routes = [
@@ -51,14 +56,30 @@ const routes: Routes = [
     canActivate : [AutenticacionGuard]
   },
   {
+    path : 'admin-ventas',
+    component : MenuComponent,
+    canActivate : [AutenticacionGuard]
+  },
+  {
     path : 'condiciones-de-uso', 
     component : CondicionesDeUsosComponent
   },
   {
-    path : '',
+    path : 'login-register',
     component : LoginComponent
-  }
-,
+  },
+  {
+    path : '',
+    component : VentasInicioComponent
+  },
+  {
+    path : 'home',
+    component : VentasHomeComponent
+  },
+  {
+    path : 'carro',
+    component : VentasCarroComponent
+  },
   {
     path : '**', // error 404
     component : PaguinaNoEncontradaComponent

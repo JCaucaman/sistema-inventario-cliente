@@ -20,7 +20,7 @@ export class InicioComponent implements OnInit {
         res => {
           if(res){
             console.log(res)
-            this.router.navigate(['/menu'])
+            this.router.navigate(['/admin-menu'])
           } else {
             //pass
           }

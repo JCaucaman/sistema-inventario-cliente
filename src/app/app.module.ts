@@ -42,6 +42,10 @@ import { PruebaCalceModalComponent } from './components/Cliente/prueba-calce-mod
 import { PedidosMaterialesModalComponent } from './components/Cliente/pedidos-materiales-modal/pedidos-materiales-modal.component';
 import { PaginaInicioComponent } from './components/Ventas/usuario/paginainicio/paginainicio.component';
 import { ProductoService } from './services/productos/producto.service';
+import { VentasHeaderComponent } from './components/Ventas/usuario/ventas-header/ventas-header.component';
+import { VentasHomeComponent } from './components/Ventas/usuario/ventas-home/ventas-home.component';
+import { VentasInicioComponent } from './components/Ventas/usuario/ventas-inicio/ventas-inicio.component';
+import { VentasCarroComponent } from './components/Ventas/usuario/ventas-carro/ventas-carro.component';
 
 
 @NgModule({
@@ -74,6 +78,10 @@ import { ProductoService } from './services/productos/producto.service';
     PruebaCalceModalComponent,
     PedidosMaterialesModalComponent,
     PaginaInicioComponent,
+    VentasHeaderComponent,
+    VentasHomeComponent,
+    VentasInicioComponent,
+    VentasCarroComponent,
   ],
   imports: [
     BrowserModule,
