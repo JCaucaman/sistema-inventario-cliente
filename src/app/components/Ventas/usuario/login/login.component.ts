@@ -48,6 +48,6 @@ export class LoginComponent {
   toggleRegisterForm() {
     this.showRegisterForm = !this.showRegisterForm;
     if (this.showRegisterForm) {
-      this.router.navigate(['/registro']); 
+      this.router.navigate(['/']); 
     console.log('showRegisterForm:', this.showRegisterForm);
   }}}

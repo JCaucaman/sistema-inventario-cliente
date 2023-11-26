@@ -19,7 +19,6 @@ export class InicioComponent implements OnInit {
       this.autentificacionServise.autoLogin().subscribe(
         res => {
           if(res){
-            console.log(res)
             this.router.navigate(['/admin-menu'])
           } else {
             //pass

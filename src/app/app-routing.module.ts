@@ -16,54 +16,8 @@ import { LoginComponent } from './components/Ventas/usuario/login/login.componen
 import { VentasCarroComponent } from './components/Ventas/usuario/ventas-carro/ventas-carro.component'
 import { VentasHomeComponent } from './components/Ventas/usuario/ventas-home/ventas-home.component'
 import { VentasInicioComponent } from './components/Ventas/usuario/ventas-inicio/ventas-inicio.component'
-//import {  } from './components/Ventas/usuario/'
-
-
 
 const routes: Routes = [
-  {
-    path : 'admin',
-    component : InicioComponent
-  },
-  {
-    path : 'admin-menu',
-    component : MenuComponent,
-    canActivate : [AutenticacionGuard]
-  },
-  {
-    path : 'admin-inventario',
-    component : InventarioComponent,
-    canActivate : [AutenticacionGuard]
-  },
-  {
-    path : 'admin-cajas',
-    component : CajasComponent,
-    canActivate : [AutenticacionGuard]
-  },
-  {
-    path : 'admin-lista_de_compras',
-    component : ListaDeComprasComponent,
-    canActivate : [AutenticacionGuard]
-  },
-  {
-    path : 'admin-cliente',
-    component : ClientesContentComponent,
-    canActivate : [AutenticacionGuard]
-  },
-  {
-    path : 'admin-productos',
-    component : VentasAdminComponent,
-    canActivate : [AutenticacionGuard]
-  },
-  {
-    path : 'admin-ventas',
-    component : MenuComponent,
-    canActivate : [AutenticacionGuard]
-  },
-  {
-    path : 'condiciones-de-uso', 
-    component : CondicionesDeUsosComponent
-  },
   {
     path : 'login-register',
     component : LoginComponent
@@ -79,6 +33,49 @@ const routes: Routes = [
   {
     path : 'carro',
     component : VentasCarroComponent
+  },
+  {
+    path : 'admin',
+    component : InicioComponent
+  },
+  {
+    path : 'menu',
+    component : MenuComponent,
+    canActivate : [AutenticacionGuard]
+  },
+  {
+    path : 'inventario',
+    component : InventarioComponent,
+    canActivate : [AutenticacionGuard]
+  },
+  {
+    path : 'cajas',
+    component : CajasComponent,
+    canActivate : [AutenticacionGuard]
+  },
+  {
+    path : 'lista_de_compras',
+    component : ListaDeComprasComponent,
+    canActivate : [AutenticacionGuard]
+  },
+  {
+    path : 'cliente',
+    component : ClientesContentComponent,
+    canActivate : [AutenticacionGuard]
+  },
+  {
+    path : 'productos',
+    component : VentasAdminComponent,
+    canActivate : [AutenticacionGuard]
+  },
+  {
+    path : 'ventas',
+    component : MenuComponent,
+    canActivate : [AutenticacionGuard]
+  },
+  {
+    path : 'condiciones-de-uso', 
+    component : CondicionesDeUsosComponent
   },
   {
     path : '**', // error 404

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { HeaderMenuService } from "src/app/services/otros/header-menu.service";
 
-
 @Component({
   selector: 'app-ventas-admin',
   templateUrl: './ventas-admin.component.html',

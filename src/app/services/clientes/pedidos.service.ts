@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PedidosService {
 
-  private URL = 'http://localhost:3000'
+  private URL = 'http://52.200.194.152:3000'
 
   constructor(
     private http: HttpClient,
