@@ -1,0 +1,33 @@
+.contenedor {
+    width: 100%;
+    background-color: rgb(48, 48, 48);
+}
+
+.contenedor-productos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    height: 92vh;
+
+    justify-content: center;
+
+    overflow-y: scroll;
+}
+
+.contenedor-productos::-webkit-scrollbar {
+    display: none; 
+}
+
+.producto{
+    position: relative;
+    width: 300px;
+    height: 300px;
+
+    margin: 20px;
+
+    background-color: #ffc4d5;
+    border: 1px solid rgb(247, 168, 168);
+    border-radius: 7px;
+    transition: 0.3s all;
+}

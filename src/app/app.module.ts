@@ -13,7 +13,6 @@ import { InicioComponent } from './components/Otros/inicio/inicio.component';
 import { MenuComponent } from './components/Otros/menu/menu.component';
 import { PaguinaNoEncontradaComponent } from './components/Otros/paguina-no-encontrada/paguina-no-encontrada.component';
 
-
 import { AutenticacionGuard } from "./guard/autentificacion.guard";
 import { InventarioComponent } from './components/Inventario-All/inventario/inventario.component';
 import { InterceptorTokenService } from "./services/seguridad/interceptor-token.service";
