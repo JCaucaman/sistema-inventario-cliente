@@ -21,8 +21,13 @@
 
 .producto{
     position: relative;
-    width: 300px;
-    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 270px;
+    height: 350px;
 
     margin: 20px;
 
@@ -30,4 +35,22 @@
     border: 1px solid rgb(247, 168, 168);
     border-radius: 7px;
     transition: 0.3s all;
+}
+
+.producto-nombre, .producto-precio{
+    font-size: larger
+}
+
+input {
+    background-color: #f397b1;
+    border: 1px solid rgb(247, 168, 168);
+    margin: 3px;
+    padding: 5px;
+    font-size: large;
+    border-radius: 5px;
+}
+
+input:hover {
+    background-color: #e38da6;
+    color: #fff;
 }

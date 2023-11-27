@@ -4,10 +4,22 @@
 
     <div class="contenedor-productos">
 
-        <div class="producto">
+        <div id="{{producto._id}}-id" class="producto" *ngFor="let producto of this.ProductoUsuarioCompartirService.Productos">
 
+            <div id="{{producto._id}}-id-imagen" class="producto-imagen">
+                <img id="{{producto._id}}-id-imagen-250-250" [src]="'http://localhost:3000/' + producto.imagen_min">
+            </div>
+            <div  id="{{producto._id}}-id-nombre" class="producto-nombre">
+                {{producto.nombre}}
+            </div>
+            <div id="{{producto._id}}-id-precio" class="producto-precio">
+                $ {{producto.precio}}
+            </div>
+            <div id="{{producto._id}}-id-botones">
+                <input type="button" value="Agregar al carro">
+                <input type="button" value="Ver detalles">
+            </div>
         </div>
-
 
     </div>
 </div>

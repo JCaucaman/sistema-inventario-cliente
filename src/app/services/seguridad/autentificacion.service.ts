@@ -25,7 +25,7 @@ export class AutentificacionService {
   }
 
   loggedIn() : Boolean{
-    if(localStorage.getItem('token')){ // cambiar
+    if(localStorage.getItem('token')){ 
       return true
     } else {
       return false

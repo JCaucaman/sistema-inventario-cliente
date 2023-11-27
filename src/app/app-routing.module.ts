@@ -12,10 +12,30 @@ import { ClientesContentComponent } from './components/Cliente/clientes-content/
 import { CondicionesDeUsosComponent } from './components/Otros/condiciones-de-usos/condiciones-de-usos.component'
 import { VentasAdminComponent } from "./components/Productos/ventas-admin/ventas-admin.component";
 
+import { VentasCarroComponent } from './components/usuario/ventas-carro/ventas-carro.component'
+import { VentasHomeComponent } from './components/usuario/ventas-home/ventas-home.component'
+import { VentasInicioComponent } from './components/usuario/ventas-inicio/ventas-inicio.component'
+
 const routes: Routes = [
   {
+    path : 'login-register',
+    component : VentasInicioComponent
+  },
+  {
     path : '',
+    component : VentasInicioComponent
+  },
+  {
+    path : 'admin',
     component : InicioComponent
+  },
+  {
+    path : 'home',
+    component : VentasHomeComponent
+  },
+  {
+    path : 'carro',
+    component : VentasCarroComponent
   },
   {
     path : 'menu',
