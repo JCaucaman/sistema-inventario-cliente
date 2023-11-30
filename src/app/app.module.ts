@@ -45,6 +45,7 @@ import { ClientesContentComponent } from './components/Cliente/clientes-content/
 import { PruebaCalceModalComponent } from './components/Cliente/prueba-calce-modal/prueba-calce-modal.component';
 import { PedidosMaterialesModalComponent } from './components/Cliente/pedidos-materiales-modal/pedidos-materiales-modal.component';
 import { ProductoService } from './services/productos/producto.service';
+
 import { VentasHeaderComponent } from './components/usuario/ventas-header/ventas-header.component';
 import { VentasHomeComponent } from './components/usuario/ventas-home/ventas-home.component';
 import { VentasInicioComponent } from './components/usuario/ventas-inicio/ventas-inicio.component';

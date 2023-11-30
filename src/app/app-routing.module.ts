@@ -12,8 +12,8 @@ import { ListaDeComprasComponent } from './components/Compras/lista-de-compras/l
 import { ClientesContentComponent } from './components/Cliente/clientes-content/clientes-content.component';
 import { CondicionesDeUsosComponent } from './components/Otros/condiciones-de-usos/condiciones-de-usos.component'
 import { VentasAdminComponent } from "./components/Productos/ventas-admin/ventas-admin.component";
-import { LoginComponent } from './components/Ventas/usuario/login/login.component'
 
+import { LoginComponent } from './components/usuario/login/login.component'
 import { VentasCarroComponent } from './components/usuario/ventas-carro/ventas-carro.component'
 import { VentasHomeComponent } from './components/usuario/ventas-home/ventas-home.component'
 import { VentasInicioComponent } from './components/usuario/ventas-inicio/ventas-inicio.component'
@@ -53,7 +53,7 @@ const routes: Routes = [
     component : VentasCarroComponent
   },
   {
-    path : 'menu',
+    path : 'admin-menu',
     component : MenuComponent,
     canActivate : [AutenticacionGuard]
   },
