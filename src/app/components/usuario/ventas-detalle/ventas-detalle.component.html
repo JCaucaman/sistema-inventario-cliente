@@ -1,0 +1,32 @@
+<div class="contenedor">
+    <app-ventas-header></app-ventas-header>
+
+    <div class="contenedor-producto">
+
+        <div id="{{producto._id}}-id" class="producto" *ngFor="let producto of this.ProductoUsuarioCompartirService.ProductoId">
+
+            <div id="{{producto._id}}-id-imagen" class="producto-imagen"> <!-- cambiar -->
+                <img id="{{producto._id}}-id-imagen" [src]="'http://localhost:3000/' + producto.imagen">
+            </div>
+            <div id="{{producto._id}}-id-data" class="producto-data" *ngIf="producto.disponibilidad">
+                <div>
+                    <div  id="{{producto._id}}-id-nombre" class="producto-nombre">
+                        {{producto.nombre}}
+                    </div>
+                    <div id="{{producto._id}}-id-precio" class="producto-precio">
+                        $ {{producto.precio}} CLP
+                    </div>
+                </div>
+                <div id="{{producto._id}}-id-descripcion" class="producto-descripcion">
+                    {{producto.descripcion}}
+                </div>
+                <div id="{{producto._id}}-id-botones" >
+                    <input type="button" value="Agregar al carro">
+                </div>
+            </div>
+            <div *ngIf="!producto.disponibilidad">
+                NO DISPONIBLE
+            </div>
+        </div>
+    </div>
+</div>

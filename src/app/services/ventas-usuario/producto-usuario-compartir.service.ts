@@ -6,6 +6,8 @@ import { Injectable } from '@angular/core';
 export class ProductoUsuarioCompartirService {
 
   Productos : any = []
+
+  ProductoId : any = []
   
   constructor() { }
 }

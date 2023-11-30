@@ -1,6 +1,6 @@
 header{
     background-color: rgb(69, 69, 69);
-    height: 8vh;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -8,8 +8,8 @@ header{
 }
 
 img{
-    width: 62.5px;
-    height: 62.5px;
+    height: 9vh;
+    width: 9vh;
 
     margin: 0 5px;
     cursor: pointer;

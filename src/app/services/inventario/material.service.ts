@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MaterialService {
 
-  private URL = 'http://localhost:3000'
+  private URL = 'http://localhost:3000' // cambiar
 
   constructor(
     private http: HttpClient

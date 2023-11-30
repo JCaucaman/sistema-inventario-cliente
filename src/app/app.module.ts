@@ -41,6 +41,7 @@ import { VentasHeaderComponent } from './components/usuario/ventas-header/ventas
 import { VentasHomeComponent } from './components/usuario/ventas-home/ventas-home.component';
 import { VentasInicioComponent } from './components/usuario/ventas-inicio/ventas-inicio.component';
 import { VentasCarroComponent } from './components/usuario/ventas-carro/ventas-carro.component';
+import { VentasDetalleComponent } from './components/usuario/ventas-detalle/ventas-detalle.component';
 
 
 @NgModule({
@@ -77,6 +78,7 @@ import { VentasCarroComponent } from './components/usuario/ventas-carro/ventas-c
     VentasHomeComponent,
     VentasInicioComponent,
     VentasCarroComponent,
+    VentasDetalleComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #FFDBDB;
   }
   
   .table-container {
@@ -29,14 +30,16 @@
   .NAVEGACION {
     width: 250px;
     height: 150px;
-    background-color: #f3c6ef;
+    background-color: #ffc4d5;
     border-radius: 15px;
     margin: 30px;
     font-size: 22px;
+    border: 1px solid #ee4777;
   }
   
   .NAVEGACION:hover {
-    background-color: #ffaff8;
+    background-color: #eeb8c7;
+    color: #fff;
   }
   
   .fondo-unicornio {
