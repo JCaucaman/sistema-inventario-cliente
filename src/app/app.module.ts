@@ -45,10 +45,11 @@ import { ClientesContentComponent } from './components/Cliente/clientes-content/
 import { PruebaCalceModalComponent } from './components/Cliente/prueba-calce-modal/prueba-calce-modal.component';
 import { PedidosMaterialesModalComponent } from './components/Cliente/pedidos-materiales-modal/pedidos-materiales-modal.component';
 import { ProductoService } from './services/productos/producto.service';
-import { VentasHeaderComponent } from './components/Ventas/usuario/ventas-header/ventas-header.component';
-import { VentasHomeComponent } from './components/Ventas/usuario/ventas-home/ventas-home.component';
-import { VentasInicioComponent } from './components/Ventas/usuario/ventas-inicio/ventas-inicio.component';
-import { VentasCarroComponent } from './components/Ventas/usuario/ventas-carro/ventas-carro.component';
+import { VentasHeaderComponent } from './components/usuario/ventas-header/ventas-header.component';
+import { VentasHomeComponent } from './components/usuario/ventas-home/ventas-home.component';
+import { VentasInicioComponent } from './components/usuario/ventas-inicio/ventas-inicio.component';
+import { VentasCarroComponent } from './components/usuario/ventas-carro/ventas-carro.component';
+import { VentasDetalleComponent } from './components/usuario/ventas-detalle/ventas-detalle.component';
 
 
 @NgModule({
@@ -84,6 +85,7 @@ import { VentasCarroComponent } from './components/Ventas/usuario/ventas-carro/v
     VentasHomeComponent,
     VentasInicioComponent,
     VentasCarroComponent,
+    VentasDetalleComponent,
   ],
   imports: [
     BrowserModule,

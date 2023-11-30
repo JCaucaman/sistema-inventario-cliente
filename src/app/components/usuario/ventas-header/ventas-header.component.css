@@ -1,0 +1,44 @@
+header{
+    background-color: rgb(69, 69, 69);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(91, 87, 89);
+}
+
+img{
+    height: 9vh;
+    width: 9vh;
+
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.img-logo{
+    margin: 5px;
+}
+
+.carro {
+    width: 30px;
+}
+
+input{
+    font-size:large;
+    margin-right: 15px;
+    padding: 10px;
+    border: 0;
+    color: rgb(213, 213, 213);
+    background-color: rgba(69, 69, 69, 0.5);
+}
+
+input:hover{
+    border: 0;
+    color: #fff;
+    background-color: #5b5859;
+}
+
+.botones{ 
+    display: flex;
+    align-items: center; 
+}

@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AutentificacionService {
 
+  private URL = 'http://localhost:3000' // cambiar
 
-  private URL = 'http://3.80.191.237:3000'
 
   constructor(
     private http: HttpClient
@@ -26,7 +26,7 @@ export class AutentificacionService {
   }
 
   loggedIn() : Boolean{
-    if(localStorage.getItem('token')){ // cambiar
+    if(localStorage.getItem('token')){ 
       return true
     } else {
       return false

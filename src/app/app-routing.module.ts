@@ -13,9 +13,11 @@ import { ClientesContentComponent } from './components/Cliente/clientes-content/
 import { CondicionesDeUsosComponent } from './components/Otros/condiciones-de-usos/condiciones-de-usos.component'
 import { VentasAdminComponent } from "./components/Productos/ventas-admin/ventas-admin.component";
 import { LoginComponent } from './components/Ventas/usuario/login/login.component'
-import { VentasCarroComponent } from './components/Ventas/usuario/ventas-carro/ventas-carro.component'
-import { VentasHomeComponent } from './components/Ventas/usuario/ventas-home/ventas-home.component'
-import { VentasInicioComponent } from './components/Ventas/usuario/ventas-inicio/ventas-inicio.component'
+
+import { VentasCarroComponent } from './components/usuario/ventas-carro/ventas-carro.component'
+import { VentasHomeComponent } from './components/usuario/ventas-home/ventas-home.component'
+import { VentasInicioComponent } from './components/usuario/ventas-inicio/ventas-inicio.component'
+import { VentasDetalleComponent } from './components/usuario/ventas-detalle/ventas-detalle.component';
 
 const routes: Routes = [
   {
@@ -35,8 +37,20 @@ const routes: Routes = [
     component : VentasCarroComponent
   },
   {
+    path : 'detalle/:id',
+    component : VentasDetalleComponent
+  },
+  {
     path : 'admin',
     component : InicioComponent
+  },
+  {
+    path : 'home',
+    component : VentasHomeComponent
+  },
+  {
+    path : 'carro',
+    component : VentasCarroComponent
   },
   {
     path : 'menu',

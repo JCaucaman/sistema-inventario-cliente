@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ClientesService {
 
+  private URL = 'http://localhost:3000' // cambiar
 
-  private URL = 'http://3.80.191.237:3000'
 
   constructor(
     private http: HttpClient,
