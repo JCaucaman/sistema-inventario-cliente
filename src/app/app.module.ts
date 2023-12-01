@@ -25,12 +25,8 @@ import { InventarioEtiquetaModalComponent } from './components/Inventario-All/in
 import { EtiquetasComponent } from './components/Inventario-All/etiquetas/etiquetas.component';
 
 import { ClientesComponent } from './components/Cliente/clientes/clientes.component';
-
 import { CajasComponent } from './components/Caja/cajas/cajas.component';
-
 import { ListaDeComprasComponent } from './components/Compras/lista-de-compras/lista-de-compras.component';
-
-
 import { ClientesMenuComponent } from './components/Cliente/clientes-menu/clientes-menu.component';
 
 import { ModalAgregarEtiquetaComponent } from './components/Inventario-All/modal-agregar-etiqueta/modal-agregar-etiqueta.component';
@@ -44,14 +40,13 @@ import { PedidosModalComponent } from './components/Cliente/pedidos-modal/pedido
 import { ClientesContentComponent } from './components/Cliente/clientes-content/clientes-content.component';
 import { PruebaCalceModalComponent } from './components/Cliente/prueba-calce-modal/prueba-calce-modal.component';
 import { PedidosMaterialesModalComponent } from './components/Cliente/pedidos-materiales-modal/pedidos-materiales-modal.component';
-import { ProductoService } from './services/productos/producto.service';
 
 import { VentasHeaderComponent } from './components/usuario/ventas-header/ventas-header.component';
 import { VentasHomeComponent } from './components/usuario/ventas-home/ventas-home.component';
 import { VentasInicioComponent } from './components/usuario/ventas-inicio/ventas-inicio.component';
 import { VentasCarroComponent } from './components/usuario/ventas-carro/ventas-carro.component';
 import { VentasDetalleComponent } from './components/usuario/ventas-detalle/ventas-detalle.component';
-
+import { VentasLoginComponent } from './components/usuario/ventas-login/ventas-login.component'
 
 @NgModule({
   declarations: [
@@ -87,6 +82,7 @@ import { VentasDetalleComponent } from './components/usuario/ventas-detalle/vent
     VentasInicioComponent,
     VentasCarroComponent,
     VentasDetalleComponent,
+    VentasLoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -98,7 +94,6 @@ import { VentasDetalleComponent } from './components/usuario/ventas-detalle/vent
   ],
   providers: [
     AutenticacionGuard,
-    ProductoService, 
     {
       provide :  HTTP_INTERCEPTORS,
       useClass : InterceptorTokenService,
