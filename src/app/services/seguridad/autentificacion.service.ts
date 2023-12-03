@@ -8,13 +8,20 @@ export class AutentificacionService {
 
   private URL = 'http://localhost:3000' // cambiar
 
+  isregister = false;
 
   constructor(
     private http: HttpClient
     ) { }
 
   login(usuario: object) {
+    console.log(usuario)
     return this.http.post<any>(this.URL + '/api/usuario/', usuario); 
+  }
+
+  register(usuario: object) {
+    console.log(usuario)
+    return this.http.post<any>(this.URL + '/api/usuario/register', usuario); 
   }
 
   loginAdmin(admin: object) {

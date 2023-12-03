@@ -13,7 +13,7 @@
         <div id="menu-dropdown" class="menu-cascada" #menudropdown  (click)="click($event)">
             <ul>
               <li *ngIf="!HeaderMenuService.menu">
-                <button class="button-menu" routerLink="/menu">Menu Principal</button>
+                <button class="button-menu" routerLink="/admin-menu">Menu Principal</button>
               </li>
               <li *ngIf="!HeaderMenuService.inventario">
                 <button class="button-menu" routerLink="/inventario">Inventario</button>

@@ -24,6 +24,12 @@ export class LoginComponent {
     .subscribe(
       res => {
         console.log(res)
+
+        this.usuario = {
+          name: '',
+          password: ''
+        }
+
         localStorage.setItem('token', res.token)
         this.router.navigate(['/menu'])
       },

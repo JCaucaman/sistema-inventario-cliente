@@ -38,7 +38,7 @@
   }
   
   .NAVEGACION:hover {
-    background-color: #eeb8c7;
+    background-color: #ea6f92;
     color: #fff;
   }
   
@@ -66,7 +66,7 @@
   }
   
   .footer-menu-content {
-    background-color: #f3c6ef;
+    background-color: #ffc4d5;
     height: 100%;
     flex-grow: 1;
   }
@@ -74,14 +74,16 @@
   .footer-texto {
     text-align: center;
   }
+
   .button-menu {
     background-color: #f3c6ef;
     width: 110px;
     border-radius: 15px;
-    }
-    .button-menu:hover {
-        background-color: #ffaff8;
-    }
+  }
+  .button-menu:hover {
+    background-color: #ffaff8;
+  }
+
   @media screen and (max-width: 600px) {
     .header-menu {
       flex-wrap: wrap;

@@ -12,7 +12,7 @@ export class EtiquetaCompartirService {
   constructor() { }
 
   agregarEtiquetas(etiqueta: any) {
-    this.etiquetas.unshift(etiqueta); 
+    this.etiquetas.push(etiqueta); 
   }
 
 }

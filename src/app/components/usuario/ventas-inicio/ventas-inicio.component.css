@@ -48,9 +48,14 @@ input {
     padding: 5px;
     font-size: large;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 input:hover {
     background-color: #e38da6;
     color: #fff;
+}
+
+img{
+    cursor: pointer;
 }

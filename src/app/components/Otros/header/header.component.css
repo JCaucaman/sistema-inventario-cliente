@@ -12,7 +12,7 @@
   }
   
   .header-menu-content {
-    background-color: #f3c6ef;
+    background-color: #ffc4d5;
     height: 100%;
     flex-grow: 1;
     display: flex;
@@ -30,7 +30,6 @@
   .header-menu-text {
     flex-grow: 1;
     margin: 0 5px 0 70px; 
-    background-color: #f3c6ef;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,7 +37,7 @@
   }
   
   .menu-button, .logout-button {
-    background-color: #f3c6ef;
+    background-color: #ffc4d5;
     color: black;
     border: none;
     cursor: pointer;
@@ -46,7 +45,7 @@
     border-radius: 3px;
     padding: 4px 15px;
     height: 40px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid #f789a8;
     text-align: center;
     transition: 0.2s all;
   }
@@ -62,12 +61,9 @@
   }
   
 
-  .menu-button:hover {
-    background-color: #ffaff8;
-  }
-
-  .logout-button:hover {
-    background-color: #ffaff8;
+  .menu-button:hover, .logout-button:hover {
+    background-color: #ea6f92;
+    color: #fff;
   }
   
   #menu-dropdown {
@@ -76,7 +72,7 @@
     top: 100%;
     right: 5em;
     width: 150px;
-    background-color: #f3afed;
+    background-color: #ffc4d5;
     border-radius: 5px;
     padding: 5px;
     z-index: 10000;
@@ -104,14 +100,15 @@
     width: 100%;
     margin: 2px;
     padding: 10px;
-    background-color:#f3b6ee ;
+    background-color: #ffc4d5;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 3px;
     transition: 0.2s all;
   }
   
   .button-menu:hover {
-  background-color:#f5d7f2 ;
+    background-color: #ea6f92;
+    color: #fff;
   }
 
   .searchInventario{

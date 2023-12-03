@@ -1,0 +1,16 @@
+.contenedor {
+    width: 100%;
+    background-color: rgb(48, 48, 48);
+}
+
+.contenedor-usuario{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    height: 90vh;
+
+    justify-content: center;
+
+    overflow-y: scroll;
+}
