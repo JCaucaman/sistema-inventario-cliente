@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms'
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -91,6 +92,7 @@ import { VentasLoginComponent } from './components/usuario/ventas-login/ventas-l
     HttpClientModule,
     BrowserAnimationsModule,
     CommonModule,
+    ToastrModule.forRoot(),
   ],
   providers: [
     AutenticacionGuard,
