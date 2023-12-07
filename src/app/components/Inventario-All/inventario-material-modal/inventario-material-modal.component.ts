@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MaterialService } from "src/app/services/inventario/material.service";
 import { CompartirService } from "src/app/services/inventario/compartir.service";
 import { CompartirInventarioModificarService } from "src/app/services/inventario/compartir-inventario-modificar.service";
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-inventario-material-modal',
@@ -22,11 +23,15 @@ export class InventarioMaterialModalComponent {
   constructor(
     private MaterialService : MaterialService,
     public CompartirService: CompartirService,
-    public CompartirInventarioModificarService : CompartirInventarioModificarService
-    ) { }
+    public CompartirInventarioModificarService : CompartirInventarioModificarService,
+    private toastr: ToastrService){}
 
     desaparecer(){
       this.CompartirService.modalMaterial = false
+    }
+
+    showSuccess() {
+      this.toastr.success('Hello world!', 'Toastr fun!');
     }
 
   crearMaterial(){

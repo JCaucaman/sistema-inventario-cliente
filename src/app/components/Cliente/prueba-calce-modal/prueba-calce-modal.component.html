@@ -1,7 +1,7 @@
-<div id="modal-pedido-calce">
-    <div id="form-calce">
+<div id="modal-pedido-calce" *ngIf="this.pedidosCompartirService.modalPedidosCalce">
+    <div id="form-calce" *ngIf="!this.pedidosCompartirService.modalPedidosCalceModificar">
         <span class="exit-button">
-            <input type="button" class="exit" value="x">
+            <input type="button" class="exit" value="x" (click)="DesaparecerModalCalce()">
         </span>
         <span>Prueba de calce</span>
         <form id="form-crear-calce" (submit)="crearPruebacalce()">
@@ -12,6 +12,22 @@
 
             </textarea>
             <button type="submit">Agendar prueba de calce</button>
+        </form>
+    </div>
+    <div id="form-calce" *ngIf="this.pedidosCompartirService.modalPedidosCalceModificar">
+        <span class="exit-button">
+            <input type="button" class="exit" value="x" (click)="DesaparecerModalCalce()">
+        </span>
+        <span>Prueba de calce Modificar</span>
+        <form id="form-crear-calce" (submit)="modificarPruebacalce()">
+            <label for="fechaN">Fecha: {{formatearFecha(this.pedidosCompartirService.copyCalce.fecha)}}
+                {{formatearHora(this.pedidosCompartirService.copyCalce.fecha)}}</label>
+            <input type="datetime-local" name="fechaN" [(ngModel)]="this.pedidosCompartirService.copyCalce.fecha" required>
+            <label for="anotacionN">Anotacion:</label>
+            <textarea name="anotacionN" [(ngModel)]="this.pedidosCompartirService.copyCalce.anotacion" >
+
+            </textarea>
+            <button type="submit">Modificar prueba de calce</button>
         </form>
     </div>
 </div>

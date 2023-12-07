@@ -24,4 +24,8 @@ export class PedidosService {
     pedidoModificar(id: string, pedido: any){
       return this.http.put<any>(this.URL + '/api/pedidos/' + id, pedido);
     }
+
+    pedidoCalceModificar(id: string, pedido: any){
+      return this.http.put<any>(this.URL + '/api/pedidos/calce/' + id, pedido);
+    }
 }

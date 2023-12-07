@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AutentificacionService } from 'src/app/services/seguridad/autentificacion.service';
 import { Router } from "@angular/router";
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-ventas-login',
@@ -22,25 +23,31 @@ export class VentasLoginComponent {
 
   constructor(
     public autentificacionService : AutentificacionService,
-    private router : Router
-    ) { }
+    private router : Router,
+    private toastr: ToastrService){}
 
   loginUsuario(){
     this.autentificacionService.login(this.usuario)
     .subscribe(
       res => {
-        console.log(res)
         
+        this.toastr.success(this.usuario.name,'Bienvenido', {
+          timeOut: 1000
+        });
+
         this.usuario = {
           name: '',
           password: ''
         }
-      
+
         localStorage.setItem('token', res.token)
         this.router.navigate(['/'])
       },
       err => {
-        console.log(err)
+        this.toastr.error(err.error, 'ERROR', {
+          timeOut: 1000
+        });
+
       }
     )
   }
@@ -49,7 +56,10 @@ export class VentasLoginComponent {
     this.autentificacionService.register(this.usuarioRegristro)
     .subscribe(
       res => {
-        console.log(res)
+
+        this.toastr.success(this.usuarioRegristro.name,'Registrado exitosamente', {
+          timeOut: 1000
+        });
         
         this.usuarioRegristro = {
           name: '',
@@ -59,7 +69,9 @@ export class VentasLoginComponent {
         this.router.navigate(['/'])
       },
       err => {
-        console.log(err)
+        this.toastr.error(err.error, 'ERROR', {
+          timeOut: 1000
+        });
       }
     )
   }

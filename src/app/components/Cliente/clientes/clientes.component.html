@@ -221,12 +221,19 @@
                     <span>
                         Pruebas calce:
                         <span>
-                            <input type="button" value="+">
+                            <input type="button" value="+" (click)="crearCalce(cliente._id, pedido._id)">
                         </span>
                     </span>
                     <div class="prueba" *ngFor="let prueba of pedido.pruebas_calce">
                         <span class="prueba-fecha">
-                            Fecha: {{prueba.fecha}}
+                            Fecha: {{ formatearFecha(prueba.fecha) }}
+                            Hora: {{formatearHora(prueba.fecha)}}
+                            <div>
+                                <input type="button" value="x" (click)="quitarCalce(cliente._id, pedido._id, pedido.pruebas_calce, prueba)">
+                            </div>
+                            <div>
+                                <input type="button" value="#" (click)="modificarCalce(cliente._id, pedido._id, pedido.pruebas_calce, prueba)">
+                            </div>
                         </span>
                         <span>
                             {{prueba.anotacion}}
@@ -236,7 +243,7 @@
                         <div>
                             Materiales:                         
                             <span>
-                                <input type="button" value="+">
+                                <input type="button" value="+" (click)="agregarMaterialPedido(cliente._id, pedido._id)">
                             </span>
                         </div>
                         <ul>

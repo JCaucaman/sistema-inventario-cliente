@@ -53,7 +53,7 @@ const routes: Routes = [
     component : VentasCarroComponent
   },
   {
-    path : 'admin-menu',
+    path : 'menu',
     component : MenuComponent,
     canActivate : [AutenticacionGuard]
   },

@@ -11,7 +11,20 @@ export class PedidosCompartirService {
 
   modalPedidosModificar : Boolean = false
 
+  modalPedidosCalceModificar : Boolean = false
+  modalPedidosCalce : Boolean = false
+
+  modalPedidosMaterialesModificar : Boolean = false
+
   copyPedido :any
+
+  copyCalce : any
+  copyCalceOld : any
+
+  copyPruebas: any
+
+  idCliente = ''
+  idPedido = ''
 
   constructor() { }
 

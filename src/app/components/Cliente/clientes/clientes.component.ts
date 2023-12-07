@@ -112,6 +112,10 @@ export class ClientesComponent {
         this.PedidosService.pedidoModificar(this.idPedido, {"completado" : true})
         .subscribe(
           res =>{
+
+            //TODO: status: 500, error: Hubo un error
+
+            console.log("tetrminar pedido res")
             this.ClientesCompartirService.CompletarPedidoLocal(res)
           },
           err => {
@@ -119,12 +123,81 @@ export class ClientesComponent {
           }
         )
 
-        this.ClientesCompartirService.CompletarPedidoLocal(null)
+        //this.ClientesCompartirService.CompletarPedidoLocal(null)
     
         this.clicksC = 0
       } else {
 
       }
+    }
+
+    formatearFecha(fecha: string): string {
+
+      const fechaOriginal = new Date(fecha);
+      const formatoFecha = new Intl.DateTimeFormat('es-ES', 
+        { day: 'numeric', month: 'numeric', year: 'numeric' }
+      );
+  
+      return formatoFecha.format(fechaOriginal);
+    }
+
+    formatearHora(fecha: string): string {
+
+      const fechaOriginal = new Date(fecha);
+      const formatoFecha = new Intl.DateTimeFormat('es-ES', 
+        {  hour: '2-digit',minute: '2-digit'}
+      );
+  
+      return formatoFecha.format(fechaOriginal);
+    }
+
+    crearCalce(id_cliente: string, id_pedido: string){
+      console.log(id_cliente + " cliente "+ id_pedido + " pedido")
+      this.PedidosCompartirService.idPedido = id_pedido
+      this.PedidosCompartirService.idCliente = id_cliente
+      this.PedidosCompartirService.modalPedidosCalce = true
+      this.PedidosCompartirService.modalPedidosCalceModificar = false
+    }
+
+    quitarCalce(id_cliente: string, id_pedido: string, all_purebas: any, prueba: any){
+
+      console.log(id_cliente + " cliente "+ id_pedido + " pedido")
+      console.log(all_purebas + " Pruebas "+ prueba + " prueba")
+      this.PedidosCompartirService.idPedido = id_pedido
+      this.PedidosCompartirService.idCliente = id_cliente
+
+      const pruebasFiltrada = all_purebas.filter((item : any) => item != prueba )
+
+      console.log(pruebasFiltrada)
+
+      this.PedidosService.pedidoCalceModificar(id_pedido, pruebasFiltrada)
+        .subscribe(
+      res => {
+        console.log(res)
+      },
+      err => {
+        console.log(err)
+      }
+    )
+    }
+
+    modificarCalce(id_cliente: string, id_pedido: string, all_purebas: any, prueba: any){
+      console.log(id_cliente + " cliente "+ id_pedido + " pedido" + ", prueba" + prueba)
+      this.PedidosCompartirService.idPedido = id_pedido
+      this.PedidosCompartirService.idCliente = id_cliente
+      this.PedidosCompartirService.copyPruebas = [...all_purebas]
+      this.PedidosCompartirService.copyCalceOld = prueba
+      this.PedidosCompartirService.modalPedidosCalce = true
+      this.PedidosCompartirService.modalPedidosCalceModificar = true
+      this.PedidosCompartirService.copyCalce = {...prueba}
+
+    }
+
+
+
+    agregarMaterialPedido(id_cliente: string, id_pedido: string){
+      console.log(id_cliente + " cliente "+ id_pedido + " pedido")
+      this.PedidosCompartirService.modalPedidosMaterialesModificar = true
     }
 
     apareceModalModificarC(){
