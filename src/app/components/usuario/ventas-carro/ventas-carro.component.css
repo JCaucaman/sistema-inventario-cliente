@@ -1,0 +1,43 @@
+.contenedor {
+    width: 100%;
+    background-color: rgb(48, 48, 48);
+}
+
+.contenedor-productos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    height: 90vh;
+
+    align-items: center;
+
+    overflow-y: scroll;
+
+}
+
+.carro{
+    width: 70%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    align-items: center;
+
+}
+
+.productos-carro{
+    display: flex;
+    justify-content: space-between;
+
+    min-width: 90%;
+    padding: 2%;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: rgb(94, 94, 94);
+}
+
+.botones-carro{
+    margin: 30px;
+}

@@ -1,4 +1,39 @@
-<app-ventas-header></app-ventas-header>
+<div class="contenedor">
+    <app-ventas-header></app-ventas-header>
+    <div class="contenedor-productos">
+        <div class="carro">
+            <div class="productos-carro" *ngFor="let producto of this.myCarro$ | async">
+                <div>
+                    {{producto.nombre}}
+                    {{producto.precio}}
+                </div>
+                <div>
+                    <input type="button" value="+" (click)="actualizarCantidadProducto('suma', producto._id)">
+                    {{producto.cantidad}}
+                    <input type="button" value="-" (click)="actualizarCantidadProducto('resta', producto._id)">
+                </div>
+                <div>
+                    total: {{totalPrecio(producto.cantidad, producto.precio)}}
+                </div>
+                <div>
+                    <input type="button" (click)="borrarProducto(producto._id)">
+                </div>
+            </div>
+            <div>
+                Total: {{totalCarro()}}
+            </div>
 
+            <div class="botones-carro">
+                <input type="button" value="reservar">
+            </div>
+        </div>
+    </div>
+</div>
 
-<p>ventas-carro works!</p>
+<!--
+    <div class="productos-carro" *ngFor="let producto of this.myCarro$ | async">
+        {{producto.nombre}}
+        {{producto.precio}}
+        {{producto.cantidad_disponible}}
+    </div>
+-->

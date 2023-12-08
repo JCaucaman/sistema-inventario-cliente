@@ -40,4 +40,8 @@ export class VentasDetalleComponent {
 
     }
 
+    agregarCarro(producto: any){
+        return this.ProductoUsuarioCompartirService.agregarProducto(producto)
+    }
+
 }

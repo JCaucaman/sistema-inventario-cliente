@@ -16,7 +16,7 @@
                 $ {{producto.precio}}
             </div>
             <div id="{{producto._id}}-id-botones">
-                <input type="button" value="Agregar al carro">
+                <input type="button" value="Agregar al carro" (click)="agregarCarro(producto)">
                 <input type="button" value="Ver detalles" routerLink="/detalle/{{producto._id}}"> 
             </div>
         </div>

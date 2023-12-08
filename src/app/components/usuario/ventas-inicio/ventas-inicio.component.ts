@@ -19,6 +19,10 @@ export class VentasInicioComponent {
     this.mostrarProductos()
   }
 
+  agregarCarro(producto: any){
+    return this.ProductoUsuarioCompartirService.agregarProducto(producto)
+  }
+
   mostrarProductos(){
     this.ProductoUsuarioService.productoMostrar()
     .subscribe(
