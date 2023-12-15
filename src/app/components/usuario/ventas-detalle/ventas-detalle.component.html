@@ -6,7 +6,7 @@
         <div id="{{producto._id}}-id" class="producto" *ngFor="let producto of this.ProductoUsuarioCompartirService.ProductoId">
 
             <div id="{{producto._id}}-id-imagen" class="producto-imagen"> <!-- cambiar -->
-                <img id="{{producto._id}}-id-imagen" [src]="'http://localhost:3000/' + producto.imagen">
+                <img id="{{producto._id}}-id-imagen" [src]="this.URL.ruta + '/' + producto.imagen">
             </div>
             <div id="{{producto._id}}-id-data" class="producto-data" *ngIf="producto.disponibilidad">
                 <div>

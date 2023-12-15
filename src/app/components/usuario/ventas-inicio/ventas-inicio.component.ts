@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductoUsuarioService } from "src/app/services/ventas-usuario/producto-usuario.service";
 import { ProductoUsuarioCompartirService } from "src/app/services/ventas-usuario/producto-usuario-compartir.service";
-
+import { RutaService } from "../../../services/ruta.service";
 
 @Component({
   selector: 'app-ventas-inicio',
@@ -12,7 +12,8 @@ export class VentasInicioComponent {
 
   constructor(
     private ProductoUsuarioService: ProductoUsuarioService,
-    public ProductoUsuarioCompartirService :ProductoUsuarioCompartirService
+    public ProductoUsuarioCompartirService :ProductoUsuarioCompartirService,
+    public URL : RutaService
   ){}
 
   ngOnInit(){

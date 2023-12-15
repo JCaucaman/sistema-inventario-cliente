@@ -1,6 +1,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { ProductoAdminService } from "../../../services/ventas-administrador/producto-admin.service";
 import { ProductoCompartirService } from "../../../services/ventas-administrador/producto-compartir.service";
+import { RutaService } from "../../../services/ruta.service";
 
 @Component({
   selector: 'app-productos',
@@ -16,6 +17,7 @@ export class ProductosComponent {
   constructor(
     private ProductoAdminService: ProductoAdminService,
     public ProductoCompartirService: ProductoCompartirService,
+    public URL : RutaService
   ){}
 
   ngOnInit(){

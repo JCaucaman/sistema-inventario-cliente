@@ -1,35 +1,35 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { RutaService } from "../ruta.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AutentificacionService {
 
-  private URL = 'http://localhost:3000' // cambiar
-
   isregister = false;
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private URL : RutaService
     ) { }
 
   login(usuario: object) {
     console.log(usuario)
-    return this.http.post<any>(this.URL + '/api/usuario/', usuario); 
+    return this.http.post<any>(this.URL.ruta + '/api/usuario/', usuario); 
   }
 
   register(usuario: object) {
     console.log(usuario)
-    return this.http.post<any>(this.URL + '/api/usuario/register', usuario); 
+    return this.http.post<any>(this.URL.ruta + '/api/usuario/register', usuario); 
   }
 
   loginAdmin(admin: object) {
-    return this.http.post<any>(this.URL + '/api/usuario/admin', admin); 
+    return this.http.post<any>(this.URL.ruta + '/api/usuario/admin', admin); 
   }
 
   autoLogin(){
-    return this.http.post<any>(this.URL + '/api/usuario/token', {})
+    return this.http.post<any>(this.URL.ruta + '/api/usuario/token', {})
   }
 
   loggedIn() : Boolean{

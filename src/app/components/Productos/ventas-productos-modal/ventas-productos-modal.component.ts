@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 import { ProductoCompartirService } from "src/app/services/ventas-administrador/producto-compartir.service";
 import { ProductoAdminService } from "src/app/services/ventas-administrador/producto-admin.service";
-
+import { RutaService } from "../../../services/ruta.service";
 
 @Component({
   selector: 'app-ventas-productos-modal',
@@ -13,6 +13,7 @@ export class VentasProductosModalComponent{
   constructor(
     public ProductoCompartirService: ProductoCompartirService,
     private ProductoAdminService: ProductoAdminService,
+    public URL : RutaService
   ){}
 
   file : File | string = '';

@@ -5,7 +5,7 @@
         </div>
 
         <div id="{{producto._id}}-id-imagen" class="producto-imagen"> <!-- cambiar -->
-            <img id="{{producto._id}}-id-imagen-250-250" [src]="'http://localhost:3000/' + producto.imagen_min">
+            <img id="{{producto._id}}-id-imagen-250-250" [src]="this.URL.ruta + '/' + producto.imagen_min">
         </div>
         <div id="{{producto._id}}-id-descripcion" class="producto-descripcion">
             {{producto.descripcion}}

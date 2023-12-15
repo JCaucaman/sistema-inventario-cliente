@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { RutaService } from "../ruta.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class PedidosService {
 
-  private URL = 'http://localhost:3000' // cambiar
-
   constructor(
     private http: HttpClient,
+    private URL : RutaService
     ) { }
 
     pedidoCrear(pedido: object, id_cliente : string) {

@@ -55,7 +55,7 @@
             </div>
             <div>
                 <input class="input-file" type="file" (change)="onFotoSeleccionada($event)"  #imagenInput>
-                <img [src]="imagenSelected || 'http://localhost:3000/' + ProductoCompartirService.productoModifiacado.imagen_min" style="height: 125px;" (click)="imagenInput.click()">
+                <img [src]="imagenSelected || this.URL.ruta + '/' + ProductoCompartirService.productoModifiacado.imagen_min" style="height: 125px;" (click)="imagenInput.click()">
             </div>
 
             <span class="input-button">
